@@ -171,8 +171,8 @@ All credentials in this repository are placeholders.
 
 ## Author
 
-**[Your Name]**
-[LinkedIn URL]
+**Terry Atong Taku**
+[www.linkedin.com/in/terry-taku]
 
 ---
 
