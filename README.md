@@ -219,8 +219,8 @@ Key terms used in this project. The full list is in [`01-planning/glossary.md`](
 
 ## Author
 
-**[Your Name]**
-[LinkedIn URL]
+**Terry Atong Taku**
+[www.linkedin.com/in/terry-taku]
 
 ---
 
