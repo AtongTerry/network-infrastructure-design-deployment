@@ -6,7 +6,7 @@ A virtual two-building office network project covering the full deployment lifec
 
 > **Note:** This is a simulated environment built in Cisco Packet Tracer. No physical equipment was used. All device names, IP addresses, serial numbers, and asset tags are fictional.
 
-![Logical topology](diagrams/logical-topology.svg)
+![Logical topology](Diagrams/logical-topology.svg)
 
 ## Overview
 
@@ -40,7 +40,7 @@ The goal is to practice the work of a real infrastructure deployment, not just a
 
 ## Network design
 
-Addressing is allocated with VLSM from two pools: `192.168.0.0/16` for hosts (summarized as `192.168.0.0/22`) and `10.10.0.0/24` for network devices. Each subnet is sized from its department's headcount plus 25% growth and a gateway address. The method, DHCP conventions, routing design, per-switch port plan, and inter-VLAN policy are in [`01-planning/addressing-plan.md`](01-planning/addressing-plan.md).
+Addressing is allocated with VLSM from two pools: `192.168.0.0/16` for hosts (summarized as `192.168.0.0/22`) and `10.10.0.0/24` for network devices. Each subnet is sized from its department's headcount plus 25% growth and a gateway address. The method, DHCP conventions, routing design, per-switch port plan, and inter-VLAN policy are in [`Planning/addressing-plan.md`](Planning/addressing-plan.md).
 
 **Topology:** two buildings. Building 1 has one edge router, one Layer 3 core switch, three access switches (Executive/HR/Accounting, Operations/Sales, and IT/servers), and two wireless APs. Each access switch connects to the core with a two-link LACP port channel. Building 2 is a small satellite with one router (BLD2-RTR-01) and one access switch serving one department, Logistics. A routed point-to-point link joins the two buildings, and the core, the edge router, and the Building 2 router all run OSPF (area 0). Building 2 has no ISP connection: its internet traffic crosses the link and is translated by the Building 1 edge router. Native VLAN 999 is unused and not routed.
 
@@ -100,82 +100,20 @@ Addressing is allocated with VLSM from two pools: `192.168.0.0/16` for hosts (su
 - **Automation (optional, later):** Netmiko or Ansible (`cisco.ios` collection) can push the rendered configs to GNS3 or EVE-NG devices. Packet Tracer devices cannot be driven from the host, so configs are pasted there.
 - **Protocols and features:** 802.1Q VLAN trunking, LACP port channels, Rapid PVST+, OSPF, DHCP on the core, inter-VLAN ACLs, NAT/PAT, SSH v2, port security, DHCP snooping, BPDU guard, NTP, and syslog.
 
-## Repository structure
-
-```
-network-infrastructure-design-deployment/
-├── README.md
-├── project-log.md           Dated notes on what was done each session
-├── .gitignore
-├── 01-planning/
-│   ├── requirements.md
-│   ├── addressing-plan.md      Addressing, OSPF routing design, switch port plan, ACL policy
-│   ├── glossary.md
-│   ├── ip-vlan-plan.xlsx
-│   ├── ip-vlan-plan.csv
-│   └── standards.md
-├── 02-pre-deployment/
-│   ├── site-survey.md
-│   ├── bill-of-materials.xlsx
-│   ├── inventory.xlsx
-│   ├── inventory.csv
-│   ├── ups-sizing.md
-│   ├── project-plan.xlsx
-│   ├── staging-checklist.md
-│   └── installation-checklist.md
-├── 03-configs/
-│   ├── network-infrastructure-design-deployment.pkt
-│   ├── templates/           Jinja2 templates (base, access switch, core)
-│   ├── variables/           Per-device variables (YAML or CSV)
-│   ├── render_configs.py    Renders one config per device
-│   ├── BLD1-CORE-01.txt
-│   ├── BLD1-ACC-01.txt
-│   ├── BLD1-ACC-02.txt
-│   ├── BLD1-ACC-03.txt
-│   ├── BLD1-RTR-01.txt
-│   ├── BLD2-RTR-01.txt
-│   ├── BLD2-ACC-01.txt
-│   └── wireless-design-note.md
-├── 04-testing/
-│   ├── test-matrix.xlsx
-│   └── evidence/
-├── 05-troubleshooting/
-│   ├── 01-wrong-access-vlan.md
-│   ├── 02-trunk-allowed-vlan-mismatch.md
-│   └── ...
-├── 06-coordination/
-│   ├── contractor-scope-email.md
-│   ├── facilities-request.md
-│   ├── vendor-rma-email.md
-│   ├── cutover-notice.md
-│   └── status-update-template.md
-├── 07-handoff/
-│   ├── as-built-notes.md
-│   ├── config-backups/
-│   └── closeout-checklist.md
-└── diagrams/
-    ├── logical-topology.svg
-    ├── logical-topology.drawio
-    ├── rack-elevation.png
-    └── patch-panel-map.png
-```
-
-File names are suggestions. Match them to what you actually produce and keep this tree current.
-
 ## Project phases
 
 | Phase | Focus | Folder | Status |
 |---|---|---|---|
 | 0 | Repo and tool setup | root | Complete |
-| 1 | Requirements, IP/VLAN plan, standards, logical diagram | `01-planning/` | In progress |
-| 2 | Site survey, BOM, inventory, rack elevation, UPS sizing, project plan, checklists | `02-pre-deployment/` | Pending |
-| 3 | Build the virtual topology | `03-configs/` | Pending |
-| 4 | Config template and device staging | `03-configs/` | Pending |
-| 5 | Wireless configuration | `03-configs/` | Pending |
-| 6 | Testing | `04-testing/` | Pending |
-| 7 | Troubleshooting log | `05-troubleshooting/` | Pending |
-| 8 | Coordination documents | `06-coordination/` | Pending |
-| 9 | Handoff package | `07-handoff/` | Pending |
+| 1 | Requirements, IP/VLAN plan, standards, logical diagram | `Planning/` | In progress |
+| 2 | Site survey, BOM, inventory, rack elevation, UPS sizing, project plan, checklists | `Pre-deployment/` | Pending |
+| 3 | Build the virtual topology | `Configs/` | Pending |
+| 4 | Config template and device staging | `Configs/` | Pending |
+| 5 | Wireless configuration | `Configs/` | Pending |
+| 6 | Testing | `Testing/` | Pending |
+| 7 | Troubleshooting log | `Troubleshooting/` | Pending |
+| 8 | Coordination documents | `Coordination/` | Pending |
+| 9 | Handoff package | `Handoff/` | Pending |
 | 10 | Final README, release, and publish | root | Pending |
 
 ## Testing summary *(pending)*
@@ -193,10 +131,10 @@ Results are added after Phase 6, for example: "XX of XX tests passed on the firs
 ## How to reproduce *(pending)*
 
 1. Install Cisco Packet Tracer.
-2. Open `03-configs/network-infrastructure-design-deployment.pkt`.
-3. Review the IP/VLAN plan in `01-planning/` and the port map in `diagrams/`.
-4. To rebuild from scratch, apply `03-configs/base-template.txt` to each device, replacing the `{{PLACEHOLDERS}}` with that device's values.
-5. Run the checks in `04-testing/test-matrix.xlsx` and compare against the evidence folder.
+2. Open `Configs/network-infrastructure-design-deployment.pkt`.
+3. Review the IP/VLAN plan in `Planning/` and the port map in `Diagrams/`.
+4. To rebuild from scratch, apply `Configs/base-template.txt` to each device, replacing the `{{PLACEHOLDERS}}` with that device's values.
+5. Run the checks in `Testing/test-matrix.xlsx` and compare against the evidence folder.
 
 All credentials in this repository are placeholders.
 
@@ -211,7 +149,7 @@ All credentials in this repository are placeholders.
 
 ## Glossary
 
-Key terms used in this project. The full list is in [`01-planning/glossary.md`](01-planning/glossary.md).
+Key terms used in this project. The full list is in [`Planning/glossary.md`](Planning/glossary.md).
 
 | Term | Meaning |
 |---|---|
@@ -230,8 +168,8 @@ Key terms used in this project. The full list is in [`01-planning/glossary.md`](
 
 ## Author
 
-**[Your Name]**
-[LinkedIn URL]
+**Terry Atong Taku**
+www.linkedin.com/in/terry-taku
 
 ---
 
