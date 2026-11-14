@@ -13,3 +13,6 @@ VLAN,Name,Network,Mask,Prefix,Gateway,First host,Last host,Broadcast,Usable host
 99,MGMT,10.10.0.0,255.255.255.224,/27,10.10.0.1,10.10.0.2,10.10.0.30,10.10.0.31,30,21,9,Static,"6 devices now (3 access switches, 2 APs, UPS) + 14 planned for expansion; core is the gateway"
 n/a,TRANSIT,10.10.0.32,255.255.255.252,/30,n/a,10.10.0.33,10.10.0.34,10.10.0.35,2,2,0,Static,"Router 10.10.0.33 / Core 10.10.0.34, routed link, OSPF area 0, no VLAN"
 n/a,WAN,203.0.113.0,255.255.255.252,/30,203.0.113.1,203.0.113.1,203.0.113.2,203.0.113.3,2,2,0,Static,"ISP handoff (documentation range 203.0.113.0/24, replace with real WAN addressing)"
+120,LOGISTICS,192.168.3.0,255.255.255.224,/27,192.168.3.1,192.168.3.2,192.168.3.30,192.168.3.31,30,26,4,DHCP (gateway excluded),Building 2: Building 2 wired workstations; router subinterface is the gateway; DHCP served by BLD2-RTR-01
+99,MGMT-B2,10.10.0.40,255.255.255.248,/29,10.10.0.41,10.10.0.42,10.10.0.46,10.10.0.47,6,4,2,Static,Building 2: BLD2 switch; router subinterface is the gateway
+n/a,TRANSIT-B2,10.10.0.36,255.255.255.252,/30,n/a,10.10.0.37,10.10.0.38,10.10.0.39,2,2,0,Static,"Inter-building link: BLD1-RTR-01 10.10.0.37 / BLD2-RTR-01 10.10.0.38, routed, OSPF area 0, no VLAN"

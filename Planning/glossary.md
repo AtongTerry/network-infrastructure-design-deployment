@@ -6,10 +6,10 @@ Plain-language definitions of the terms used in this project, with the lab's own
 
 | Term | Meaning |
 |---|---|
-| **BR01** | Branch 01, the site code that starts every device name. A second site would be BR02. |
-| **SITE-ROLE-NN** | The device naming standard. `BR01-ACC-02` is site BR01, access switch, number 02. |
+| **BLD1 / BLD2** | Building 1 and Building 2, the site codes that start every device name. |
+| **SITE-ROLE-NN** | The device naming standard. `BLD1-ACC-02` is building 1, access switch, number 02. |
 | **RTR / CORE / ACC / AP / UPS** | Role codes: edge router, core switch, access switch, wireless access point, battery backup. |
-| **IDF** | Intermediate Distribution Frame: a network closet. This lab has one (IDF1). |
+| **IDF** | Intermediate Distribution Frame: a network closet. This lab has one per building (BLD1-IDF1 and BLD2-IDF1). |
 
 ## Addressing
 
@@ -25,7 +25,7 @@ Plain-language definitions of the terms used in this project, with the lab's own
 | **VLSM** | Variable Length Subnet Masking. Each subnet gets the prefix its host count needs, instead of one size for all. |
 | **Summary route** | One route that covers many subnets. All host subnets fit in `192.168.0.0/22`. |
 | **Growth allowance** | Extra addresses added to a subnet's size so it survives new hires. This lab uses 25%. |
-| **Transit network** | A small routed link between two devices (a /30 with 2 usable addresses). Here: `10.10.0.32/30`. |
+| **Transit network** | A small routed link between two devices (a /30 with 2 usable addresses). Here: `10.10.0.32/30` (core to edge router) and `10.10.0.36/30` (between the buildings). |
 | **Documentation range** | Addresses reserved for examples (`203.0.113.0/24`). Used as a placeholder WAN. |
 | **Static address** | An address typed in by hand. Used for servers and network devices. |
 
@@ -58,9 +58,9 @@ Plain-language definitions of the terms used in this project, with the lab's own
 | **Inter-VLAN routing** | Moving traffic between VLANs. Done on the core switch through SVIs. |
 | **Static route** | A route typed in by hand. The edge router has one default route to the ISP. |
 | **Dynamic routing** | Routers learn routes from each other automatically with a routing protocol. |
-| **OSPF** | Open Shortest Path First, a dynamic routing protocol. Used between the core and the edge router. |
+| **OSPF** | Open Shortest Path First, a dynamic routing protocol. Used across the core, the edge router, and the Building 2 router. |
 | **Area 0** | OSPF's backbone area. This lab has a single area. |
-| **Router ID** | A unique name for an OSPF router, written like an IP address. Set manually (`10.10.0.1` core, `10.10.0.33` edge). |
+| **Router ID** | A unique name for an OSPF router, written like an IP address. Set manually (`10.10.0.1` core, `10.10.0.33` edge router, `10.10.0.38` Building 2 router). |
 | **Adjacency / neighbor** | Two OSPF routers that have formed a relationship and exchange routes. `FULL` means it is working. |
 | **Point-to-point network type** | An OSPF setting for a link with exactly two routers. No election, faster convergence. |
 | **Passive interface** | An interface that advertises its network but sends no OSPF messages. All user-facing SVIs are passive. |
@@ -70,6 +70,11 @@ Plain-language definitions of the terms used in this project, with the lab's own
 | **O\*E2** | How the core's routing table shows a default route learned from OSPF as an external route. |
 | **Default route (0.0.0.0/0)** | The "send everything else here" route, pointing toward the internet. |
 | **NAT / PAT** | Network Address Translation. PAT (overload) lets many private hosts share one public address. |
+| **Router-on-a-stick** | One router port trunks to a switch and carries one subinterface per VLAN, so the router does the inter-VLAN routing. Used in Building 2. |
+| **Subinterface** | A virtual interface on one physical router port, tied to one VLAN with `encapsulation dot1Q`. Example: `Gi0/1.120`. |
+| **Inter-building link** | The routed /30 link between BLD1-RTR-01 and BLD2-RTR-01. Fiber in a real deployment. |
+| **Satellite building** | A small site with no ISP link of its own. Building 2 reaches the internet through Building 1. |
+| **ABR** | Area Border Router: joins two OSPF areas. A future option if Building 2 becomes its own area. |
 | **HSRP / VRRP** | Protocols that give two routers one shared gateway address for redundancy. A possible future upgrade. |
 
 ## Security and management
@@ -83,8 +88,8 @@ Plain-language definitions of the terms used in this project, with the lab's own
 | **NTP** | Network Time Protocol. Keeps device clocks in sync so logs line up. |
 | **Syslog** | Sends device log messages to a central server (the backup/syslog server here). |
 | **Hardening / security baseline** | The standard set of security settings every device gets. |
-| **DHCP** | Hands out IP addresses automatically. The core serves it for each VLAN. |
-| **DNS** | Translates names to IP addresses. Runs on BR01-SRV-01. |
+| **DHCP** | Hands out IP addresses automatically. The core serves it in Building 1 and BLD2-RTR-01 in Building 2. |
+| **DNS** | Translates names to IP addresses. Runs on BLD1-SRV-01. |
 | **Rogue DHCP server** | An unauthorized device handing out addresses. DHCP snooping blocks it. |
 
 ## Deployment and documentation
