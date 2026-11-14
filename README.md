@@ -6,7 +6,7 @@ A virtual branch-office network project covering the full deployment lifecycle: 
 
 > **Note:** This is a simulated environment built in Cisco Packet Tracer. No physical equipment was used. All device names, IP addresses, serial numbers, and asset tags are fictional.
 
-![Logical topology](diagrams/logical-topology.svg)
+![Logical topology](Diagrams/logical-topology.svg)
 
 ## Overview
 
@@ -39,7 +39,7 @@ The goal is to practice the work of a real infrastructure deployment, not just a
 
 ## Network design
 
-Addressing is allocated with VLSM from two pools: `192.168.0.0/16` for hosts (summarized as `192.168.0.0/22`) and `10.10.0.0/24` for network devices. Each subnet is sized from its department's headcount plus 25% growth and a gateway address. The method, DHCP conventions, routing design, per-switch port plan, and inter-VLAN policy are in [`01-planning/addressing-plan.md`](01-planning/addressing-plan.md).
+Addressing is allocated with variable length subnet mask from two pools: `192.168.0.0/16` for hosts (summarized as `192.168.0.0/22`) and `10.10.0.0/24` for network devices. Each subnet is sized from its department's headcount plus 25% growth and a gateway address. The method, DHCP conventions, routing design, per-switch port plan, and inter-VLAN policy are in [`01-planning/addressing-plan.md`](01-planning/addressing-plan.md).
 
 **Topology:** one edge router, one Layer 3 core switch, three access switches (Executive/HR/Accounting, Operations/Sales, and IT/servers), and two wireless APs. Each access switch connects to the core with a two-link LACP port channel. The core and edge router exchange routes with OSPF (area 0) over a point-to-point transit link. Native VLAN 999 is unused and not routed.
 
