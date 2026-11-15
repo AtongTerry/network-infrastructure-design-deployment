@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1850 1250" width="1850" height="1250" font-family="Arial, Helvetica, sans-serif">
-<rect width="1850" height="1250" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1850 1335" width="1850" height="1335" font-family="Arial, Helvetica, sans-serif">
+<rect width="1850" height="1335" fill="#ffffff"/>
 <text x="925.0" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#212529">Network Infrastructure Design &amp; Deployment Lab: Detailed Logical Topology (Building 1: 80 users, Building 2: 20 users)</text>
-<rect x="12" y="106" width="1476" height="1132" rx="10" fill="#fbfbfc" stroke="#868e96" stroke-width="1.5" stroke-dasharray="10 5"/>
+<rect x="12" y="106" width="1476" height="1217" rx="10" fill="#fbfbfc" stroke="#868e96" stroke-width="1.5" stroke-dasharray="10 5"/>
 <rect x="1510" y="106" width="328" height="690" rx="10" fill="#fbfbfc" stroke="#868e96" stroke-width="1.5" stroke-dasharray="10 5"/>
 <line x1="750" y1="92" x2="750" y2="120" stroke="#495057" stroke-width="2"/>
 <line x1="735" y1="212" x2="735" y2="250" stroke="#495057" stroke-width="3"/>
@@ -10,39 +10,43 @@
 <line x1="980" y1="172" x2="1525" y2="172" stroke="#1d4ed8" stroke-width="2" stroke-dasharray="6 4"/>
 <line x1="1672" y1="232" x2="1672" y2="272" stroke="#495057" stroke-width="3"/>
 <line x1="1672" y1="380" x2="1672" y2="420" stroke="#495057" stroke-width="1.5"/>
-<line x1="560" y1="400" x2="250" y2="560" stroke="#495057" stroke-width="4"/>
-<line x1="750" y1="400" x2="750" y2="560" stroke="#495057" stroke-width="4"/>
-<line x1="940" y1="400" x2="1250" y2="560" stroke="#495057" stroke-width="4"/>
-<line x1="250.0" y1="775" x2="72.0" y2="815" stroke="#495057" stroke-width="1.5"/>
-<line x1="250.0" y1="775" x2="161.0" y2="815" stroke="#495057" stroke-width="1.5"/>
-<line x1="250.0" y1="775" x2="250.0" y2="815" stroke="#495057" stroke-width="1.5"/>
-<line x1="250.0" y1="775" x2="339.0" y2="815" stroke="#495057" stroke-width="1.5"/>
-<line x1="250.0" y1="775" x2="428.0" y2="815" stroke="#495057" stroke-width="1.5"/>
-<line x1="750.0" y1="775" x2="582.0" y2="815" stroke="#495057" stroke-width="1.5"/>
-<line x1="750.0" y1="775" x2="694.0" y2="815" stroke="#495057" stroke-width="1.5"/>
-<line x1="750.0" y1="775" x2="806.0" y2="815" stroke="#495057" stroke-width="1.5"/>
-<line x1="750.0" y1="775" x2="918.0" y2="815" stroke="#495057" stroke-width="1.5"/>
-<line x1="1250.0" y1="775" x2="1100.0" y2="815" stroke="#495057" stroke-width="1.5"/>
-<line x1="1250.0" y1="775" x2="1250.0" y2="815" stroke="#495057" stroke-width="1.5"/>
-<line x1="1250.0" y1="775" x2="1400.0" y2="815" stroke="#495057" stroke-width="1.5"/>
-<line x1="428.0" y1="901" x2="372.0" y2="965" stroke="#495057" stroke-width="2" stroke-dasharray="6 4"/>
-<line x1="428.0" y1="901" x2="484.0" y2="965" stroke="#495057" stroke-width="2" stroke-dasharray="6 4"/>
-<line x1="918.0" y1="901" x2="862.0" y2="965" stroke="#495057" stroke-width="2" stroke-dasharray="6 4"/>
-<line x1="918.0" y1="901" x2="974.0" y2="965" stroke="#495057" stroke-width="2" stroke-dasharray="6 4"/>
+<line x1="450" y1="400" x2="168.0" y2="560" stroke="#495057" stroke-width="4"/>
+<line x1="600" y1="400" x2="459.0" y2="560" stroke="#495057" stroke-width="4"/>
+<line x1="750" y1="400" x2="750.0" y2="560" stroke="#495057" stroke-width="4"/>
+<line x1="900" y1="400" x2="1041.0" y2="560" stroke="#495057" stroke-width="4"/>
+<line x1="1050" y1="400" x2="1332.0" y2="560" stroke="#495057" stroke-width="4"/>
+<line x1="168.0" y1="775" x2="63.0" y2="815" stroke="#495057" stroke-width="1.5"/>
+<line x1="168.0" y1="775" x2="133.0" y2="815" stroke="#495057" stroke-width="1.5"/>
+<line x1="168.0" y1="775" x2="203.0" y2="815" stroke="#495057" stroke-width="1.5"/>
+<line x1="168.0" y1="775" x2="273.0" y2="815" stroke="#495057" stroke-width="1.5"/>
+<line x1="459.0" y1="775" x2="354.0" y2="815" stroke="#495057" stroke-width="1.5"/>
+<line x1="459.0" y1="775" x2="424.0" y2="815" stroke="#495057" stroke-width="1.5"/>
+<line x1="750.0" y1="775" x2="645.0" y2="815" stroke="#495057" stroke-width="1.5"/>
+<line x1="750.0" y1="775" x2="715.0" y2="815" stroke="#495057" stroke-width="1.5"/>
+<line x1="750.0" y1="775" x2="785.0" y2="815" stroke="#495057" stroke-width="1.5"/>
+<line x1="1041.0" y1="775" x2="936.0" y2="815" stroke="#495057" stroke-width="1.5"/>
+<line x1="1041.0" y1="775" x2="1006.0" y2="815" stroke="#495057" stroke-width="1.5"/>
+<line x1="1332.0" y1="775" x2="1227.0" y2="815" stroke="#495057" stroke-width="1.5"/>
+<line x1="1332.0" y1="775" x2="1297.0" y2="815" stroke="#495057" stroke-width="1.5"/>
+<line x1="1332.0" y1="775" x2="1367.0" y2="815" stroke="#495057" stroke-width="1.5"/>
+<line x1="273.0" y1="901" x2="217.0" y2="965" stroke="#495057" stroke-width="2" stroke-dasharray="6 4"/>
+<line x1="273.0" y1="901" x2="329.0" y2="965" stroke="#495057" stroke-width="2" stroke-dasharray="6 4"/>
+<line x1="1367.0" y1="901" x2="1311.0" y2="965" stroke="#495057" stroke-width="2" stroke-dasharray="6 4"/>
+<line x1="1367.0" y1="901" x2="1423.0" y2="965" stroke="#495057" stroke-width="2" stroke-dasharray="6 4"/>
 <text x="28" y="128" text-anchor="start" font-size="14" font-weight="bold" fill="#495057">BUILDING 1 (BLD1)</text>
 <g transform="translate(750,62)"><g fill="#f1f3f5" stroke="#495057" stroke-width="2"><circle cx="-30" cy="6" r="16"/><circle cx="-8" cy="-6" r="22"/><circle cx="20" cy="2" r="18"/><circle cx="38" cy="10" r="12"/><rect x="-30" y="6" width="68" height="16" stroke="none"/></g><g fill="#f1f3f5"><rect x="-32" y="4" width="72" height="19"/></g><line x1="-30" y1="22" x2="40" y2="22" stroke="#495057" stroke-width="2"/></g>
 <text x="750" y="70" text-anchor="middle" font-size="12" font-weight="bold" fill="#212529">Internet / ISP</text>
-<text x="762" y="101" text-anchor="start" font-size="10" fill="#212529">WAN 203.0.113.0/30: ISP 203.0.113.1 / Gi0/0 203.0.113.2</text>
+<text x="762" y="101" text-anchor="start" font-size="10" fill="#212529">WAN 203.0.113.0/30: ISP 203.0.113.1 / Gi0/0/0 203.0.113.2</text>
 <rect x="520" y="120" width="460" height="92" rx="6" fill="#f8d7da" stroke="#842029" stroke-width="2"/>
 <g transform="translate(558,166)"><circle r="16" fill="#fff" stroke="#212529" stroke-width="2"/><g stroke="#212529" stroke-width="2" fill="#212529"><line x1="-9" y1="0" x2="9" y2="0"/><polygon points="10,0 5,-4 5,4"/><polygon points="-10,0 -5,-4 -5,4"/><line x1="0" y1="-9" x2="0" y2="9"/><polygon points="0,-10 -4,-5 4,-5"/><polygon points="0,10 -4,5 4,5"/></g></g>
 <text x="782" y="139" text-anchor="middle" font-size="13" font-weight="bold" fill="#212529">BLD1-RTR-01</text>
 <text x="782" y="154" text-anchor="middle" font-size="10.5" fill="#212529">Edge router: NAT (PAT), perimeter ACLs</text>
-<text x="782" y="168" text-anchor="middle" font-size="10.5" fill="#212529">Gi0/0 WAN 203.0.113.2/30  Gi0/1 core 10.10.0.33/30  Gi0/2 BLD2 10.10.0.37/30</text>
+<text x="782" y="168" text-anchor="middle" font-size="9.5" fill="#212529">Gi0/0/0 WAN 203.0.113.2/30  Gi0/0/1 core 10.10.0.33/30  Gi0/0/2 BLD2 10.10.0.37/30</text>
 <text x="782" y="182" text-anchor="middle" font-size="10.5" fill="#1d4ed8">OSPF 1, area 0, router-id 10.10.0.33</text>
 <text x="782" y="196" text-anchor="middle" font-size="10.5" fill="#1d4ed8">Default route to ISP, originated into OSPF</text>
-<text x="780" y="227" text-anchor="start" font-size="10" fill="#212529">Transit 10.10.0.32/30: Gi0/1 (10.10.0.33) to core Gi1/0/24 (10.10.0.34)</text>
+<text x="780" y="227" text-anchor="start" font-size="10" fill="#212529">Transit 10.10.0.32/30: Gi0/0/1 (10.10.0.33) to core Gi0/1 (10.10.0.34)</text>
 <text x="780" y="242" text-anchor="start" font-size="10" fill="#1d4ed8">OSPF adjacency: point-to-point, MD5 auth</text>
-<text x="1252" y="148" text-anchor="middle" font-size="10" fill="#212529">Inter-building link 10.10.0.36/30: BLD1-RTR-01 Gi0/2 (10.10.0.37) to BLD2-RTR-01 Gi0/0 (10.10.0.38)</text>
+<text x="1252" y="148" text-anchor="middle" font-size="10" fill="#212529">Inter-building link 10.10.0.36/30: BLD1-RTR-01 Gi0/0/2 (10.10.0.37) to BLD2-RTR-01 Gi0/0/0 (10.10.0.38)</text>
 <text x="1252" y="188" text-anchor="middle" font-size="10" fill="#1d4ed8">OSPF adjacency: point-to-point, MD5 auth</text>
 <text x="1252" y="202" text-anchor="middle" font-size="10" fill="#212529">Building 2 reaches the internet through BLD1-RTR-01 (NAT)</text>
 <text x="1252" y="216" text-anchor="middle" font-size="10" fill="#495057">Fiber in a real deployment; routed /30, no VLAN</text>
@@ -51,24 +55,24 @@
 <g transform="translate(1555,186)"><circle r="16" fill="#fff" stroke="#212529" stroke-width="2"/><g stroke="#212529" stroke-width="2" fill="#212529"><line x1="-9" y1="0" x2="9" y2="0"/><polygon points="10,0 5,-4 5,4"/><polygon points="-10,0 -5,-4 -5,4"/><line x1="0" y1="-9" x2="0" y2="9"/><polygon points="0,-10 -4,-5 4,-5"/><polygon points="0,10 -4,5 4,5"/></g></g>
 <text x="1700" y="159" text-anchor="middle" font-size="13" font-weight="bold" fill="#212529">BLD2-RTR-01</text>
 <text x="1700" y="174" text-anchor="middle" font-size="10.5" fill="#212529">Router, DHCP, router-on-a-stick</text>
-<text x="1700" y="188" text-anchor="middle" font-size="10.5" fill="#212529">Gi0/0 10.10.0.38/30 (to BLD1)</text>
+<text x="1700" y="188" text-anchor="middle" font-size="10.5" fill="#212529">Gi0/0/0 10.10.0.38/30 (to BLD1)</text>
 <text x="1700" y="202" text-anchor="middle" font-size="10.5" fill="#1d4ed8">OSPF 1, area 0, router-id 10.10.0.38</text>
 <text x="1700" y="216" text-anchor="middle" font-size="10.5" fill="#1d4ed8">Default route learned from OSPF</text>
-<text x="1682" y="248" text-anchor="start" font-size="10" fill="#212529">Gi0/1 to ACC-01 Gi1/0/24</text>
+<text x="1682" y="248" text-anchor="start" font-size="10" fill="#212529">Gi0/0/1 to ACC-01 Gi0/1</text>
 <text x="1682" y="262" text-anchor="start" font-size="10" fill="#212529">802.1Q: VLAN 99, 120</text>
 <rect x="1525" y="272" width="295" height="108" rx="6" fill="#cff4fc" stroke="#055160" stroke-width="2"/>
 <g transform="translate(1790,294)"><rect x="-19" y="-11" width="38" height="22" rx="3" fill="#fff" stroke="#212529" stroke-width="2"/><g stroke="#212529" stroke-width="1.8" fill="#212529"><line x1="-12" y1="-3" x2="10" y2="-3"/><polygon points="13,-3 8,-6.5 8,0.5"/><line x1="12" y1="4" x2="-10" y2="4"/><polygon points="-13,4 -8,0.5 -8,7.5"/></g></g>
 <text x="1535" y="290" text-anchor="start" font-size="11.5" font-weight="bold" fill="#212529">BLD2-ACC-01 (24-port access, L2)</text>
 <text x="1535" y="305" text-anchor="start" font-size="10" fill="#212529">Mgmt Vlan99 10.10.0.42/29, gateway 10.10.0.41</text>
-<text x="1535" y="319" text-anchor="start" font-size="10" fill="#212529">Uplink Gi1/0/24: trunk, native 999, allow 99,120</text>
+<text x="1535" y="319" text-anchor="start" font-size="10" fill="#212529">Uplink Gi0/1: trunk, native 999, allow 99,120</text>
 <rect x="1535" y="331" width="10" height="10" fill="#e9f5c9" stroke="#4d6a0a"/>
-<text x="1551" y="340" text-anchor="start" font-size="10" fill="#212529">Gi1/0/1-20</text>
+<text x="1551" y="340" text-anchor="start" font-size="10" fill="#212529">Fa0/1-20</text>
 <text x="1625" y="340" text-anchor="start" font-size="10" fill="#212529">VLAN 120 LOGISTICS</text>
 <text x="1810" y="340" text-anchor="end" font-size="9.5" fill="#495057">20 users</text>
-<text x="1551" y="355" text-anchor="start" font-size="10" fill="#212529">Gi1/0/21-23</text>
+<text x="1551" y="355" text-anchor="start" font-size="10" fill="#212529">Fa0/21-24</text>
 <text x="1625" y="355" text-anchor="start" font-size="10" fill="#212529">n/a</text>
 <text x="1810" y="355" text-anchor="end" font-size="9.5" fill="#495057">unused, shutdown</text>
-<text x="1551" y="370" text-anchor="start" font-size="10" fill="#212529">Gi1/0/24</text>
+<text x="1551" y="370" text-anchor="start" font-size="10" fill="#212529">Gi0/1</text>
 <text x="1625" y="370" text-anchor="start" font-size="10" fill="#212529">n/a</text>
 <text x="1810" y="370" text-anchor="end" font-size="9.5" fill="#495057">trunk to router</text>
 <rect x="1580" y="420" width="185" height="86" rx="6" fill="#e9f5c9" stroke="#4d6a0a" stroke-width="2"/>
@@ -97,7 +101,7 @@
 <g transform="translate(425,278)"><rect x="-19" y="-11" width="38" height="22" rx="3" fill="#fff" stroke="#212529" stroke-width="2"/><g stroke="#212529" stroke-width="1.8" fill="#212529"><line x1="-12" y1="-3" x2="10" y2="-3"/><polygon points="13,-3 8,-6.5 8,0.5"/><line x1="12" y1="4" x2="-10" y2="4"/><polygon points="-13,4 -8,0.5 -8,7.5"/></g><circle cx="19" cy="-11" r="7" fill="#212529"/><text x="19" y="-8" text-anchor="middle" font-size="8" font-weight="bold" fill="#fff">L3</text></g>
 <text x="760" y="270" text-anchor="middle" font-size="13" font-weight="bold" fill="#212529">BLD1-CORE-01: Layer 3 core switch</text>
 <text x="760" y="285" text-anchor="middle" font-size="10" fill="#212529">DHCP server, inter-VLAN routing and ACLs, Rapid PVST+ root, mgmt Vlan99 10.10.0.1/27</text>
-<text x="760" y="300" text-anchor="middle" font-size="10" fill="#1d4ed8">OSPF 1, area 0, router-id 10.10.0.1; passive on all SVIs, active on Gi1/0/24 only</text>
+<text x="760" y="300" text-anchor="middle" font-size="10" fill="#1d4ed8">OSPF 1, area 0, router-id 10.10.0.1; passive on all SVIs, active on Gi0/1 only</text>
 <text x="760" y="318" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#212529">SVIs (default gateways, advertised into OSPF)</text>
 <rect x="405" y="327" width="10" height="10" fill="#e2d9f3" stroke="#59359a"/>
 <text x="421" y="336" text-anchor="start" font-size="10" fill="#212529">Vlan10 EXEC: 192.168.2.193/28</text>
@@ -123,247 +127,277 @@
 <text x="901" y="368" text-anchor="start" font-size="10" fill="#212529">Vlan110 SERVERS: 192.168.2.225/29</text>
 <rect x="885" y="375" width="10" height="10" fill="#dbe4ff" stroke="#364fc7"/>
 <text x="901" y="384" text-anchor="start" font-size="10" fill="#212529">Vlan99 MGMT: 10.10.0.1/27</text>
-<text x="370" y="468" text-anchor="end" font-size="10" fill="#212529">Po1: Core Gi1/0/1-2 to ACC-01 Gi1/1/1-2</text>
-<text x="370" y="482" text-anchor="end" font-size="10" fill="#212529">LACP trunk, native 999</text>
-<text x="762" y="468" text-anchor="start" font-size="10" fill="#212529">Po2: Core Gi1/0/3-4 to ACC-02 Gi1/1/1-2</text>
-<text x="762" y="482" text-anchor="start" font-size="10" fill="#212529">LACP trunk, native 999</text>
-<text x="1130" y="468" text-anchor="start" font-size="10" fill="#212529">Po3: Core Gi1/0/5-6 to ACC-03 Gi1/1/1-2</text>
-<text x="1130" y="482" text-anchor="start" font-size="10" fill="#212529">LACP trunk, native 999</text>
-<rect x="30" y="560" width="440" height="215" rx="6" fill="#cff4fc" stroke="#055160" stroke-width="2"/>
-<g transform="translate(436,584)"><rect x="-19" y="-11" width="38" height="22" rx="3" fill="#fff" stroke="#212529" stroke-width="2"/><g stroke="#212529" stroke-width="1.8" fill="#212529"><line x1="-12" y1="-3" x2="10" y2="-3"/><polygon points="13,-3 8,-6.5 8,0.5"/><line x1="12" y1="4" x2="-10" y2="4"/><polygon points="-13,4 -8,0.5 -8,7.5"/></g></g>
-<text x="44" y="580" text-anchor="start" font-size="13" font-weight="bold" fill="#212529">BLD1-ACC-01 (48-port access, Layer 2)</text>
-<text x="44" y="596" text-anchor="start" font-size="10" fill="#212529">Mgmt Vlan99 10.10.0.11/27, gateway 10.10.0.1</text>
-<text x="44" y="611" text-anchor="start" font-size="10" fill="#212529">Uplink Po1 = Gi1/1/1-2, trunk allowed VLANs:</text>
-<text x="44" y="624" text-anchor="start" font-size="10" fill="#212529">10,20,30,70,80,90,99,100 (native 999)</text>
-<rect x="44" y="639" width="10" height="10" fill="#e2d9f3" stroke="#59359a"/>
-<text x="60" y="648" text-anchor="start" font-size="10" fill="#212529">Gi1/0/1-8</text>
-<text x="142" y="648" text-anchor="start" font-size="10" fill="#212529">VLAN 10 EXEC</text>
-<text x="456" y="648" text-anchor="end" font-size="9.5" fill="#495057">8 users</text>
-<rect x="44" y="655" width="10" height="10" fill="#f8d7da" stroke="#842029"/>
-<text x="60" y="664" text-anchor="start" font-size="10" fill="#212529">Gi1/0/9-18</text>
-<text x="142" y="664" text-anchor="start" font-size="10" fill="#212529">VLAN 20 HR</text>
-<text x="456" y="664" text-anchor="end" font-size="9.5" fill="#495057">10 users</text>
-<rect x="44" y="671" width="10" height="10" fill="#ffe5d0" stroke="#a5490b"/>
-<text x="60" y="680" text-anchor="start" font-size="10" fill="#212529">Gi1/0/19-30</text>
-<text x="142" y="680" text-anchor="start" font-size="10" fill="#212529">VLAN 30 ACCT</text>
-<text x="456" y="680" text-anchor="end" font-size="9.5" fill="#495057">12 users</text>
-<rect x="44" y="687" width="10" height="10" fill="#fde2f0" stroke="#9c1c63"/>
-<text x="60" y="696" text-anchor="start" font-size="10" fill="#212529">Gi1/0/31-39</text>
-<text x="142" y="696" text-anchor="start" font-size="10" fill="#212529">VLAN 100 PRINTERS-IOT</text>
-<text x="456" y="696" text-anchor="end" font-size="9.5" fill="#495057">9 printers/IoT</text>
-<rect x="44" y="703" width="10" height="10" fill="#ffffff" stroke="#6c757d" stroke-dasharray="2 2"/>
-<text x="60" y="712" text-anchor="start" font-size="10" fill="#212529">Gi1/0/40-47</text>
-<text x="142" y="712" text-anchor="start" font-size="10" fill="#212529">n/a</text>
-<text x="456" y="712" text-anchor="end" font-size="9.5" fill="#495057">Unused: shutdown, VLAN 999</text>
-<rect x="44" y="719" width="10" height="10" fill="#ffffff" stroke="#6c757d" stroke-dasharray="2 2"/>
-<text x="60" y="728" text-anchor="start" font-size="10" fill="#212529">Gi1/0/48</text>
-<text x="142" y="728" text-anchor="start" font-size="10" fill="#212529">n/a</text>
-<text x="456" y="728" text-anchor="end" font-size="9.5" fill="#495057">AP-01 trunk (native 99, allow 80,90,99)</text>
-<rect x="44" y="741" width="10" height="10" fill="#fff3cd" stroke="#997404"/>
-<text x="60" y="750" text-anchor="start" font-size="10" fill="#212529">VLAN 70 VOICE tagged on Gi1/0/1-30 (phone ports)</text>
-<rect x="530" y="560" width="440" height="215" rx="6" fill="#cff4fc" stroke="#055160" stroke-width="2"/>
-<g transform="translate(936,584)"><rect x="-19" y="-11" width="38" height="22" rx="3" fill="#fff" stroke="#212529" stroke-width="2"/><g stroke="#212529" stroke-width="1.8" fill="#212529"><line x1="-12" y1="-3" x2="10" y2="-3"/><polygon points="13,-3 8,-6.5 8,0.5"/><line x1="12" y1="4" x2="-10" y2="4"/><polygon points="-13,4 -8,0.5 -8,7.5"/></g></g>
-<text x="544" y="580" text-anchor="start" font-size="13" font-weight="bold" fill="#212529">BLD1-ACC-02 (48-port access, Layer 2)</text>
-<text x="544" y="596" text-anchor="start" font-size="10" fill="#212529">Mgmt Vlan99 10.10.0.12/27, gateway 10.10.0.1</text>
-<text x="544" y="611" text-anchor="start" font-size="10" fill="#212529">Uplink Po2 = Gi1/1/1-2, trunk allowed VLANs:</text>
-<text x="544" y="624" text-anchor="start" font-size="10" fill="#212529">40,50,70,80,90,99,100 (native 999)</text>
-<rect x="544" y="639" width="10" height="10" fill="#d1e7dd" stroke="#146c43"/>
-<text x="560" y="648" text-anchor="start" font-size="10" fill="#212529">Gi1/0/1-14</text>
-<text x="642" y="648" text-anchor="start" font-size="10" fill="#212529">VLAN 40 OPS</text>
-<text x="956" y="648" text-anchor="end" font-size="9.5" fill="#495057">14 users</text>
-<rect x="544" y="655" width="10" height="10" fill="#cfe2ff" stroke="#0a58ca"/>
-<text x="560" y="664" text-anchor="start" font-size="10" fill="#212529">Gi1/0/15-34</text>
-<text x="642" y="664" text-anchor="start" font-size="10" fill="#212529">VLAN 50 SALES</text>
-<text x="956" y="664" text-anchor="end" font-size="9.5" fill="#495057">20 users</text>
-<rect x="544" y="671" width="10" height="10" fill="#fde2f0" stroke="#9c1c63"/>
-<text x="560" y="680" text-anchor="start" font-size="10" fill="#212529">Gi1/0/35-43</text>
-<text x="642" y="680" text-anchor="start" font-size="10" fill="#212529">VLAN 100 PRINTERS-IOT</text>
-<text x="956" y="680" text-anchor="end" font-size="9.5" fill="#495057">9 printers/IoT</text>
-<rect x="544" y="687" width="10" height="10" fill="#ffffff" stroke="#6c757d" stroke-dasharray="2 2"/>
-<text x="560" y="696" text-anchor="start" font-size="10" fill="#212529">Gi1/0/44-47</text>
-<text x="642" y="696" text-anchor="start" font-size="10" fill="#212529">n/a</text>
-<text x="956" y="696" text-anchor="end" font-size="9.5" fill="#495057">Unused: shutdown, VLAN 999</text>
-<rect x="544" y="703" width="10" height="10" fill="#ffffff" stroke="#6c757d" stroke-dasharray="2 2"/>
-<text x="560" y="712" text-anchor="start" font-size="10" fill="#212529">Gi1/0/48</text>
-<text x="642" y="712" text-anchor="start" font-size="10" fill="#212529">n/a</text>
-<text x="956" y="712" text-anchor="end" font-size="9.5" fill="#495057">AP-02 trunk (native 99, allow 80,90,99)</text>
-<rect x="544" y="741" width="10" height="10" fill="#fff3cd" stroke="#997404"/>
-<text x="560" y="750" text-anchor="start" font-size="10" fill="#212529">VLAN 70 VOICE tagged on Gi1/0/1-34 (phone ports)</text>
-<rect x="1030" y="560" width="440" height="215" rx="6" fill="#cff4fc" stroke="#055160" stroke-width="2"/>
-<g transform="translate(1436,584)"><rect x="-19" y="-11" width="38" height="22" rx="3" fill="#fff" stroke="#212529" stroke-width="2"/><g stroke="#212529" stroke-width="1.8" fill="#212529"><line x1="-12" y1="-3" x2="10" y2="-3"/><polygon points="13,-3 8,-6.5 8,0.5"/><line x1="12" y1="4" x2="-10" y2="4"/><polygon points="-13,4 -8,0.5 -8,7.5"/></g></g>
-<text x="1044" y="580" text-anchor="start" font-size="13" font-weight="bold" fill="#212529">BLD1-ACC-03 (24-port access, Layer 2)</text>
-<text x="1044" y="596" text-anchor="start" font-size="10" fill="#212529">Mgmt Vlan99 10.10.0.13/27, gateway 10.10.0.1</text>
-<text x="1044" y="611" text-anchor="start" font-size="10" fill="#212529">Uplink Po3 = Gi1/1/1-2, trunk allowed VLANs:</text>
-<text x="1044" y="624" text-anchor="start" font-size="10" fill="#212529">60,70,99,110 (native 999)</text>
-<rect x="1044" y="639" width="10" height="10" fill="#cff4fc" stroke="#055160"/>
-<text x="1060" y="648" text-anchor="start" font-size="10" fill="#212529">Gi1/0/1-16</text>
-<text x="1142" y="648" text-anchor="start" font-size="10" fill="#212529">VLAN 60 IT</text>
-<text x="1456" y="648" text-anchor="end" font-size="9.5" fill="#495057">16 users</text>
-<rect x="1044" y="655" width="10" height="10" fill="#ffd8a8" stroke="#8a4b00"/>
-<text x="1060" y="664" text-anchor="start" font-size="10" fill="#212529">Gi1/0/17-20</text>
-<text x="1142" y="664" text-anchor="start" font-size="10" fill="#212529">VLAN 110 SERVERS</text>
-<text x="1456" y="664" text-anchor="end" font-size="9.5" fill="#495057">4 servers</text>
-<rect x="1044" y="671" width="10" height="10" fill="#ffffff" stroke="#6c757d" stroke-dasharray="2 2"/>
-<text x="1060" y="680" text-anchor="start" font-size="10" fill="#212529">Gi1/0/21-23</text>
-<text x="1142" y="680" text-anchor="start" font-size="10" fill="#212529">n/a</text>
-<text x="1456" y="680" text-anchor="end" font-size="9.5" fill="#495057">Unused: shutdown, VLAN 999</text>
-<rect x="1044" y="687" width="10" height="10" fill="#dbe4ff" stroke="#364fc7"/>
-<text x="1060" y="696" text-anchor="start" font-size="10" fill="#212529">Gi1/0/24</text>
-<text x="1142" y="696" text-anchor="start" font-size="10" fill="#212529">VLAN 99 MGMT</text>
-<text x="1456" y="696" text-anchor="end" font-size="9.5" fill="#495057">UPS-01 (static 10.10.0.25)</text>
-<rect x="1044" y="741" width="10" height="10" fill="#fff3cd" stroke="#997404"/>
-<text x="1060" y="750" text-anchor="start" font-size="10" fill="#212529">VLAN 70 VOICE tagged on Gi1/0/1-16 (phone ports)</text>
-<rect x="30" y="815" width="84" height="86" rx="6" fill="#e2d9f3" stroke="#59359a" stroke-width="2"/><g transform="translate(72.0,834)"><rect x="-12" y="-10" width="24" height="15" rx="2" fill="#fff" stroke="#212529" stroke-width="2"/><rect x="-3" y="5" width="6" height="4" fill="#212529"/><line x1="-9" y1="9" x2="9" y2="9" stroke="#212529" stroke-width="2"/></g><text x="72.0" y="859" text-anchor="middle" font-size="11" font-weight="bold" fill="#212529">Executive</text><text x="72.0" y="872" text-anchor="middle" font-size="9.5" fill="#212529">VLAN 10</text><text x="72.0" y="884" text-anchor="middle" font-size="9.5" fill="#212529">192.168.2.192/28</text><text x="72.0" y="896" text-anchor="middle" font-size="9.5" fill="#212529">8 users</text>
-<rect x="119" y="815" width="84" height="86" rx="6" fill="#f8d7da" stroke="#842029" stroke-width="2"/><g transform="translate(161.0,834)"><rect x="-12" y="-10" width="24" height="15" rx="2" fill="#fff" stroke="#212529" stroke-width="2"/><rect x="-3" y="5" width="6" height="4" fill="#212529"/><line x1="-9" y1="9" x2="9" y2="9" stroke="#212529" stroke-width="2"/></g><text x="161.0" y="859" text-anchor="middle" font-size="11" font-weight="bold" fill="#212529">HR</text><text x="161.0" y="872" text-anchor="middle" font-size="9.5" fill="#212529">VLAN 20</text><text x="161.0" y="884" text-anchor="middle" font-size="9.5" fill="#212529">192.168.2.208/28</text><text x="161.0" y="896" text-anchor="middle" font-size="9.5" fill="#212529">10 users</text>
-<rect x="208" y="815" width="84" height="86" rx="6" fill="#ffe5d0" stroke="#a5490b" stroke-width="2"/><g transform="translate(250.0,834)"><rect x="-12" y="-10" width="24" height="15" rx="2" fill="#fff" stroke="#212529" stroke-width="2"/><rect x="-3" y="5" width="6" height="4" fill="#212529"/><line x1="-9" y1="9" x2="9" y2="9" stroke="#212529" stroke-width="2"/></g><text x="250.0" y="859" text-anchor="middle" font-size="11" font-weight="bold" fill="#212529">Accounting</text><text x="250.0" y="872" text-anchor="middle" font-size="9.5" fill="#212529">VLAN 30</text><text x="250.0" y="884" text-anchor="middle" font-size="9.5" fill="#212529">192.168.2.64/27</text><text x="250.0" y="896" text-anchor="middle" font-size="9.5" fill="#212529">12 users</text>
-<rect x="297" y="815" width="84" height="86" rx="6" fill="#fde2f0" stroke="#9c1c63" stroke-width="2"/><g transform="translate(339.0,834)"><rect x="-7" y="-11" width="14" height="8" fill="#fff" stroke="#212529" stroke-width="1.8"/><rect x="-13" y="-4" width="26" height="11" rx="2" fill="#fff" stroke="#212529" stroke-width="2"/><rect x="-7" y="4" width="14" height="7" fill="#fff" stroke="#212529" stroke-width="1.8"/></g><text x="339.0" y="859" text-anchor="middle" font-size="11" font-weight="bold" fill="#212529">Printers/IoT</text><text x="339.0" y="872" text-anchor="middle" font-size="9.5" fill="#212529">VLAN 100</text><text x="339.0" y="884" text-anchor="middle" font-size="9.5" fill="#212529">192.168.2.160/27</text><text x="339.0" y="896" text-anchor="middle" font-size="9.5" fill="#212529">9 devices</text>
-<rect x="386" y="815" width="84" height="86" rx="6" fill="#e2e3e5" stroke="#41464b" stroke-width="2"/><g transform="translate(428.0,834)"><rect x="-13" y="2" width="26" height="8" rx="2" fill="#fff" stroke="#212529" stroke-width="2"/><g fill="none" stroke="#212529" stroke-width="1.8"><path d="M-7,-1 Q0,-8 7,-1"/><path d="M-12,-5 Q0,-16 12,-5"/></g></g><text x="428.0" y="859" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#212529">BLD1-AP-01</text><text x="428.0" y="872" text-anchor="middle" font-size="9.5" fill="#212529">Vlan99 mgmt</text><text x="428.0" y="884" text-anchor="middle" font-size="9.5" fill="#212529">10.10.0.21</text><text x="428.0" y="896" text-anchor="middle" font-size="9" fill="#212529">ACC-01 Gi1/0/48</text>
-<rect x="530" y="815" width="104" height="86" rx="6" fill="#d1e7dd" stroke="#146c43" stroke-width="2"/><g transform="translate(582.0,834)"><rect x="-12" y="-10" width="24" height="15" rx="2" fill="#fff" stroke="#212529" stroke-width="2"/><rect x="-3" y="5" width="6" height="4" fill="#212529"/><line x1="-9" y1="9" x2="9" y2="9" stroke="#212529" stroke-width="2"/></g><text x="582.0" y="859" text-anchor="middle" font-size="11" font-weight="bold" fill="#212529">Operations</text><text x="582.0" y="872" text-anchor="middle" font-size="9.5" fill="#212529">VLAN 40</text><text x="582.0" y="884" text-anchor="middle" font-size="9.5" fill="#212529">192.168.2.96/27</text><text x="582.0" y="896" text-anchor="middle" font-size="9.5" fill="#212529">14 users</text>
-<rect x="642" y="815" width="104" height="86" rx="6" fill="#cfe2ff" stroke="#0a58ca" stroke-width="2"/><g transform="translate(694.0,834)"><rect x="-12" y="-10" width="24" height="15" rx="2" fill="#fff" stroke="#212529" stroke-width="2"/><rect x="-3" y="5" width="6" height="4" fill="#212529"/><line x1="-9" y1="9" x2="9" y2="9" stroke="#212529" stroke-width="2"/></g><text x="694.0" y="859" text-anchor="middle" font-size="11" font-weight="bold" fill="#212529">Sales</text><text x="694.0" y="872" text-anchor="middle" font-size="9.5" fill="#212529">VLAN 50</text><text x="694.0" y="884" text-anchor="middle" font-size="9.5" fill="#212529">192.168.2.128/27</text><text x="694.0" y="896" text-anchor="middle" font-size="9.5" fill="#212529">20 users</text>
-<rect x="754" y="815" width="104" height="86" rx="6" fill="#fde2f0" stroke="#9c1c63" stroke-width="2"/><g transform="translate(806.0,834)"><rect x="-7" y="-11" width="14" height="8" fill="#fff" stroke="#212529" stroke-width="1.8"/><rect x="-13" y="-4" width="26" height="11" rx="2" fill="#fff" stroke="#212529" stroke-width="2"/><rect x="-7" y="4" width="14" height="7" fill="#fff" stroke="#212529" stroke-width="1.8"/></g><text x="806.0" y="859" text-anchor="middle" font-size="11" font-weight="bold" fill="#212529">Printers/IoT</text><text x="806.0" y="872" text-anchor="middle" font-size="9.5" fill="#212529">VLAN 100</text><text x="806.0" y="884" text-anchor="middle" font-size="9.5" fill="#212529">192.168.2.160/27</text><text x="806.0" y="896" text-anchor="middle" font-size="9.5" fill="#212529">9 devices</text>
-<rect x="866" y="815" width="104" height="86" rx="6" fill="#e2e3e5" stroke="#41464b" stroke-width="2"/><g transform="translate(918.0,834)"><rect x="-13" y="2" width="26" height="8" rx="2" fill="#fff" stroke="#212529" stroke-width="2"/><g fill="none" stroke="#212529" stroke-width="1.8"><path d="M-7,-1 Q0,-8 7,-1"/><path d="M-12,-5 Q0,-16 12,-5"/></g></g><text x="918.0" y="859" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#212529">BLD1-AP-02</text><text x="918.0" y="872" text-anchor="middle" font-size="9.5" fill="#212529">Vlan99 mgmt</text><text x="918.0" y="884" text-anchor="middle" font-size="9.5" fill="#212529">10.10.0.22</text><text x="918.0" y="896" text-anchor="middle" font-size="9" fill="#212529">ACC-02 Gi1/0/48</text>
-<rect x="1030" y="815" width="140" height="86" rx="6" fill="#cff4fc" stroke="#055160" stroke-width="2"/><g transform="translate(1100.0,834)"><rect x="-12" y="-10" width="24" height="15" rx="2" fill="#fff" stroke="#212529" stroke-width="2"/><rect x="-3" y="5" width="6" height="4" fill="#212529"/><line x1="-9" y1="9" x2="9" y2="9" stroke="#212529" stroke-width="2"/></g><text x="1100.0" y="859" text-anchor="middle" font-size="11" font-weight="bold" fill="#212529">IT</text><text x="1100.0" y="872" text-anchor="middle" font-size="9.5" fill="#212529">VLAN 60</text><text x="1100.0" y="884" text-anchor="middle" font-size="9.5" fill="#212529">192.168.2.0/26</text><text x="1100.0" y="896" text-anchor="middle" font-size="9.5" fill="#212529">16 users</text>
-<rect x="1180" y="815" width="140" height="86" rx="6" fill="#ffd8a8" stroke="#8a4b00" stroke-width="2"/><g transform="translate(1250.0,834)"><rect x="-12" y="-12" width="24" height="8" rx="1.5" fill="#fff" stroke="#212529" stroke-width="1.8"/><circle cx="-7" cy="-8" r="1.5" fill="#212529"/><rect x="-12" y="-3" width="24" height="8" rx="1.5" fill="#fff" stroke="#212529" stroke-width="1.8"/><circle cx="-7" cy="1" r="1.5" fill="#212529"/><rect x="-12" y="6" width="24" height="8" rx="1.5" fill="#fff" stroke="#212529" stroke-width="1.8"/><circle cx="-7" cy="10" r="1.5" fill="#212529"/></g><text x="1250.0" y="859" text-anchor="middle" font-size="11" font-weight="bold" fill="#212529">Servers</text><text x="1250.0" y="872" text-anchor="middle" font-size="9.5" fill="#212529">VLAN 110</text><text x="1250.0" y="884" text-anchor="middle" font-size="9.5" fill="#212529">192.168.2.224/29</text><text x="1250.0" y="896" text-anchor="middle" font-size="9.5" fill="#212529">4 servers (static)</text>
-<rect x="1330" y="815" width="140" height="86" rx="6" fill="#dbe4ff" stroke="#364fc7" stroke-width="2"/>
-<g transform="translate(1400,834)"><rect x="-14" y="-9" width="28" height="18" rx="2" fill="#fff" stroke="#212529" stroke-width="2"/><polygon points="1,-6 -5,1 -1,1 -2,6 5,-1 1,-1" fill="#212529"/></g>
-<text x="1400" y="859" text-anchor="middle" font-size="11" font-weight="bold" fill="#212529">BLD1-UPS-01</text>
-<text x="1400" y="872" text-anchor="middle" font-size="9.5" fill="#212529">Vlan99 (static)</text>
-<text x="1400" y="884" text-anchor="middle" font-size="9.5" fill="#212529">10.10.0.25</text>
-<text x="1400" y="896" text-anchor="middle" font-size="9" fill="#212529">ACC-03 Gi1/0/24</text>
-<rect x="322.0" y="965" width="100" height="62" rx="6" fill="#d2f4ea" stroke="#0f5c4c" stroke-width="2"/><text x="372.0" y="982" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#212529">Staff Wi-Fi</text><text x="372.0" y="996" text-anchor="middle" font-size="9.5" fill="#212529">VLAN 80</text><text x="372.0" y="1009" text-anchor="middle" font-size="9.5" fill="#212529">192.168.0.0/24</text><text x="372.0" y="1022" text-anchor="middle" font-size="9" fill="#212529">SSID BLD1-Staff</text>
-<rect x="434.0" y="965" width="100" height="62" rx="6" fill="#e2e3e5" stroke="#41464b" stroke-width="2"/><text x="484.0" y="982" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#212529">Guest Wi-Fi</text><text x="484.0" y="996" text-anchor="middle" font-size="9.5" fill="#212529">VLAN 90</text><text x="484.0" y="1009" text-anchor="middle" font-size="9.5" fill="#212529">192.168.1.128/25</text><text x="484.0" y="1022" text-anchor="middle" font-size="9" fill="#212529">SSID BLD1-Guest</text>
-<rect x="812.0" y="965" width="100" height="62" rx="6" fill="#d2f4ea" stroke="#0f5c4c" stroke-width="2"/><text x="862.0" y="982" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#212529">Staff Wi-Fi</text><text x="862.0" y="996" text-anchor="middle" font-size="9.5" fill="#212529">VLAN 80</text><text x="862.0" y="1009" text-anchor="middle" font-size="9.5" fill="#212529">192.168.0.0/24</text><text x="862.0" y="1022" text-anchor="middle" font-size="9" fill="#212529">SSID BLD1-Staff</text>
-<rect x="924.0" y="965" width="100" height="62" rx="6" fill="#e2e3e5" stroke="#41464b" stroke-width="2"/><text x="974.0" y="982" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#212529">Guest Wi-Fi</text><text x="974.0" y="996" text-anchor="middle" font-size="9.5" fill="#212529">VLAN 90</text><text x="974.0" y="1009" text-anchor="middle" font-size="9.5" fill="#212529">192.168.1.128/25</text><text x="974.0" y="1022" text-anchor="middle" font-size="9" fill="#212529">SSID BLD1-Guest</text>
-<rect x="30" y="950" width="285" height="262" rx="6" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
-<text x="44" y="970" text-anchor="start" font-size="12" font-weight="bold" fill="#212529">Technologies and features</text>
-<text x="44" y="992" text-anchor="start" font-size="10.5" fill="#212529">802.1Q VLAN trunking, native VLAN 999</text>
-<text x="44" y="1010" text-anchor="start" font-size="10.5" fill="#212529">LACP (802.3ad) port channels Po1-Po3</text>
-<text x="44" y="1028" text-anchor="start" font-size="10.5" fill="#212529">Rapid PVST+, core is root bridge</text>
-<text x="44" y="1046" text-anchor="start" font-size="10.5" fill="#1d4ed8">OSPF area 0, MD5 auth, passive SVIs</text>
-<text x="44" y="1064" text-anchor="start" font-size="10.5" fill="#212529">DHCP and SVI gateways on the core</text>
-<text x="44" y="1082" text-anchor="start" font-size="10.5" fill="#212529">Inter-VLAN ACLs; NAT/PAT on edge router</text>
-<text x="44" y="1100" text-anchor="start" font-size="10.5" fill="#212529">SSH v2 only, local accounts, banners</text>
-<text x="44" y="1118" text-anchor="start" font-size="10.5" fill="#212529">Port security, DHCP snooping, BPDU guard</text>
-<text x="44" y="1136" text-anchor="start" font-size="10.5" fill="#212529">NTP and syslog; unused ports shut down</text>
-<text x="44" y="1154" text-anchor="start" font-size="10.5" fill="#212529">Jinja2-templated configs kept in Git</text>
-<text x="44" y="1172" text-anchor="start" font-size="10.5" fill="#212529">Router-on-a-stick (802.1Q subifs) in BLD2</text>
-<text x="44" y="1198" text-anchor="start" font-size="9.5" fill="#495057">Solid = wired, gray dashed = wireless, blue dashed = OSPF</text>
-<text x="560" y="1042" text-anchor="start" font-size="10.5" fill="#495057">Host space 192.168.0.0/22 (192.168.0.0/16 pool). Network devices 10.10.0.0/24.</text>
-<text x="560" y="1057" text-anchor="start" font-size="10.5" fill="#495057">Unallocated: 192.168.3.32 onward (hosts), 10.10.0.48 onward (devices).</text>
-<rect x="560" y="1075" width="440" height="140" rx="6" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
-<text x="574" y="1093" text-anchor="start" font-size="12" font-weight="bold" fill="#212529">Device key</text>
-<g transform="translate(605,1125)"><circle r="16" fill="#fff" stroke="#212529" stroke-width="2"/><g stroke="#212529" stroke-width="2" fill="#212529"><line x1="-9" y1="0" x2="9" y2="0"/><polygon points="10,0 5,-4 5,4"/><polygon points="-10,0 -5,-4 -5,4"/><line x1="0" y1="-9" x2="0" y2="9"/><polygon points="0,-10 -4,-5 4,-5"/><polygon points="0,10 -4,5 4,5"/></g></g>
-<text x="605" y="1151" text-anchor="middle" font-size="9.5" fill="#212529">Edge router</text>
-<g transform="translate(690,1125)"><rect x="-19" y="-11" width="38" height="22" rx="3" fill="#fff" stroke="#212529" stroke-width="2"/><g stroke="#212529" stroke-width="1.8" fill="#212529"><line x1="-12" y1="-3" x2="10" y2="-3"/><polygon points="13,-3 8,-6.5 8,0.5"/><line x1="12" y1="4" x2="-10" y2="4"/><polygon points="-13,4 -8,0.5 -8,7.5"/></g><circle cx="19" cy="-11" r="7" fill="#212529"/><text x="19" y="-8" text-anchor="middle" font-size="8" font-weight="bold" fill="#fff">L3</text></g>
-<text x="690" y="1151" text-anchor="middle" font-size="9.5" fill="#212529">L3 core switch</text>
-<g transform="translate(775,1125)"><rect x="-19" y="-11" width="38" height="22" rx="3" fill="#fff" stroke="#212529" stroke-width="2"/><g stroke="#212529" stroke-width="1.8" fill="#212529"><line x1="-12" y1="-3" x2="10" y2="-3"/><polygon points="13,-3 8,-6.5 8,0.5"/><line x1="12" y1="4" x2="-10" y2="4"/><polygon points="-13,4 -8,0.5 -8,7.5"/></g></g>
-<text x="775" y="1151" text-anchor="middle" font-size="9.5" fill="#212529">L2 access switch</text>
-<g transform="translate(860,1125)"><rect x="-13" y="2" width="26" height="8" rx="2" fill="#fff" stroke="#212529" stroke-width="2"/><g fill="none" stroke="#212529" stroke-width="1.8"><path d="M-7,-1 Q0,-8 7,-1"/><path d="M-12,-5 Q0,-16 12,-5"/></g></g>
-<text x="860" y="1151" text-anchor="middle" font-size="9.5" fill="#212529">Wireless AP</text>
-<g transform="translate(945,1125)"><rect x="-14" y="-9" width="28" height="18" rx="2" fill="#fff" stroke="#212529" stroke-width="2"/><polygon points="1,-6 -5,1 -1,1 -2,6 5,-1 1,-1" fill="#212529"/></g>
-<text x="945" y="1151" text-anchor="middle" font-size="9.5" fill="#212529">UPS</text>
-<g transform="translate(605,1181)"><rect x="-12" y="-10" width="24" height="15" rx="2" fill="#fff" stroke="#212529" stroke-width="2"/><rect x="-3" y="5" width="6" height="4" fill="#212529"/><line x1="-9" y1="9" x2="9" y2="9" stroke="#212529" stroke-width="2"/></g>
-<text x="605" y="1205" text-anchor="middle" font-size="9.5" fill="#212529">Workstation</text>
-<g transform="translate(690,1181)"><rect x="-7" y="-10" width="14" height="20" rx="3" fill="#fff" stroke="#212529" stroke-width="2"/><circle cx="0" cy="6" r="1.8" fill="#212529"/><line x1="-4" y1="-6" x2="4" y2="-6" stroke="#212529" stroke-width="2"/></g>
-<text x="690" y="1205" text-anchor="middle" font-size="9.5" fill="#212529">IP phone</text>
-<g transform="translate(775,1181)"><rect x="-7" y="-11" width="14" height="8" fill="#fff" stroke="#212529" stroke-width="1.8"/><rect x="-13" y="-4" width="26" height="11" rx="2" fill="#fff" stroke="#212529" stroke-width="2"/><rect x="-7" y="4" width="14" height="7" fill="#fff" stroke="#212529" stroke-width="1.8"/></g>
-<text x="775" y="1205" text-anchor="middle" font-size="9.5" fill="#212529">Printer/IoT</text>
-<g transform="translate(860,1181)"><rect x="-12" y="-12" width="24" height="8" rx="1.5" fill="#fff" stroke="#212529" stroke-width="1.8"/><circle cx="-7" cy="-8" r="1.5" fill="#212529"/><rect x="-12" y="-3" width="24" height="8" rx="1.5" fill="#fff" stroke="#212529" stroke-width="1.8"/><circle cx="-7" cy="1" r="1.5" fill="#212529"/><rect x="-12" y="6" width="24" height="8" rx="1.5" fill="#fff" stroke="#212529" stroke-width="1.8"/><circle cx="-7" cy="10" r="1.5" fill="#212529"/></g>
-<text x="860" y="1205" text-anchor="middle" font-size="9.5" fill="#212529">Server</text>
-<line x1="925" y1="1181" x2="965" y2="1181" stroke="#1d4ed8" stroke-width="2" stroke-dasharray="6 4"/>
-<text x="945" y="1205" text-anchor="middle" font-size="9.5" fill="#1d4ed8">OSPF link</text>
-<rect x="1030" y="950" width="440" height="276" rx="6" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
-<text x="1044" y="970" text-anchor="start" font-size="12" font-weight="bold" fill="#212529">Addressing summary</text>
-<text x="1060" y="988" text-anchor="start" font-size="10" font-weight="bold" fill="#495057">VLAN</text>
-<text x="1096" y="988" text-anchor="start" font-size="10" font-weight="bold" fill="#495057">Name</text>
-<text x="1206" y="988" text-anchor="start" font-size="10" font-weight="bold" fill="#495057">Subnet</text>
-<text x="1334" y="988" text-anchor="start" font-size="10" font-weight="bold" fill="#495057">Usable</text>
-<text x="1382" y="988" text-anchor="start" font-size="10" font-weight="bold" fill="#495057">Users/hosts</text>
-<rect x="1044" y="995" width="10" height="10" fill="#e2d9f3" stroke="#59359a"/>
-<text x="1060" y="1004" text-anchor="start" font-size="10.5" fill="#212529">10</text>
-<text x="1096" y="1004" text-anchor="start" font-size="10.5" fill="#212529">EXEC</text>
-<text x="1206" y="1004" text-anchor="start" font-size="10.5" fill="#212529">192.168.2.192/28</text>
-<text x="1334" y="1004" text-anchor="start" font-size="10.5" fill="#212529">14</text>
-<text x="1382" y="1004" text-anchor="start" font-size="10.5" fill="#212529">8 users</text>
-<rect x="1044" y="1009.5" width="10" height="10" fill="#f8d7da" stroke="#842029"/>
-<text x="1060" y="1018.5" text-anchor="start" font-size="10.5" fill="#212529">20</text>
-<text x="1096" y="1018.5" text-anchor="start" font-size="10.5" fill="#212529">HR</text>
-<text x="1206" y="1018.5" text-anchor="start" font-size="10.5" fill="#212529">192.168.2.208/28</text>
-<text x="1334" y="1018.5" text-anchor="start" font-size="10.5" fill="#212529">14</text>
-<text x="1382" y="1018.5" text-anchor="start" font-size="10.5" fill="#212529">10 users</text>
-<rect x="1044" y="1024.0" width="10" height="10" fill="#ffe5d0" stroke="#a5490b"/>
-<text x="1060" y="1033.0" text-anchor="start" font-size="10.5" fill="#212529">30</text>
-<text x="1096" y="1033.0" text-anchor="start" font-size="10.5" fill="#212529">ACCT</text>
-<text x="1206" y="1033.0" text-anchor="start" font-size="10.5" fill="#212529">192.168.2.64/27</text>
-<text x="1334" y="1033.0" text-anchor="start" font-size="10.5" fill="#212529">30</text>
-<text x="1382" y="1033.0" text-anchor="start" font-size="10.5" fill="#212529">12 users</text>
-<rect x="1044" y="1038.5" width="10" height="10" fill="#d1e7dd" stroke="#146c43"/>
-<text x="1060" y="1047.5" text-anchor="start" font-size="10.5" fill="#212529">40</text>
-<text x="1096" y="1047.5" text-anchor="start" font-size="10.5" fill="#212529">OPS</text>
-<text x="1206" y="1047.5" text-anchor="start" font-size="10.5" fill="#212529">192.168.2.96/27</text>
-<text x="1334" y="1047.5" text-anchor="start" font-size="10.5" fill="#212529">30</text>
-<text x="1382" y="1047.5" text-anchor="start" font-size="10.5" fill="#212529">14 users</text>
-<rect x="1044" y="1053.0" width="10" height="10" fill="#cfe2ff" stroke="#0a58ca"/>
-<text x="1060" y="1062.0" text-anchor="start" font-size="10.5" fill="#212529">50</text>
-<text x="1096" y="1062.0" text-anchor="start" font-size="10.5" fill="#212529">SALES</text>
-<text x="1206" y="1062.0" text-anchor="start" font-size="10.5" fill="#212529">192.168.2.128/27</text>
-<text x="1334" y="1062.0" text-anchor="start" font-size="10.5" fill="#212529">30</text>
-<text x="1382" y="1062.0" text-anchor="start" font-size="10.5" fill="#212529">20 users</text>
-<rect x="1044" y="1067.5" width="10" height="10" fill="#cff4fc" stroke="#055160"/>
-<text x="1060" y="1076.5" text-anchor="start" font-size="10.5" fill="#212529">60</text>
-<text x="1096" y="1076.5" text-anchor="start" font-size="10.5" fill="#212529">IT</text>
-<text x="1206" y="1076.5" text-anchor="start" font-size="10.5" fill="#212529">192.168.2.0/26</text>
-<text x="1334" y="1076.5" text-anchor="start" font-size="10.5" fill="#212529">62</text>
-<text x="1382" y="1076.5" text-anchor="start" font-size="10.5" fill="#212529">16 users</text>
-<rect x="1044" y="1082.0" width="10" height="10" fill="#fff3cd" stroke="#997404"/>
-<text x="1060" y="1091.0" text-anchor="start" font-size="10.5" fill="#212529">70</text>
-<text x="1096" y="1091.0" text-anchor="start" font-size="10.5" fill="#212529">VOICE</text>
-<text x="1206" y="1091.0" text-anchor="start" font-size="10.5" fill="#212529">192.168.1.0/25</text>
-<text x="1334" y="1091.0" text-anchor="start" font-size="10.5" fill="#212529">126</text>
-<text x="1382" y="1091.0" text-anchor="start" font-size="10.5" fill="#212529">80 dev</text>
-<rect x="1044" y="1096.5" width="10" height="10" fill="#d2f4ea" stroke="#0f5c4c"/>
-<text x="1060" y="1105.5" text-anchor="start" font-size="10.5" fill="#212529">80</text>
-<text x="1096" y="1105.5" text-anchor="start" font-size="10.5" fill="#212529">STAFF-WIFI</text>
-<text x="1206" y="1105.5" text-anchor="start" font-size="10.5" fill="#212529">192.168.0.0/24</text>
-<text x="1334" y="1105.5" text-anchor="start" font-size="10.5" fill="#212529">254</text>
-<text x="1382" y="1105.5" text-anchor="start" font-size="10.5" fill="#212529">80 users</text>
-<rect x="1044" y="1111.0" width="10" height="10" fill="#e2e3e5" stroke="#41464b"/>
-<text x="1060" y="1120.0" text-anchor="start" font-size="10.5" fill="#212529">90</text>
-<text x="1096" y="1120.0" text-anchor="start" font-size="10.5" fill="#212529">GUEST</text>
-<text x="1206" y="1120.0" text-anchor="start" font-size="10.5" fill="#212529">192.168.1.128/25</text>
-<text x="1334" y="1120.0" text-anchor="start" font-size="10.5" fill="#212529">126</text>
-<text x="1382" y="1120.0" text-anchor="start" font-size="10.5" fill="#212529">80 dev</text>
-<rect x="1044" y="1125.5" width="10" height="10" fill="#fde2f0" stroke="#9c1c63"/>
-<text x="1060" y="1134.5" text-anchor="start" font-size="10.5" fill="#212529">100</text>
-<text x="1096" y="1134.5" text-anchor="start" font-size="10.5" fill="#212529">PRINTERS-IOT</text>
-<text x="1206" y="1134.5" text-anchor="start" font-size="10.5" fill="#212529">192.168.2.160/27</text>
-<text x="1334" y="1134.5" text-anchor="start" font-size="10.5" fill="#212529">30</text>
-<text x="1382" y="1134.5" text-anchor="start" font-size="10.5" fill="#212529">18 dev</text>
-<rect x="1044" y="1140.0" width="10" height="10" fill="#ffd8a8" stroke="#8a4b00"/>
-<text x="1060" y="1149.0" text-anchor="start" font-size="10.5" fill="#212529">110</text>
-<text x="1096" y="1149.0" text-anchor="start" font-size="10.5" fill="#212529">SERVERS</text>
-<text x="1206" y="1149.0" text-anchor="start" font-size="10.5" fill="#212529">192.168.2.224/29</text>
-<text x="1334" y="1149.0" text-anchor="start" font-size="10.5" fill="#212529">6</text>
-<text x="1382" y="1149.0" text-anchor="start" font-size="10.5" fill="#212529">4 dev</text>
-<rect x="1044" y="1154.5" width="10" height="10" fill="#dbe4ff" stroke="#364fc7"/>
-<text x="1060" y="1163.5" text-anchor="start" font-size="10.5" fill="#212529">99</text>
-<text x="1096" y="1163.5" text-anchor="start" font-size="10.5" fill="#212529">MGMT</text>
-<text x="1206" y="1163.5" text-anchor="start" font-size="10.5" fill="#212529">10.10.0.0/27</text>
-<text x="1334" y="1163.5" text-anchor="start" font-size="10.5" fill="#212529">30</text>
-<text x="1382" y="1163.5" text-anchor="start" font-size="10.5" fill="#212529">6 dev</text>
-<text x="1060" y="1178.0" text-anchor="start" font-size="10.5" fill="#212529">n/a</text>
-<text x="1096" y="1178.0" text-anchor="start" font-size="10.5" fill="#212529">TRANSIT</text>
-<text x="1206" y="1178.0" text-anchor="start" font-size="10.5" fill="#212529">10.10.0.32/30</text>
-<text x="1334" y="1178.0" text-anchor="start" font-size="10.5" fill="#212529">2</text>
-<text x="1382" y="1178.0" text-anchor="start" font-size="10.5" fill="#212529">core-edge</text>
-<text x="1060" y="1192.5" text-anchor="start" font-size="10.5" fill="#212529">n/a</text>
-<text x="1096" y="1192.5" text-anchor="start" font-size="10.5" fill="#212529">TRANSIT-B2</text>
-<text x="1206" y="1192.5" text-anchor="start" font-size="10.5" fill="#212529">10.10.0.36/30</text>
-<text x="1334" y="1192.5" text-anchor="start" font-size="10.5" fill="#212529">2</text>
-<text x="1382" y="1192.5" text-anchor="start" font-size="10.5" fill="#212529">BLD1-BLD2</text>
-<text x="1060" y="1207.0" text-anchor="start" font-size="10.5" fill="#212529">n/a</text>
-<text x="1096" y="1207.0" text-anchor="start" font-size="10.5" fill="#212529">WAN</text>
-<text x="1206" y="1207.0" text-anchor="start" font-size="10.5" fill="#212529">203.0.113.0/30</text>
-<text x="1334" y="1207.0" text-anchor="start" font-size="10.5" fill="#212529">2</text>
-<text x="1382" y="1207.0" text-anchor="start" font-size="10.5" fill="#212529">to ISP</text>
+<text x="309.0" y="462" text-anchor="middle" font-size="9.5" fill="#212529" stroke="#ffffff" stroke-width="3" paint-order="stroke">Po1: Core Fa0/1-2</text>
+<text x="309.0" y="475" text-anchor="middle" font-size="9.5" fill="#212529" stroke="#ffffff" stroke-width="3" paint-order="stroke">to ACC-01 Gi0/1-2</text>
+<text x="309.0" y="488" text-anchor="middle" font-size="9.5" fill="#212529" stroke="#ffffff" stroke-width="3" paint-order="stroke">LACP trunk, native 999</text>
+<text x="529.5" y="462" text-anchor="middle" font-size="9.5" fill="#212529" stroke="#ffffff" stroke-width="3" paint-order="stroke">Po2: Core Fa0/3-4</text>
+<text x="529.5" y="475" text-anchor="middle" font-size="9.5" fill="#212529" stroke="#ffffff" stroke-width="3" paint-order="stroke">to ACC-02 Gi0/1-2</text>
+<text x="529.5" y="488" text-anchor="middle" font-size="9.5" fill="#212529" stroke="#ffffff" stroke-width="3" paint-order="stroke">LACP trunk, native 999</text>
+<text x="750.0" y="462" text-anchor="middle" font-size="9.5" fill="#212529" stroke="#ffffff" stroke-width="3" paint-order="stroke">Po3: Core Fa0/5-6</text>
+<text x="750.0" y="475" text-anchor="middle" font-size="9.5" fill="#212529" stroke="#ffffff" stroke-width="3" paint-order="stroke">to ACC-03 Gi0/1-2</text>
+<text x="750.0" y="488" text-anchor="middle" font-size="9.5" fill="#212529" stroke="#ffffff" stroke-width="3" paint-order="stroke">LACP trunk, native 999</text>
+<text x="970.5" y="462" text-anchor="middle" font-size="9.5" fill="#212529" stroke="#ffffff" stroke-width="3" paint-order="stroke">Po4: Core Fa0/7-8</text>
+<text x="970.5" y="475" text-anchor="middle" font-size="9.5" fill="#212529" stroke="#ffffff" stroke-width="3" paint-order="stroke">to ACC-04 Gi0/1-2</text>
+<text x="970.5" y="488" text-anchor="middle" font-size="9.5" fill="#212529" stroke="#ffffff" stroke-width="3" paint-order="stroke">LACP trunk, native 999</text>
+<text x="1191.0" y="462" text-anchor="middle" font-size="9.5" fill="#212529" stroke="#ffffff" stroke-width="3" paint-order="stroke">Po5: Core Fa0/9-10</text>
+<text x="1191.0" y="475" text-anchor="middle" font-size="9.5" fill="#212529" stroke="#ffffff" stroke-width="3" paint-order="stroke">to ACC-05 Gi0/1-2</text>
+<text x="1191.0" y="488" text-anchor="middle" font-size="9.5" fill="#212529" stroke="#ffffff" stroke-width="3" paint-order="stroke">LACP trunk, native 999</text>
+<rect x="30" y="560" width="276" height="215" rx="6" fill="#cff4fc" stroke="#055160" stroke-width="2"/>
+<g transform="translate(276,584)"><rect x="-19" y="-11" width="38" height="22" rx="3" fill="#fff" stroke="#212529" stroke-width="2"/><g stroke="#212529" stroke-width="1.8" fill="#212529"><line x1="-12" y1="-3" x2="10" y2="-3"/><polygon points="13,-3 8,-6.5 8,0.5"/><line x1="12" y1="4" x2="-10" y2="4"/><polygon points="-13,4 -8,0.5 -8,7.5"/></g></g>
+<text x="42" y="580" text-anchor="start" font-size="12" font-weight="bold" fill="#212529">BLD1-ACC-01 (24-port, L2)</text>
+<text x="42" y="596" text-anchor="start" font-size="10" fill="#212529">Mgmt Vlan99 10.10.0.11/27</text>
+<text x="42" y="611" text-anchor="start" font-size="10" fill="#212529">Uplink Po1 = Gi0/1-2</text>
+<text x="42" y="624" text-anchor="start" font-size="10" fill="#212529">Trunk VLANs 10,20,70,80,90,99,100</text>
+<rect x="42" y="639" width="10" height="10" fill="#e2d9f3" stroke="#59359a"/>
+<text x="58" y="648" text-anchor="start" font-size="9.5" fill="#212529">Fa0/1-8</text>
+<text x="130" y="648" text-anchor="start" font-size="9.5" fill="#212529">V10</text>
+<text x="294" y="648" text-anchor="end" font-size="9.5" fill="#495057">8 users</text>
+<rect x="42" y="655" width="10" height="10" fill="#f8d7da" stroke="#842029"/>
+<text x="58" y="664" text-anchor="start" font-size="9.5" fill="#212529">Fa0/9-18</text>
+<text x="130" y="664" text-anchor="start" font-size="9.5" fill="#212529">V20</text>
+<text x="294" y="664" text-anchor="end" font-size="9.5" fill="#495057">10 users</text>
+<rect x="42" y="671" width="10" height="10" fill="#fde2f0" stroke="#9c1c63"/>
+<text x="58" y="680" text-anchor="start" font-size="9.5" fill="#212529">Fa0/19-23</text>
+<text x="130" y="680" text-anchor="start" font-size="9.5" fill="#212529">V100</text>
+<text x="294" y="680" text-anchor="end" font-size="9.5" fill="#495057">5 printers</text>
+<rect x="42" y="687" width="10" height="10" fill="#ffffff" stroke="#6c757d" stroke-dasharray="2 2"/>
+<text x="58" y="696" text-anchor="start" font-size="9.5" fill="#212529">Fa0/24</text>
+<text x="130" y="696" text-anchor="start" font-size="9.5" fill="#212529">n/a</text>
+<text x="294" y="696" text-anchor="end" font-size="9.5" fill="#495057">AP-01 trunk</text>
+<rect x="42" y="741" width="10" height="10" fill="#fff3cd" stroke="#997404"/>
+<text x="58" y="750" text-anchor="start" font-size="10" fill="#212529">VLAN 70 voice on Fa0/1-18</text>
+<rect x="321" y="560" width="276" height="215" rx="6" fill="#cff4fc" stroke="#055160" stroke-width="2"/>
+<g transform="translate(567,584)"><rect x="-19" y="-11" width="38" height="22" rx="3" fill="#fff" stroke="#212529" stroke-width="2"/><g stroke="#212529" stroke-width="1.8" fill="#212529"><line x1="-12" y1="-3" x2="10" y2="-3"/><polygon points="13,-3 8,-6.5 8,0.5"/><line x1="12" y1="4" x2="-10" y2="4"/><polygon points="-13,4 -8,0.5 -8,7.5"/></g></g>
+<text x="333" y="580" text-anchor="start" font-size="12" font-weight="bold" fill="#212529">BLD1-ACC-02 (24-port, L2)</text>
+<text x="333" y="596" text-anchor="start" font-size="10" fill="#212529">Mgmt Vlan99 10.10.0.12/27</text>
+<text x="333" y="611" text-anchor="start" font-size="10" fill="#212529">Uplink Po2 = Gi0/1-2</text>
+<text x="333" y="624" text-anchor="start" font-size="10" fill="#212529">Trunk VLANs 30,70,99,100</text>
+<rect x="333" y="639" width="10" height="10" fill="#ffe5d0" stroke="#a5490b"/>
+<text x="349" y="648" text-anchor="start" font-size="9.5" fill="#212529">Fa0/1-12</text>
+<text x="421" y="648" text-anchor="start" font-size="9.5" fill="#212529">V30</text>
+<text x="585" y="648" text-anchor="end" font-size="9.5" fill="#495057">12 users</text>
+<rect x="333" y="655" width="10" height="10" fill="#fde2f0" stroke="#9c1c63"/>
+<text x="349" y="664" text-anchor="start" font-size="9.5" fill="#212529">Fa0/13-17</text>
+<text x="421" y="664" text-anchor="start" font-size="9.5" fill="#212529">V100</text>
+<text x="585" y="664" text-anchor="end" font-size="9.5" fill="#495057">5 printers</text>
+<rect x="333" y="671" width="10" height="10" fill="#ffffff" stroke="#6c757d" stroke-dasharray="2 2"/>
+<text x="349" y="680" text-anchor="start" font-size="9.5" fill="#212529">Fa0/18-24</text>
+<text x="421" y="680" text-anchor="start" font-size="9.5" fill="#212529">n/a</text>
+<text x="585" y="680" text-anchor="end" font-size="9.5" fill="#495057">Unused, shut</text>
+<rect x="333" y="741" width="10" height="10" fill="#fff3cd" stroke="#997404"/>
+<text x="349" y="750" text-anchor="start" font-size="10" fill="#212529">VLAN 70 voice on Fa0/1-12</text>
+<rect x="612" y="560" width="276" height="215" rx="6" fill="#cff4fc" stroke="#055160" stroke-width="2"/>
+<g transform="translate(858,584)"><rect x="-19" y="-11" width="38" height="22" rx="3" fill="#fff" stroke="#212529" stroke-width="2"/><g stroke="#212529" stroke-width="1.8" fill="#212529"><line x1="-12" y1="-3" x2="10" y2="-3"/><polygon points="13,-3 8,-6.5 8,0.5"/><line x1="12" y1="4" x2="-10" y2="4"/><polygon points="-13,4 -8,0.5 -8,7.5"/></g></g>
+<text x="624" y="580" text-anchor="start" font-size="12" font-weight="bold" fill="#212529">BLD1-ACC-03 (24-port, L2)</text>
+<text x="624" y="596" text-anchor="start" font-size="10" fill="#212529">Mgmt Vlan99 10.10.0.13/27</text>
+<text x="624" y="611" text-anchor="start" font-size="10" fill="#212529">Uplink Po3 = Gi0/1-2</text>
+<text x="624" y="624" text-anchor="start" font-size="10" fill="#212529">Trunk VLANs 60,70,99,110</text>
+<rect x="624" y="639" width="10" height="10" fill="#cff4fc" stroke="#055160"/>
+<text x="640" y="648" text-anchor="start" font-size="9.5" fill="#212529">Fa0/1-16</text>
+<text x="712" y="648" text-anchor="start" font-size="9.5" fill="#212529">V60</text>
+<text x="876" y="648" text-anchor="end" font-size="9.5" fill="#495057">16 users</text>
+<rect x="624" y="655" width="10" height="10" fill="#ffd8a8" stroke="#8a4b00"/>
+<text x="640" y="664" text-anchor="start" font-size="9.5" fill="#212529">Fa0/17-20</text>
+<text x="712" y="664" text-anchor="start" font-size="9.5" fill="#212529">V110</text>
+<text x="876" y="664" text-anchor="end" font-size="9.5" fill="#495057">4 servers</text>
+<rect x="624" y="671" width="10" height="10" fill="#ffffff" stroke="#6c757d" stroke-dasharray="2 2"/>
+<text x="640" y="680" text-anchor="start" font-size="9.5" fill="#212529">Fa0/21-23</text>
+<text x="712" y="680" text-anchor="start" font-size="9.5" fill="#212529">n/a</text>
+<text x="876" y="680" text-anchor="end" font-size="9.5" fill="#495057">Unused, shut</text>
+<rect x="624" y="687" width="10" height="10" fill="#dbe4ff" stroke="#364fc7"/>
+<text x="640" y="696" text-anchor="start" font-size="9.5" fill="#212529">Fa0/24</text>
+<text x="712" y="696" text-anchor="start" font-size="9.5" fill="#212529">V99</text>
+<text x="876" y="696" text-anchor="end" font-size="9.5" fill="#495057">UPS-01 (static 10.10.0.25)</text>
+<rect x="624" y="741" width="10" height="10" fill="#fff3cd" stroke="#997404"/>
+<text x="640" y="750" text-anchor="start" font-size="10" fill="#212529">VLAN 70 voice on Fa0/1-16</text>
+<rect x="903" y="560" width="276" height="215" rx="6" fill="#cff4fc" stroke="#055160" stroke-width="2"/>
+<g transform="translate(1149,584)"><rect x="-19" y="-11" width="38" height="22" rx="3" fill="#fff" stroke="#212529" stroke-width="2"/><g stroke="#212529" stroke-width="1.8" fill="#212529"><line x1="-12" y1="-3" x2="10" y2="-3"/><polygon points="13,-3 8,-6.5 8,0.5"/><line x1="12" y1="4" x2="-10" y2="4"/><polygon points="-13,4 -8,0.5 -8,7.5"/></g></g>
+<text x="915" y="580" text-anchor="start" font-size="12" font-weight="bold" fill="#212529">BLD1-ACC-04 (24-port, L2)</text>
+<text x="915" y="596" text-anchor="start" font-size="10" fill="#212529">Mgmt Vlan99 10.10.0.14/27</text>
+<text x="915" y="611" text-anchor="start" font-size="10" fill="#212529">Uplink Po4 = Gi0/1-2</text>
+<text x="915" y="624" text-anchor="start" font-size="10" fill="#212529">Trunk VLANs 40,70,99,100</text>
+<rect x="915" y="639" width="10" height="10" fill="#d1e7dd" stroke="#146c43"/>
+<text x="931" y="648" text-anchor="start" font-size="9.5" fill="#212529">Fa0/1-14</text>
+<text x="1003" y="648" text-anchor="start" font-size="9.5" fill="#212529">V40</text>
+<text x="1167" y="648" text-anchor="end" font-size="9.5" fill="#495057">14 users</text>
+<rect x="915" y="655" width="10" height="10" fill="#fde2f0" stroke="#9c1c63"/>
+<text x="931" y="664" text-anchor="start" font-size="9.5" fill="#212529">Fa0/15-19</text>
+<text x="1003" y="664" text-anchor="start" font-size="9.5" fill="#212529">V100</text>
+<text x="1167" y="664" text-anchor="end" font-size="9.5" fill="#495057">5 printers</text>
+<rect x="915" y="671" width="10" height="10" fill="#ffffff" stroke="#6c757d" stroke-dasharray="2 2"/>
+<text x="931" y="680" text-anchor="start" font-size="9.5" fill="#212529">Fa0/20-24</text>
+<text x="1003" y="680" text-anchor="start" font-size="9.5" fill="#212529">n/a</text>
+<text x="1167" y="680" text-anchor="end" font-size="9.5" fill="#495057">Unused, shut</text>
+<rect x="915" y="741" width="10" height="10" fill="#fff3cd" stroke="#997404"/>
+<text x="931" y="750" text-anchor="start" font-size="10" fill="#212529">VLAN 70 voice on Fa0/1-14</text>
+<rect x="1194" y="560" width="276" height="215" rx="6" fill="#cff4fc" stroke="#055160" stroke-width="2"/>
+<g transform="translate(1440,584)"><rect x="-19" y="-11" width="38" height="22" rx="3" fill="#fff" stroke="#212529" stroke-width="2"/><g stroke="#212529" stroke-width="1.8" fill="#212529"><line x1="-12" y1="-3" x2="10" y2="-3"/><polygon points="13,-3 8,-6.5 8,0.5"/><line x1="12" y1="4" x2="-10" y2="4"/><polygon points="-13,4 -8,0.5 -8,7.5"/></g></g>
+<text x="1206" y="580" text-anchor="start" font-size="12" font-weight="bold" fill="#212529">BLD1-ACC-05 (24-port, L2)</text>
+<text x="1206" y="596" text-anchor="start" font-size="10" fill="#212529">Mgmt Vlan99 10.10.0.15/27</text>
+<text x="1206" y="611" text-anchor="start" font-size="10" fill="#212529">Uplink Po5 = Gi0/1-2</text>
+<text x="1206" y="624" text-anchor="start" font-size="10" fill="#212529">Trunk VLANs 50,70,80,90,99,100</text>
+<rect x="1206" y="639" width="10" height="10" fill="#cfe2ff" stroke="#0a58ca"/>
+<text x="1222" y="648" text-anchor="start" font-size="9.5" fill="#212529">Fa0/1-20</text>
+<text x="1294" y="648" text-anchor="start" font-size="9.5" fill="#212529">V50</text>
+<text x="1458" y="648" text-anchor="end" font-size="9.5" fill="#495057">20 users</text>
+<rect x="1206" y="655" width="10" height="10" fill="#fde2f0" stroke="#9c1c63"/>
+<text x="1222" y="664" text-anchor="start" font-size="9.5" fill="#212529">Fa0/21-23</text>
+<text x="1294" y="664" text-anchor="start" font-size="9.5" fill="#212529">V100</text>
+<text x="1458" y="664" text-anchor="end" font-size="9.5" fill="#495057">3 printers</text>
+<rect x="1206" y="671" width="10" height="10" fill="#ffffff" stroke="#6c757d" stroke-dasharray="2 2"/>
+<text x="1222" y="680" text-anchor="start" font-size="9.5" fill="#212529">Fa0/24</text>
+<text x="1294" y="680" text-anchor="start" font-size="9.5" fill="#212529">n/a</text>
+<text x="1458" y="680" text-anchor="end" font-size="9.5" fill="#495057">AP-02 trunk</text>
+<rect x="1206" y="741" width="10" height="10" fill="#fff3cd" stroke="#997404"/>
+<text x="1222" y="750" text-anchor="start" font-size="10" fill="#212529">VLAN 70 voice on Fa0/1-20</text>
+<rect x="30" y="815" width="66" height="86" rx="6" fill="#e2d9f3" stroke="#59359a" stroke-width="2"/><g transform="translate(63.0,834)"><rect x="-12" y="-10" width="24" height="15" rx="2" fill="#fff" stroke="#212529" stroke-width="2"/><rect x="-3" y="5" width="6" height="4" fill="#212529"/><line x1="-9" y1="9" x2="9" y2="9" stroke="#212529" stroke-width="2"/></g><text x="63.0" y="859" text-anchor="middle" font-size="9" font-weight="bold" fill="#212529">Executive</text><text x="63.0" y="872" text-anchor="middle" font-size="9" fill="#212529">VLAN 10</text><text x="63.0" y="884" text-anchor="middle" font-size="9" fill="#212529">8 users</text>
+<rect x="100" y="815" width="66" height="86" rx="6" fill="#f8d7da" stroke="#842029" stroke-width="2"/><g transform="translate(133.0,834)"><rect x="-12" y="-10" width="24" height="15" rx="2" fill="#fff" stroke="#212529" stroke-width="2"/><rect x="-3" y="5" width="6" height="4" fill="#212529"/><line x1="-9" y1="9" x2="9" y2="9" stroke="#212529" stroke-width="2"/></g><text x="133.0" y="859" text-anchor="middle" font-size="9" font-weight="bold" fill="#212529">HR</text><text x="133.0" y="872" text-anchor="middle" font-size="9" fill="#212529">VLAN 20</text><text x="133.0" y="884" text-anchor="middle" font-size="9" fill="#212529">10 users</text>
+<rect x="170" y="815" width="66" height="86" rx="6" fill="#fde2f0" stroke="#9c1c63" stroke-width="2"/><g transform="translate(203.0,834)"><rect x="-7" y="-11" width="14" height="8" fill="#fff" stroke="#212529" stroke-width="1.8"/><rect x="-13" y="-4" width="26" height="11" rx="2" fill="#fff" stroke="#212529" stroke-width="2"/><rect x="-7" y="4" width="14" height="7" fill="#fff" stroke="#212529" stroke-width="1.8"/></g><text x="203.0" y="859" text-anchor="middle" font-size="9" font-weight="bold" fill="#212529">Printers/IoT</text><text x="203.0" y="872" text-anchor="middle" font-size="9" fill="#212529">VLAN 100</text><text x="203.0" y="884" text-anchor="middle" font-size="9" fill="#212529">5 devices</text>
+<rect x="240" y="815" width="66" height="86" rx="6" fill="#e2e3e5" stroke="#41464b" stroke-width="2"/><g transform="translate(273.0,834)"><rect x="-13" y="2" width="26" height="8" rx="2" fill="#fff" stroke="#212529" stroke-width="2"/><g fill="none" stroke="#212529" stroke-width="1.8"><path d="M-7,-1 Q0,-8 7,-1"/><path d="M-12,-5 Q0,-16 12,-5"/></g></g><text x="273.0" y="859" text-anchor="middle" font-size="9" font-weight="bold" fill="#212529">BLD1-AP-01</text><text x="273.0" y="872" text-anchor="middle" font-size="9" fill="#212529">Vlan99</text><text x="273.0" y="884" text-anchor="middle" font-size="9" fill="#212529">10.10.0.21</text><text x="273.0" y="896" text-anchor="middle" font-size="8.5" fill="#212529">Fa0/24</text>
+<rect x="321" y="815" width="66" height="86" rx="6" fill="#ffe5d0" stroke="#a5490b" stroke-width="2"/><g transform="translate(354.0,834)"><rect x="-12" y="-10" width="24" height="15" rx="2" fill="#fff" stroke="#212529" stroke-width="2"/><rect x="-3" y="5" width="6" height="4" fill="#212529"/><line x1="-9" y1="9" x2="9" y2="9" stroke="#212529" stroke-width="2"/></g><text x="354.0" y="859" text-anchor="middle" font-size="9" font-weight="bold" fill="#212529">Accounting</text><text x="354.0" y="872" text-anchor="middle" font-size="9" fill="#212529">VLAN 30</text><text x="354.0" y="884" text-anchor="middle" font-size="9" fill="#212529">12 users</text>
+<rect x="391" y="815" width="66" height="86" rx="6" fill="#fde2f0" stroke="#9c1c63" stroke-width="2"/><g transform="translate(424.0,834)"><rect x="-7" y="-11" width="14" height="8" fill="#fff" stroke="#212529" stroke-width="1.8"/><rect x="-13" y="-4" width="26" height="11" rx="2" fill="#fff" stroke="#212529" stroke-width="2"/><rect x="-7" y="4" width="14" height="7" fill="#fff" stroke="#212529" stroke-width="1.8"/></g><text x="424.0" y="859" text-anchor="middle" font-size="9" font-weight="bold" fill="#212529">Printers/IoT</text><text x="424.0" y="872" text-anchor="middle" font-size="9" fill="#212529">VLAN 100</text><text x="424.0" y="884" text-anchor="middle" font-size="9" fill="#212529">5 devices</text>
+<rect x="612" y="815" width="66" height="86" rx="6" fill="#cff4fc" stroke="#055160" stroke-width="2"/><g transform="translate(645.0,834)"><rect x="-12" y="-10" width="24" height="15" rx="2" fill="#fff" stroke="#212529" stroke-width="2"/><rect x="-3" y="5" width="6" height="4" fill="#212529"/><line x1="-9" y1="9" x2="9" y2="9" stroke="#212529" stroke-width="2"/></g><text x="645.0" y="859" text-anchor="middle" font-size="9" font-weight="bold" fill="#212529">IT</text><text x="645.0" y="872" text-anchor="middle" font-size="9" fill="#212529">VLAN 60</text><text x="645.0" y="884" text-anchor="middle" font-size="9" fill="#212529">16 users</text>
+<rect x="682" y="815" width="66" height="86" rx="6" fill="#ffd8a8" stroke="#8a4b00" stroke-width="2"/><g transform="translate(715.0,834)"><rect x="-12" y="-12" width="24" height="8" rx="1.5" fill="#fff" stroke="#212529" stroke-width="1.8"/><circle cx="-7" cy="-8" r="1.5" fill="#212529"/><rect x="-12" y="-3" width="24" height="8" rx="1.5" fill="#fff" stroke="#212529" stroke-width="1.8"/><circle cx="-7" cy="1" r="1.5" fill="#212529"/><rect x="-12" y="6" width="24" height="8" rx="1.5" fill="#fff" stroke="#212529" stroke-width="1.8"/><circle cx="-7" cy="10" r="1.5" fill="#212529"/></g><text x="715.0" y="859" text-anchor="middle" font-size="9" font-weight="bold" fill="#212529">Servers</text><text x="715.0" y="872" text-anchor="middle" font-size="9" fill="#212529">VLAN 110</text><text x="715.0" y="884" text-anchor="middle" font-size="9" fill="#212529">4 static</text>
+<rect x="752" y="815" width="66" height="86" rx="6" fill="#dbe4ff" stroke="#364fc7" stroke-width="2"/><g transform="translate(785.0,834)"><rect x="-14" y="-9" width="28" height="18" rx="2" fill="#fff" stroke="#212529" stroke-width="2"/><polygon points="1,-6 -5,1 -1,1 -2,6 5,-1 1,-1" fill="#212529"/></g><text x="785.0" y="859" text-anchor="middle" font-size="9" font-weight="bold" fill="#212529">BLD1-UPS-01</text><text x="785.0" y="872" text-anchor="middle" font-size="9" fill="#212529">Vlan99</text><text x="785.0" y="884" text-anchor="middle" font-size="9" fill="#212529">10.10.0.25</text><text x="785.0" y="896" text-anchor="middle" font-size="8.5" fill="#212529">Fa0/24</text>
+<rect x="903" y="815" width="66" height="86" rx="6" fill="#d1e7dd" stroke="#146c43" stroke-width="2"/><g transform="translate(936.0,834)"><rect x="-12" y="-10" width="24" height="15" rx="2" fill="#fff" stroke="#212529" stroke-width="2"/><rect x="-3" y="5" width="6" height="4" fill="#212529"/><line x1="-9" y1="9" x2="9" y2="9" stroke="#212529" stroke-width="2"/></g><text x="936.0" y="859" text-anchor="middle" font-size="9" font-weight="bold" fill="#212529">Operations</text><text x="936.0" y="872" text-anchor="middle" font-size="9" fill="#212529">VLAN 40</text><text x="936.0" y="884" text-anchor="middle" font-size="9" fill="#212529">14 users</text>
+<rect x="973" y="815" width="66" height="86" rx="6" fill="#fde2f0" stroke="#9c1c63" stroke-width="2"/><g transform="translate(1006.0,834)"><rect x="-7" y="-11" width="14" height="8" fill="#fff" stroke="#212529" stroke-width="1.8"/><rect x="-13" y="-4" width="26" height="11" rx="2" fill="#fff" stroke="#212529" stroke-width="2"/><rect x="-7" y="4" width="14" height="7" fill="#fff" stroke="#212529" stroke-width="1.8"/></g><text x="1006.0" y="859" text-anchor="middle" font-size="9" font-weight="bold" fill="#212529">Printers/IoT</text><text x="1006.0" y="872" text-anchor="middle" font-size="9" fill="#212529">VLAN 100</text><text x="1006.0" y="884" text-anchor="middle" font-size="9" fill="#212529">5 devices</text>
+<rect x="1194" y="815" width="66" height="86" rx="6" fill="#cfe2ff" stroke="#0a58ca" stroke-width="2"/><g transform="translate(1227.0,834)"><rect x="-12" y="-10" width="24" height="15" rx="2" fill="#fff" stroke="#212529" stroke-width="2"/><rect x="-3" y="5" width="6" height="4" fill="#212529"/><line x1="-9" y1="9" x2="9" y2="9" stroke="#212529" stroke-width="2"/></g><text x="1227.0" y="859" text-anchor="middle" font-size="9" font-weight="bold" fill="#212529">Sales</text><text x="1227.0" y="872" text-anchor="middle" font-size="9" fill="#212529">VLAN 50</text><text x="1227.0" y="884" text-anchor="middle" font-size="9" fill="#212529">20 users</text>
+<rect x="1264" y="815" width="66" height="86" rx="6" fill="#fde2f0" stroke="#9c1c63" stroke-width="2"/><g transform="translate(1297.0,834)"><rect x="-7" y="-11" width="14" height="8" fill="#fff" stroke="#212529" stroke-width="1.8"/><rect x="-13" y="-4" width="26" height="11" rx="2" fill="#fff" stroke="#212529" stroke-width="2"/><rect x="-7" y="4" width="14" height="7" fill="#fff" stroke="#212529" stroke-width="1.8"/></g><text x="1297.0" y="859" text-anchor="middle" font-size="9" font-weight="bold" fill="#212529">Printers/IoT</text><text x="1297.0" y="872" text-anchor="middle" font-size="9" fill="#212529">VLAN 100</text><text x="1297.0" y="884" text-anchor="middle" font-size="9" fill="#212529">3 devices</text>
+<rect x="1334" y="815" width="66" height="86" rx="6" fill="#e2e3e5" stroke="#41464b" stroke-width="2"/><g transform="translate(1367.0,834)"><rect x="-13" y="2" width="26" height="8" rx="2" fill="#fff" stroke="#212529" stroke-width="2"/><g fill="none" stroke="#212529" stroke-width="1.8"><path d="M-7,-1 Q0,-8 7,-1"/><path d="M-12,-5 Q0,-16 12,-5"/></g></g><text x="1367.0" y="859" text-anchor="middle" font-size="9" font-weight="bold" fill="#212529">BLD1-AP-02</text><text x="1367.0" y="872" text-anchor="middle" font-size="9" fill="#212529">Vlan99</text><text x="1367.0" y="884" text-anchor="middle" font-size="9" fill="#212529">10.10.0.22</text><text x="1367.0" y="896" text-anchor="middle" font-size="8.5" fill="#212529">Fa0/24</text>
+<rect x="167.0" y="965" width="100" height="62" rx="6" fill="#d2f4ea" stroke="#0f5c4c" stroke-width="2"/><text x="217.0" y="982" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#212529">Staff Wi-Fi</text><text x="217.0" y="996" text-anchor="middle" font-size="9.5" fill="#212529">VLAN 80</text><text x="217.0" y="1009" text-anchor="middle" font-size="9.5" fill="#212529">192.168.0.0/24</text><text x="217.0" y="1022" text-anchor="middle" font-size="9" fill="#212529">SSID BLD1-Staff</text>
+<rect x="279.0" y="965" width="100" height="62" rx="6" fill="#e2e3e5" stroke="#41464b" stroke-width="2"/><text x="329.0" y="982" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#212529">Guest Wi-Fi</text><text x="329.0" y="996" text-anchor="middle" font-size="9.5" fill="#212529">VLAN 90</text><text x="329.0" y="1009" text-anchor="middle" font-size="9.5" fill="#212529">192.168.1.128/25</text><text x="329.0" y="1022" text-anchor="middle" font-size="9" fill="#212529">SSID BLD1-Guest</text>
+<rect x="1261.0" y="965" width="100" height="62" rx="6" fill="#d2f4ea" stroke="#0f5c4c" stroke-width="2"/><text x="1311.0" y="982" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#212529">Staff Wi-Fi</text><text x="1311.0" y="996" text-anchor="middle" font-size="9.5" fill="#212529">VLAN 80</text><text x="1311.0" y="1009" text-anchor="middle" font-size="9.5" fill="#212529">192.168.0.0/24</text><text x="1311.0" y="1022" text-anchor="middle" font-size="9" fill="#212529">SSID BLD1-Staff</text>
+<rect x="1373.0" y="965" width="100" height="62" rx="6" fill="#e2e3e5" stroke="#41464b" stroke-width="2"/><text x="1423.0" y="982" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#212529">Guest Wi-Fi</text><text x="1423.0" y="996" text-anchor="middle" font-size="9.5" fill="#212529">VLAN 90</text><text x="1423.0" y="1009" text-anchor="middle" font-size="9.5" fill="#212529">192.168.1.128/25</text><text x="1423.0" y="1022" text-anchor="middle" font-size="9" fill="#212529">SSID BLD1-Guest</text>
+<rect x="30" y="1035" width="285" height="262" rx="6" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="44" y="1055" text-anchor="start" font-size="12" font-weight="bold" fill="#212529">Technologies and features</text>
+<text x="44" y="1077" text-anchor="start" font-size="10.5" fill="#212529">802.1Q VLAN trunking, native VLAN 999</text>
+<text x="44" y="1095" text-anchor="start" font-size="10.5" fill="#212529">LACP (802.3ad) port channels Po1-Po5</text>
+<text x="44" y="1113" text-anchor="start" font-size="10.5" fill="#212529">Rapid PVST+, core is root bridge</text>
+<text x="44" y="1131" text-anchor="start" font-size="10.5" fill="#1d4ed8">OSPF area 0, MD5 auth, passive SVIs</text>
+<text x="44" y="1149" text-anchor="start" font-size="10.5" fill="#212529">DHCP and SVI gateways on the core</text>
+<text x="44" y="1167" text-anchor="start" font-size="10.5" fill="#212529">Inter-VLAN ACLs; NAT/PAT on edge router</text>
+<text x="44" y="1185" text-anchor="start" font-size="10.5" fill="#212529">SSH v2 only, local accounts, banners</text>
+<text x="44" y="1203" text-anchor="start" font-size="10.5" fill="#212529">Port security, DHCP snooping, BPDU guard</text>
+<text x="44" y="1221" text-anchor="start" font-size="10.5" fill="#212529">NTP and syslog; unused ports shut down</text>
+<text x="44" y="1239" text-anchor="start" font-size="10.5" fill="#212529">Jinja2-templated configs kept in Git</text>
+<text x="44" y="1257" text-anchor="start" font-size="10.5" fill="#212529">Router-on-a-stick (802.1Q subifs) in BLD2</text>
+<text x="44" y="1283" text-anchor="start" font-size="9.5" fill="#495057">Solid = wired, gray dashed = wireless, blue dashed = OSPF</text>
+<text x="560" y="1127" text-anchor="start" font-size="10.5" fill="#495057">Host space 192.168.0.0/22 (192.168.0.0/16 pool). Network devices 10.10.0.0/24.</text>
+<text x="560" y="1142" text-anchor="start" font-size="10.5" fill="#495057">Unallocated: 192.168.3.32 onward (hosts), 10.10.0.48 onward (devices).</text>
+<rect x="560" y="1160" width="440" height="140" rx="6" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="574" y="1178" text-anchor="start" font-size="12" font-weight="bold" fill="#212529">Device key</text>
+<g transform="translate(605,1210)"><circle r="16" fill="#fff" stroke="#212529" stroke-width="2"/><g stroke="#212529" stroke-width="2" fill="#212529"><line x1="-9" y1="0" x2="9" y2="0"/><polygon points="10,0 5,-4 5,4"/><polygon points="-10,0 -5,-4 -5,4"/><line x1="0" y1="-9" x2="0" y2="9"/><polygon points="0,-10 -4,-5 4,-5"/><polygon points="0,10 -4,5 4,5"/></g></g>
+<text x="605" y="1236" text-anchor="middle" font-size="9.5" fill="#212529">Edge router</text>
+<g transform="translate(690,1210)"><rect x="-19" y="-11" width="38" height="22" rx="3" fill="#fff" stroke="#212529" stroke-width="2"/><g stroke="#212529" stroke-width="1.8" fill="#212529"><line x1="-12" y1="-3" x2="10" y2="-3"/><polygon points="13,-3 8,-6.5 8,0.5"/><line x1="12" y1="4" x2="-10" y2="4"/><polygon points="-13,4 -8,0.5 -8,7.5"/></g><circle cx="19" cy="-11" r="7" fill="#212529"/><text x="19" y="-8" text-anchor="middle" font-size="8" font-weight="bold" fill="#fff">L3</text></g>
+<text x="690" y="1236" text-anchor="middle" font-size="9.5" fill="#212529">L3 core switch</text>
+<g transform="translate(775,1210)"><rect x="-19" y="-11" width="38" height="22" rx="3" fill="#fff" stroke="#212529" stroke-width="2"/><g stroke="#212529" stroke-width="1.8" fill="#212529"><line x1="-12" y1="-3" x2="10" y2="-3"/><polygon points="13,-3 8,-6.5 8,0.5"/><line x1="12" y1="4" x2="-10" y2="4"/><polygon points="-13,4 -8,0.5 -8,7.5"/></g></g>
+<text x="775" y="1236" text-anchor="middle" font-size="9.5" fill="#212529">L2 access switch</text>
+<g transform="translate(860,1210)"><rect x="-13" y="2" width="26" height="8" rx="2" fill="#fff" stroke="#212529" stroke-width="2"/><g fill="none" stroke="#212529" stroke-width="1.8"><path d="M-7,-1 Q0,-8 7,-1"/><path d="M-12,-5 Q0,-16 12,-5"/></g></g>
+<text x="860" y="1236" text-anchor="middle" font-size="9.5" fill="#212529">Wireless AP</text>
+<g transform="translate(945,1210)"><rect x="-14" y="-9" width="28" height="18" rx="2" fill="#fff" stroke="#212529" stroke-width="2"/><polygon points="1,-6 -5,1 -1,1 -2,6 5,-1 1,-1" fill="#212529"/></g>
+<text x="945" y="1236" text-anchor="middle" font-size="9.5" fill="#212529">UPS</text>
+<g transform="translate(605,1266)"><rect x="-12" y="-10" width="24" height="15" rx="2" fill="#fff" stroke="#212529" stroke-width="2"/><rect x="-3" y="5" width="6" height="4" fill="#212529"/><line x1="-9" y1="9" x2="9" y2="9" stroke="#212529" stroke-width="2"/></g>
+<text x="605" y="1290" text-anchor="middle" font-size="9.5" fill="#212529">Workstation</text>
+<g transform="translate(690,1266)"><rect x="-7" y="-10" width="14" height="20" rx="3" fill="#fff" stroke="#212529" stroke-width="2"/><circle cx="0" cy="6" r="1.8" fill="#212529"/><line x1="-4" y1="-6" x2="4" y2="-6" stroke="#212529" stroke-width="2"/></g>
+<text x="690" y="1290" text-anchor="middle" font-size="9.5" fill="#212529">IP phone</text>
+<g transform="translate(775,1266)"><rect x="-7" y="-11" width="14" height="8" fill="#fff" stroke="#212529" stroke-width="1.8"/><rect x="-13" y="-4" width="26" height="11" rx="2" fill="#fff" stroke="#212529" stroke-width="2"/><rect x="-7" y="4" width="14" height="7" fill="#fff" stroke="#212529" stroke-width="1.8"/></g>
+<text x="775" y="1290" text-anchor="middle" font-size="9.5" fill="#212529">Printer/IoT</text>
+<g transform="translate(860,1266)"><rect x="-12" y="-12" width="24" height="8" rx="1.5" fill="#fff" stroke="#212529" stroke-width="1.8"/><circle cx="-7" cy="-8" r="1.5" fill="#212529"/><rect x="-12" y="-3" width="24" height="8" rx="1.5" fill="#fff" stroke="#212529" stroke-width="1.8"/><circle cx="-7" cy="1" r="1.5" fill="#212529"/><rect x="-12" y="6" width="24" height="8" rx="1.5" fill="#fff" stroke="#212529" stroke-width="1.8"/><circle cx="-7" cy="10" r="1.5" fill="#212529"/></g>
+<text x="860" y="1290" text-anchor="middle" font-size="9.5" fill="#212529">Server</text>
+<line x1="925" y1="1266" x2="965" y2="1266" stroke="#1d4ed8" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="945" y="1290" text-anchor="middle" font-size="9.5" fill="#1d4ed8">OSPF link</text>
+<rect x="1030" y="1035" width="440" height="276" rx="6" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="1044" y="1055" text-anchor="start" font-size="12" font-weight="bold" fill="#212529">Addressing summary</text>
+<text x="1060" y="1073" text-anchor="start" font-size="10" font-weight="bold" fill="#495057">VLAN</text>
+<text x="1096" y="1073" text-anchor="start" font-size="10" font-weight="bold" fill="#495057">Name</text>
+<text x="1206" y="1073" text-anchor="start" font-size="10" font-weight="bold" fill="#495057">Subnet</text>
+<text x="1334" y="1073" text-anchor="start" font-size="10" font-weight="bold" fill="#495057">Usable</text>
+<text x="1382" y="1073" text-anchor="start" font-size="10" font-weight="bold" fill="#495057">Users/hosts</text>
+<rect x="1044" y="1080" width="10" height="10" fill="#e2d9f3" stroke="#59359a"/>
+<text x="1060" y="1089" text-anchor="start" font-size="10.5" fill="#212529">10</text>
+<text x="1096" y="1089" text-anchor="start" font-size="10.5" fill="#212529">EXEC</text>
+<text x="1206" y="1089" text-anchor="start" font-size="10.5" fill="#212529">192.168.2.192/28</text>
+<text x="1334" y="1089" text-anchor="start" font-size="10.5" fill="#212529">14</text>
+<text x="1382" y="1089" text-anchor="start" font-size="10.5" fill="#212529">8 users</text>
+<rect x="1044" y="1094.5" width="10" height="10" fill="#f8d7da" stroke="#842029"/>
+<text x="1060" y="1103.5" text-anchor="start" font-size="10.5" fill="#212529">20</text>
+<text x="1096" y="1103.5" text-anchor="start" font-size="10.5" fill="#212529">HR</text>
+<text x="1206" y="1103.5" text-anchor="start" font-size="10.5" fill="#212529">192.168.2.208/28</text>
+<text x="1334" y="1103.5" text-anchor="start" font-size="10.5" fill="#212529">14</text>
+<text x="1382" y="1103.5" text-anchor="start" font-size="10.5" fill="#212529">10 users</text>
+<rect x="1044" y="1109.0" width="10" height="10" fill="#ffe5d0" stroke="#a5490b"/>
+<text x="1060" y="1118.0" text-anchor="start" font-size="10.5" fill="#212529">30</text>
+<text x="1096" y="1118.0" text-anchor="start" font-size="10.5" fill="#212529">ACCT</text>
+<text x="1206" y="1118.0" text-anchor="start" font-size="10.5" fill="#212529">192.168.2.64/27</text>
+<text x="1334" y="1118.0" text-anchor="start" font-size="10.5" fill="#212529">30</text>
+<text x="1382" y="1118.0" text-anchor="start" font-size="10.5" fill="#212529">12 users</text>
+<rect x="1044" y="1123.5" width="10" height="10" fill="#d1e7dd" stroke="#146c43"/>
+<text x="1060" y="1132.5" text-anchor="start" font-size="10.5" fill="#212529">40</text>
+<text x="1096" y="1132.5" text-anchor="start" font-size="10.5" fill="#212529">OPS</text>
+<text x="1206" y="1132.5" text-anchor="start" font-size="10.5" fill="#212529">192.168.2.96/27</text>
+<text x="1334" y="1132.5" text-anchor="start" font-size="10.5" fill="#212529">30</text>
+<text x="1382" y="1132.5" text-anchor="start" font-size="10.5" fill="#212529">14 users</text>
+<rect x="1044" y="1138.0" width="10" height="10" fill="#cfe2ff" stroke="#0a58ca"/>
+<text x="1060" y="1147.0" text-anchor="start" font-size="10.5" fill="#212529">50</text>
+<text x="1096" y="1147.0" text-anchor="start" font-size="10.5" fill="#212529">SALES</text>
+<text x="1206" y="1147.0" text-anchor="start" font-size="10.5" fill="#212529">192.168.2.128/27</text>
+<text x="1334" y="1147.0" text-anchor="start" font-size="10.5" fill="#212529">30</text>
+<text x="1382" y="1147.0" text-anchor="start" font-size="10.5" fill="#212529">20 users</text>
+<rect x="1044" y="1152.5" width="10" height="10" fill="#cff4fc" stroke="#055160"/>
+<text x="1060" y="1161.5" text-anchor="start" font-size="10.5" fill="#212529">60</text>
+<text x="1096" y="1161.5" text-anchor="start" font-size="10.5" fill="#212529">IT</text>
+<text x="1206" y="1161.5" text-anchor="start" font-size="10.5" fill="#212529">192.168.2.0/26</text>
+<text x="1334" y="1161.5" text-anchor="start" font-size="10.5" fill="#212529">62</text>
+<text x="1382" y="1161.5" text-anchor="start" font-size="10.5" fill="#212529">16 users</text>
+<rect x="1044" y="1167.0" width="10" height="10" fill="#fff3cd" stroke="#997404"/>
+<text x="1060" y="1176.0" text-anchor="start" font-size="10.5" fill="#212529">70</text>
+<text x="1096" y="1176.0" text-anchor="start" font-size="10.5" fill="#212529">VOICE</text>
+<text x="1206" y="1176.0" text-anchor="start" font-size="10.5" fill="#212529">192.168.1.0/25</text>
+<text x="1334" y="1176.0" text-anchor="start" font-size="10.5" fill="#212529">126</text>
+<text x="1382" y="1176.0" text-anchor="start" font-size="10.5" fill="#212529">80 dev</text>
+<rect x="1044" y="1181.5" width="10" height="10" fill="#d2f4ea" stroke="#0f5c4c"/>
+<text x="1060" y="1190.5" text-anchor="start" font-size="10.5" fill="#212529">80</text>
+<text x="1096" y="1190.5" text-anchor="start" font-size="10.5" fill="#212529">STAFF-WIFI</text>
+<text x="1206" y="1190.5" text-anchor="start" font-size="10.5" fill="#212529">192.168.0.0/24</text>
+<text x="1334" y="1190.5" text-anchor="start" font-size="10.5" fill="#212529">254</text>
+<text x="1382" y="1190.5" text-anchor="start" font-size="10.5" fill="#212529">80 users</text>
+<rect x="1044" y="1196.0" width="10" height="10" fill="#e2e3e5" stroke="#41464b"/>
+<text x="1060" y="1205.0" text-anchor="start" font-size="10.5" fill="#212529">90</text>
+<text x="1096" y="1205.0" text-anchor="start" font-size="10.5" fill="#212529">GUEST</text>
+<text x="1206" y="1205.0" text-anchor="start" font-size="10.5" fill="#212529">192.168.1.128/25</text>
+<text x="1334" y="1205.0" text-anchor="start" font-size="10.5" fill="#212529">126</text>
+<text x="1382" y="1205.0" text-anchor="start" font-size="10.5" fill="#212529">80 dev</text>
+<rect x="1044" y="1210.5" width="10" height="10" fill="#fde2f0" stroke="#9c1c63"/>
+<text x="1060" y="1219.5" text-anchor="start" font-size="10.5" fill="#212529">100</text>
+<text x="1096" y="1219.5" text-anchor="start" font-size="10.5" fill="#212529">PRINTERS-IOT</text>
+<text x="1206" y="1219.5" text-anchor="start" font-size="10.5" fill="#212529">192.168.2.160/27</text>
+<text x="1334" y="1219.5" text-anchor="start" font-size="10.5" fill="#212529">30</text>
+<text x="1382" y="1219.5" text-anchor="start" font-size="10.5" fill="#212529">18 dev</text>
+<rect x="1044" y="1225.0" width="10" height="10" fill="#ffd8a8" stroke="#8a4b00"/>
+<text x="1060" y="1234.0" text-anchor="start" font-size="10.5" fill="#212529">110</text>
+<text x="1096" y="1234.0" text-anchor="start" font-size="10.5" fill="#212529">SERVERS</text>
+<text x="1206" y="1234.0" text-anchor="start" font-size="10.5" fill="#212529">192.168.2.224/29</text>
+<text x="1334" y="1234.0" text-anchor="start" font-size="10.5" fill="#212529">6</text>
+<text x="1382" y="1234.0" text-anchor="start" font-size="10.5" fill="#212529">4 dev</text>
+<rect x="1044" y="1239.5" width="10" height="10" fill="#dbe4ff" stroke="#364fc7"/>
+<text x="1060" y="1248.5" text-anchor="start" font-size="10.5" fill="#212529">99</text>
+<text x="1096" y="1248.5" text-anchor="start" font-size="10.5" fill="#212529">MGMT</text>
+<text x="1206" y="1248.5" text-anchor="start" font-size="10.5" fill="#212529">10.10.0.0/27</text>
+<text x="1334" y="1248.5" text-anchor="start" font-size="10.5" fill="#212529">30</text>
+<text x="1382" y="1248.5" text-anchor="start" font-size="10.5" fill="#212529">8 dev</text>
+<text x="1060" y="1263.0" text-anchor="start" font-size="10.5" fill="#212529">n/a</text>
+<text x="1096" y="1263.0" text-anchor="start" font-size="10.5" fill="#212529">TRANSIT</text>
+<text x="1206" y="1263.0" text-anchor="start" font-size="10.5" fill="#212529">10.10.0.32/30</text>
+<text x="1334" y="1263.0" text-anchor="start" font-size="10.5" fill="#212529">2</text>
+<text x="1382" y="1263.0" text-anchor="start" font-size="10.5" fill="#212529">core-edge</text>
+<text x="1060" y="1277.5" text-anchor="start" font-size="10.5" fill="#212529">n/a</text>
+<text x="1096" y="1277.5" text-anchor="start" font-size="10.5" fill="#212529">TRANSIT-B2</text>
+<text x="1206" y="1277.5" text-anchor="start" font-size="10.5" fill="#212529">10.10.0.36/30</text>
+<text x="1334" y="1277.5" text-anchor="start" font-size="10.5" fill="#212529">2</text>
+<text x="1382" y="1277.5" text-anchor="start" font-size="10.5" fill="#212529">BLD1-BLD2</text>
+<text x="1060" y="1292.0" text-anchor="start" font-size="10.5" fill="#212529">n/a</text>
+<text x="1096" y="1292.0" text-anchor="start" font-size="10.5" fill="#212529">WAN</text>
+<text x="1206" y="1292.0" text-anchor="start" font-size="10.5" fill="#212529">203.0.113.0/30</text>
+<text x="1334" y="1292.0" text-anchor="start" font-size="10.5" fill="#212529">2</text>
+<text x="1382" y="1292.0" text-anchor="start" font-size="10.5" fill="#212529">to ISP</text>
 </svg>

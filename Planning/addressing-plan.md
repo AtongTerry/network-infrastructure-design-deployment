@@ -33,7 +33,7 @@ Headcount: Executive 8, HR 10, Accounting 12, Operations 14, Sales 20, IT 16 = *
 | 90 | GUEST | n/a | 80 | 100 | 101 | /25 | 126 | 25 |
 | 100 | PRINTERS-IOT | n/a | 18 | 23 | 24 | /27 | 30 | 6 |
 | 110 | SERVERS | n/a | 4 | 5 | 6 | /29 | 6 | 0 |
-| 99 | MGMT | n/a | 6 | 20 | 21 | /27 | 30 | 9 |
+| 99 | MGMT | n/a | 8 | 20 | 21 | /27 | 30 | 9 |
 | 120 | LOGISTICS | 20 | 20 | 25 | 26 | /27 | 30 | 4 |
 | 99 | MGMT-B2 | n/a | 2 | 3 | 4 | /29 | 6 | 2 |
 
@@ -81,16 +81,18 @@ Conventions:
 | BLD1-ACC-01 | VLAN 99 SVI | 10.10.0.11/27 |
 | BLD1-ACC-02 | VLAN 99 SVI | 10.10.0.12/27 |
 | BLD1-ACC-03 | VLAN 99 SVI | 10.10.0.13/27 |
+| BLD1-ACC-04 | VLAN 99 SVI | 10.10.0.14/27 |
+| BLD1-ACC-05 | VLAN 99 SVI | 10.10.0.15/27 |
 | BLD1-AP-01 | Management | 10.10.0.21/27 |
 | BLD1-AP-02 | Management | 10.10.0.22/27 |
 | BLD1-UPS-01 | Network card | 10.10.0.25/27 |
-| BLD1-RTR-01 | Gi0/1 inside (transit) | 10.10.0.33/30 |
-| BLD1-CORE-01 | Gi1/0/24 routed port (transit) | 10.10.0.34/30 |
-| BLD1-RTR-01 | Gi0/0 WAN | 203.0.113.2/30 (ISP 203.0.113.1) |
-| BLD1-RTR-01 | Gi0/2 inter-building link | 10.10.0.37/30 |
-| BLD2-RTR-01 | Gi0/0 inter-building link | 10.10.0.38/30 |
-| BLD2-RTR-01 | Gi0/1.99 (Building 2 MGMT gateway) | 10.10.0.41/29 |
-| BLD2-RTR-01 | Gi0/1.120 (LOGISTICS gateway) | 192.168.3.1/27 |
+| BLD1-RTR-01 | Gi0/0/1 inside (transit) | 10.10.0.33/30 |
+| BLD1-CORE-01 | Gi0/1 routed port (transit) | 10.10.0.34/30 |
+| BLD1-RTR-01 | Gi0/0/0 WAN | 203.0.113.2/30 (ISP 203.0.113.1) |
+| BLD1-RTR-01 | Gi0/0/2 inter-building link | 10.10.0.37/30 |
+| BLD2-RTR-01 | Gi0/0/0 inter-building link | 10.10.0.38/30 |
+| BLD2-RTR-01 | Gi0/0/1.99 (Building 2 MGMT gateway) | 10.10.0.41/29 |
+| BLD2-RTR-01 | Gi0/0/1.120 (LOGISTICS gateway) | 192.168.3.1/27 |
 | BLD2-ACC-01 | VLAN 99 SVI | 10.10.0.42/29 |
 
 Each Building 1 access switch also needs `ip default-gateway 10.10.0.1`. BLD2-ACC-01 uses `ip default-gateway 10.10.0.41`, the Building 2 router.
@@ -122,14 +124,14 @@ Dynamic routing runs across three routing devices with **OSPFv2, single area (ar
 | Edge router advertises | Both transit networks (`10.10.0.32/29` covers them) and a default route (`default-information originate`) |
 | BLD2 router advertises | `192.168.3.0/27` (Logistics), `10.10.0.40/29` (Building 2 management), and the inter-building link |
 | Default route | Edge router has `ip route 0.0.0.0 0.0.0.0 203.0.113.1` to the ISP. The core and the BLD2 router learn the default through OSPF as an external route (`O*E2`), so neither has a static default |
-| NAT | Only the edge router does PAT (`ip nat inside source list NAT-INSIDE interface Gi0/0 overload`). It translates `192.168.0.0/22`, which already includes Logistics (`192.168.3.0/27`), so Building 2 needs no NAT of its own |
+| NAT | Only the edge router does PAT (`ip nat inside source list NAT-INSIDE interface Gi0/0/0 overload`). It translates `192.168.0.0/22`, which already includes Logistics (`192.168.3.0/27`), so Building 2 needs no NAT of its own |
 
 ### Core (BLD1-CORE-01)
 
 ```
 ip routing
 !
-interface GigabitEthernet1/0/24
+interface GigabitEthernet0/1
  description TRANSIT-TO-BLD1-RTR-01
  no switchport
  ip address 10.10.0.34 255.255.255.252
@@ -140,7 +142,7 @@ interface GigabitEthernet1/0/24
 router ospf 1
  router-id 10.10.0.1
  passive-interface default
- no passive-interface GigabitEthernet1/0/24
+ no passive-interface GigabitEthernet0/1
  network 192.168.0.0 0.0.3.255 area 0
  network 10.10.0.0 0.0.0.63 area 0
 ```
@@ -148,20 +150,22 @@ router ospf 1
 ### Edge router (BLD1-RTR-01)
 
 ```
-interface GigabitEthernet0/0
+interface GigabitEthernet0/0/0
  description WAN-TO-ISP
  ip address 203.0.113.2 255.255.255.252
  ip nat outside
+ no shutdown
 !
-interface GigabitEthernet0/1
+interface GigabitEthernet0/0/1
  description TRANSIT-TO-BLD1-CORE-01
  ip address 10.10.0.33 255.255.255.252
  ip nat inside
  ip ospf network point-to-point
  ip ospf authentication message-digest
  ip ospf message-digest-key 1 md5 {{OSPF_KEY}}
+ no shutdown
 !
-interface GigabitEthernet0/2
+interface GigabitEthernet0/0/2
  description INTER-BUILDING-TO-BLD2-RTR-01
  ip address 10.10.0.37 255.255.255.252
  ip nat inside
@@ -175,13 +179,13 @@ ip route 0.0.0.0 0.0.0.0 203.0.113.1
 ip access-list standard NAT-INSIDE
  permit 192.168.0.0 0.0.3.255
 !
-ip nat inside source list NAT-INSIDE interface GigabitEthernet0/0 overload
+ip nat inside source list NAT-INSIDE interface GigabitEthernet0/0/0 overload
 !
 router ospf 1
  router-id 10.10.0.33
  passive-interface default
- no passive-interface GigabitEthernet0/1
- no passive-interface GigabitEthernet0/2
+ no passive-interface GigabitEthernet0/0/1
+ no passive-interface GigabitEthernet0/0/2
  network 10.10.0.32 0.0.0.7 area 0
  default-information originate
 ```
@@ -193,7 +197,7 @@ One physical port trunks to the switch and carries two 802.1Q subinterfaces (rou
 ```
 hostname BLD2-RTR-01
 !
-interface GigabitEthernet0/0
+interface GigabitEthernet0/0/0
  description INTER-BUILDING-TO-BLD1-RTR-01
  ip address 10.10.0.38 255.255.255.252
  ip ospf network point-to-point
@@ -201,17 +205,17 @@ interface GigabitEthernet0/0
  ip ospf message-digest-key 1 md5 {{OSPF_KEY}}
  no shutdown
 !
-interface GigabitEthernet0/1
+interface GigabitEthernet0/0/1
  description TRUNK-TO-BLD2-ACC-01
  no ip address
  no shutdown
 !
-interface GigabitEthernet0/1.99
+interface GigabitEthernet0/0/1.99
  description MGMT gateway
  encapsulation dot1Q 99
  ip address 10.10.0.41 255.255.255.248
 !
-interface GigabitEthernet0/1.120
+interface GigabitEthernet0/0/1.120
  description LOGISTICS gateway
  encapsulation dot1Q 120
  ip address 192.168.3.1 255.255.255.224
@@ -234,7 +238,7 @@ ip access-list extended LOGISTICS-IN
 router ospf 1
  router-id 10.10.0.38
  passive-interface default
- no passive-interface GigabitEthernet0/0
+ no passive-interface GigabitEthernet0/0/0
  network 10.10.0.36 0.0.0.3 area 0
  network 10.10.0.40 0.0.0.7 area 0
  network 192.168.3.0 0.0.0.31 area 0
@@ -253,8 +257,8 @@ router ospf 1
 | Core sees Building 2 | `show ip route 192.168.3.0` (core) | `O` route via `10.10.0.33` |
 | Default route | `show ip route 0.0.0.0` (core) | `O*E2` via `10.10.0.33` |
 | Interface settings | `show ip ospf interface brief` | Transit interfaces in area 0, network type point-to-point |
-| Passive interfaces | `show ip protocols` | All SVIs (core) and `Gi0/1.99`, `Gi0/1.120` (BLD2 router) listed as passive |
-| Authentication | `show ip ospf interface Gi0/2` (edge router) | Message digest authentication enabled |
+| Passive interfaces | `show ip protocols` | All SVIs (core) and `Gi0/0/1.99`, `Gi0/0/1.120` (BLD2 router) listed as passive |
+| Authentication | `show ip ospf interface Gi0/0/2` (edge router) | Message digest authentication enabled |
 | DHCP | `show ip dhcp binding` (BLD2 router) | Logistics PCs hold `192.168.3.0/27` leases, gateway `192.168.3.1` |
 | End to end, internal | Logistics PC pings the file server `192.168.2.226` | Success across both transit links |
 | End to end, internet | Logistics PC pings an outside address | Success. `show ip nat translations` on the edge router shows the Logistics address translated |
@@ -265,7 +269,7 @@ router ospf 1
 1. Remove the `network` statement for one VLAN on the core. That subnet disappears from the edge router's and the BLD2 router's tables and return traffic fails.
 2. Break authentication (wrong key on one side of the inter-building link). The neighbor drops, and `debug ip ospf adj` shows the mismatch. Building 2 loses all routes except its connected networks.
 3. Shut the inter-building interface on the edge router. Confirm the BLD2 router loses the default route and every Building 1 route, Logistics still reaches its own gateway, and everything returns when the link comes back.
-4. Remove `ip nat inside` from `Gi0/2` on the edge router. Logistics reaches Building 1 servers but not the internet, because traffic leaves untranslated with a private source address. Restore it and confirm the translation appears.
+4. Remove `ip nat inside` from `Gi0/0/2` on the edge router. Logistics reaches Building 1 servers but not the internet, because traffic leaves untranslated with a private source address. Restore it and confirm the translation appears.
 5. Remove `network 192.168.3.0 0.0.0.31 area 0` on the BLD2 router. Building 1 loses the Logistics route and replies stop.
 6. Shut the transit interface between the core and the edge router. Confirm the default route leaves the core's table, then restore it and watch the neighbor rebuild.
 
@@ -273,72 +277,90 @@ Possible later upgrades: a second inter-building link (with OSPF cost to prefer 
 
 ## Switch port plan
 
-Port names follow Catalyst 9000-style numbering (`Gi1/0/x` access, `Gi1/1/x` uplinks). Rename them to match the model or simulator image you use.
+The lab uses Packet Tracer models: ISR4331 routers (`Gi0/0/0-2`), a 3560-24PS Layer 3 core (`Fa0/1-24`, `Gi0/1-2`), and 2960-24TT access switches (`Fa0/1-24` for hosts, `Gi0/1-2` for the uplink). None has a 48-port version, so every switch is 24-port. The core has only two Gigabit ports, so the five port channels use its Fast Ethernet ports, and each access switch's two Gigabit uplinks negotiate down to 100 Mbps. The Gigabit core port `Gi0/1` carries the routed link to the edge router.
 
 ### BLD1-CORE-01 (24-port)
 
 | Ports | Connects |
 |---|---|
-| `Gi1/0/1-2` | Po1 to BLD1-ACC-01 (`Gi1/1/1-2`) |
-| `Gi1/0/3-4` | Po2 to BLD1-ACC-02 (`Gi1/1/1-2`) |
-| `Gi1/0/5-6` | Po3 to BLD1-ACC-03 (`Gi1/1/1-2`) |
-| `Gi1/0/24` | Routed port to BLD1-RTR-01 `Gi0/1`, 10.10.0.34/30, OSPF area 0 |
+| `Fa0/1-2` | Po1 to BLD1-ACC-01 (`Gi0/1-2`) |
+| `Fa0/3-4` | Po2 to BLD1-ACC-02 (`Gi0/1-2`) |
+| `Fa0/5-6` | Po3 to BLD1-ACC-03 (`Gi0/1-2`) |
+| `Fa0/7-8` | Po4 to BLD1-ACC-04 (`Gi0/1-2`) |
+| `Fa0/9-10` | Po5 to BLD1-ACC-05 (`Gi0/1-2`) |
+| `Gi0/1` | Routed port to BLD1-RTR-01 `Gi0/0/1`, 10.10.0.34/30, OSPF area 0 |
 | All SVIs | Default gateways for every VLAN (see Subnets), passive in OSPF |
 
-### BLD1-ACC-01 (48-port, Mgmt 10.10.0.11)
+### BLD1-ACC-01 (24-port, Mgmt 10.10.0.11)
 
-Uplink `Po1`: `Gi1/1/1-2` to core `Gi1/0/1-2`, LACP trunk, native VLAN 999, allowed VLANs 10,20,30,70,80,90,99,100. Voice VLAN 70 on `Gi1/0/1-30`.
-
-| Ports | VLAN | Connects |
-|---|---|---|
-| `Gi1/0/1-8` | 10 EXEC | 8 users |
-| `Gi1/0/9-18` | 20 HR | 10 users |
-| `Gi1/0/19-30` | 30 ACCT | 12 users |
-| `Gi1/0/31-39` | 100 PRINTERS-IOT | 9 printers/IoT |
-| `Gi1/0/40-47` | n/a | Unused: shutdown, VLAN 999 |
-| `Gi1/0/48` | n/a | AP-01 trunk (native 99, allow 80,90,99) |
-
-### BLD1-ACC-02 (48-port, Mgmt 10.10.0.12)
-
-Uplink `Po2`: `Gi1/1/1-2` to core `Gi1/0/3-4`, LACP trunk, native VLAN 999, allowed VLANs 40,50,70,80,90,99,100. Voice VLAN 70 on `Gi1/0/1-34`.
+Uplink `Po1`: `Gi0/1-2` to core `Fa0/1-2`, LACP trunk, native VLAN 999, allowed VLANs 10,20,70,80,90,99,100. Voice VLAN 70 on `Fa0/1-18`.
 
 | Ports | VLAN | Connects |
 |---|---|---|
-| `Gi1/0/1-14` | 40 OPS | 14 users |
-| `Gi1/0/15-34` | 50 SALES | 20 users |
-| `Gi1/0/35-43` | 100 PRINTERS-IOT | 9 printers/IoT |
-| `Gi1/0/44-47` | n/a | Unused: shutdown, VLAN 999 |
-| `Gi1/0/48` | n/a | AP-02 trunk (native 99, allow 80,90,99) |
+| `Fa0/1-8` | 10 EXEC | 8 users |
+| `Fa0/9-18` | 20 HR | 10 users |
+| `Fa0/19-23` | 100 PRINTERS-IOT | 5 printers/IoT |
+| `Fa0/24` | n/a | AP-01 trunk (native 99, allow 80,90,99) |
+
+### BLD1-ACC-02 (24-port, Mgmt 10.10.0.12)
+
+Uplink `Po2`: `Gi0/1-2` to core `Fa0/3-4`, LACP trunk, native VLAN 999, allowed VLANs 30,70,99,100. Voice VLAN 70 on `Fa0/1-12`.
+
+| Ports | VLAN | Connects |
+|---|---|---|
+| `Fa0/1-12` | 30 ACCT | 12 users |
+| `Fa0/13-17` | 100 PRINTERS-IOT | 5 printers/IoT |
+| `Fa0/18-24` | n/a | Unused: shutdown, VLAN 999 |
 
 ### BLD1-ACC-03 (24-port, Mgmt 10.10.0.13)
 
-Uplink `Po3`: `Gi1/1/1-2` to core `Gi1/0/5-6`, LACP trunk, native VLAN 999, allowed VLANs 60,70,99,110. Voice VLAN 70 on `Gi1/0/1-16`.
+Uplink `Po3`: `Gi0/1-2` to core `Fa0/5-6`, LACP trunk, native VLAN 999, allowed VLANs 60,70,99,110. Voice VLAN 70 on `Fa0/1-16`.
 
 | Ports | VLAN | Connects |
 |---|---|---|
-| `Gi1/0/1-16` | 60 IT | 16 users |
-| `Gi1/0/17-20` | 110 SERVERS | 4 servers |
-| `Gi1/0/21-23` | n/a | Unused: shutdown, VLAN 999 |
-| `Gi1/0/24` | 99 MGMT | UPS-01 (static 10.10.0.25) |
+| `Fa0/1-16` | 60 IT | 16 users |
+| `Fa0/17-20` | 110 SERVERS | 4 servers |
+| `Fa0/21-23` | n/a | Unused: shutdown, VLAN 999 |
+| `Fa0/24` | 99 MGMT | UPS-01 (static 10.10.0.25) |
+
+### BLD1-ACC-04 (24-port, Mgmt 10.10.0.14)
+
+Uplink `Po4`: `Gi0/1-2` to core `Fa0/7-8`, LACP trunk, native VLAN 999, allowed VLANs 40,70,99,100. Voice VLAN 70 on `Fa0/1-14`.
+
+| Ports | VLAN | Connects |
+|---|---|---|
+| `Fa0/1-14` | 40 OPS | 14 users |
+| `Fa0/15-19` | 100 PRINTERS-IOT | 5 printers/IoT |
+| `Fa0/20-24` | n/a | Unused: shutdown, VLAN 999 |
+
+### BLD1-ACC-05 (24-port, Mgmt 10.10.0.15)
+
+Uplink `Po5`: `Gi0/1-2` to core `Fa0/9-10`, LACP trunk, native VLAN 999, allowed VLANs 50,70,80,90,99,100. Voice VLAN 70 on `Fa0/1-20`.
+
+| Ports | VLAN | Connects |
+|---|---|---|
+| `Fa0/1-20` | 50 SALES | 20 users |
+| `Fa0/21-23` | 100 PRINTERS-IOT | 3 printers/IoT |
+| `Fa0/24` | n/a | AP-02 trunk (native 99, allow 80,90,99) |
 
 ### BLD2-RTR-01 (router, 2 interfaces plus subinterfaces)
 
 | Interface | Connects |
 |---|---|
-| `Gi0/0` | Inter-building link to BLD1-RTR-01 `Gi0/2`, 10.10.0.38/30, OSPF area 0 |
-| `Gi0/1` | 802.1Q trunk to BLD2-ACC-01 `Gi1/0/24`, no IP address on the physical port |
-| `Gi0/1.99` | VLAN 99 management subinterface, gateway 10.10.0.41/29 |
-| `Gi0/1.120` | VLAN 120 LOGISTICS subinterface, gateway 192.168.3.1/27, DHCP server |
+| `Gi0/0/0` | Inter-building link to BLD1-RTR-01 `Gi0/0/2`, 10.10.0.38/30, OSPF area 0 |
+| `Gi0/0/1` | 802.1Q trunk to BLD2-ACC-01 `Gi0/1`, no IP address on the physical port |
+| `Gi0/0/1.99` | VLAN 99 management subinterface, gateway 10.10.0.41/29 |
+| `Gi0/0/1.120` | VLAN 120 LOGISTICS subinterface, gateway 192.168.3.1/27, DHCP server |
 
 ### BLD2-ACC-01 (24-port, Mgmt 10.10.0.42)
 
-Uplink: `Gi1/0/24` to BLD2-RTR-01 `Gi0/1`, 802.1Q trunk, native VLAN 999, allowed VLANs 99,120. No voice VLAN (data only).
+Uplink: `Gi0/1` to BLD2-RTR-01 `Gi0/0/1`, 802.1Q trunk, native VLAN 999, allowed VLANs 99,120. No voice VLAN (data only).
 
 | Ports | VLAN | Connects |
 |---|---|---|
-| `Gi1/0/1-20` | 120 LOGISTICS | 20 users |
-| `Gi1/0/21-23` | n/a | Unused: shutdown, VLAN 999 |
-| `Gi1/0/24` | n/a | Trunk to BLD2-RTR-01 (native 999, allow 99,120) |
+| `Fa0/1-20` | 120 LOGISTICS | 20 users |
+| `Fa0/21-24` | n/a | Unused: shutdown, VLAN 999 |
+| `Gi0/1` | n/a | Trunk to BLD2-RTR-01 (native 999, allow 99,120) |
 
 ## Inter-VLAN policy (enforced with ACLs on the core)
 

@@ -40,7 +40,7 @@ Plain-language definitions of the terms used in this project, with the lab's own
 | **Native VLAN** | The VLAN a trunk carries untagged. Set to unused VLAN 999 on every trunk for safety. |
 | **Voice VLAN** | A second VLAN on an access port so the IP phone (VLAN 70) and the PC behind it stay separate. |
 | **SVI** | Switched Virtual Interface. A virtual Layer 3 interface for a VLAN, which acts as that VLAN's gateway. |
-| **LACP / port channel** | Bundles several physical links into one logical link with failover. Po1 to Po3 here. |
+| **LACP / port channel** | Bundles several physical links into one logical link with failover. Po1 to Po5 here. |
 | **Spanning Tree (STP, Rapid PVST+)** | Prevents switching loops by blocking redundant paths. The core is the root bridge. |
 | **Root bridge** | The switch STP builds its tree around. Set to the core with a low priority. |
 | **PortFast** | Lets an access port start forwarding immediately. Only used on end-device ports. |

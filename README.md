@@ -42,7 +42,7 @@ The goal is to practice the work of a real infrastructure deployment, not just a
 
 Addressing is allocated with VLSM from two pools: `192.168.0.0/16` for hosts (summarized as `192.168.0.0/22`) and `10.10.0.0/24` for network devices. Each subnet is sized from its department's headcount plus 25% growth and a gateway address. The method, DHCP conventions, routing design, per-switch port plan, and inter-VLAN policy are in [`Planning/addressing-plan.md`](Planning/addressing-plan.md).
 
-**Topology:** two buildings. Building 1 has one edge router, one Layer 3 core switch, three access switches (Executive/HR/Accounting, Operations/Sales, and IT/servers), and two wireless APs. Each access switch connects to the core with a two-link LACP port channel. Building 2 is a small satellite with one router (BLD2-RTR-01) and one access switch serving one department, Logistics. A routed point-to-point link joins the two buildings, and the core, the edge router, and the Building 2 router all run OSPF (area 0). Building 2 has no ISP connection: its internet traffic crosses the link and is translated by the Building 1 edge router. Native VLAN 999 is unused and not routed.
+**Topology:** two buildings. Building 1 has one edge router, one Layer 3 core switch, five 24-port access switches (Executive/HR, Accounting, IT/servers, Operations, and Sales, with printers/IoT spread across four of them), and two wireless APs. Each access switch connects to the core with a two-link LACP port channel. Building 2 is a small satellite with one router (BLD2-RTR-01) and one access switch serving one department, Logistics. A routed point-to-point link joins the two buildings, and the core, the edge router, and the Building 2 router all run OSPF (area 0). Building 2 has no ISP connection: its internet traffic crosses the link and is translated by the Building 1 edge router. Native VLAN 999 is unused and not routed.
 
 **Host VLANs (192.168.0.0/16)**
 
@@ -77,9 +77,11 @@ Addressing is allocated with VLSM from two pools: `192.168.0.0/16` for hosts (su
 |---|---|---|
 | BLD1-RTR-01 | Edge router: NAT, OSPF, default route to ISP, link to Building 2 | 10.10.0.33 (core), 10.10.0.37 (BLD2), 203.0.113.2 (WAN) |
 | BLD1-CORE-01 | Layer 3 core switch: DHCP, SVIs, inter-VLAN routing, OSPF | 10.10.0.1 (VLAN 99), 10.10.0.34 (transit) |
-| BLD1-ACC-01 | Access switch (Executive, HR, Accounting, Printers/IoT) | 10.10.0.11 |
-| BLD1-ACC-02 | Access switch (Operations, Sales, Printers/IoT) | 10.10.0.12 |
+| BLD1-ACC-01 | Access switch (Executive, HR, Printers/IoT, AP-01) | 10.10.0.11 |
+| BLD1-ACC-02 | Access switch (Accounting, Printers/IoT) | 10.10.0.12 |
 | BLD1-ACC-03 | Access switch (IT, Servers, UPS) | 10.10.0.13 |
+| BLD1-ACC-04 | Access switch (Operations, Printers/IoT) | 10.10.0.14 |
+| BLD1-ACC-05 | Access switch (Sales, Printers/IoT, AP-02) | 10.10.0.15 |
 | BLD1-AP-01 / AP-02 | Wireless APs (Staff and Guest SSIDs) | 10.10.0.21 / 10.10.0.22 |
 | BLD1-UPS-01 | UPS network card | 10.10.0.25 |
 | BLD2-RTR-01 | Building 2 router: DHCP, router-on-a-stick, OSPF | 10.10.0.38 (inter-building), 10.10.0.41 (VLAN 99), 192.168.3.1 (VLAN 120) |
@@ -99,6 +101,70 @@ Addressing is allocated with VLSM from two pools: `192.168.0.0/16` for hosts (su
 - **How devices are configured:** the Cisco IOS command line, first over console, then over SSH on the management VLAN. Configs are written as Jinja2 templates with per-device variables stored in the repo, rendered per device by a short Python script, applied during staging, then verified with `show` commands and committed.
 - **Automation (optional, later):** Netmiko or Ansible (`cisco.ios` collection) can push the rendered configs to GNS3 or EVE-NG devices. Packet Tracer devices cannot be driven from the host, so configs are pasted there.
 - **Protocols and features:** 802.1Q VLAN trunking, LACP port channels, Rapid PVST+, OSPF, DHCP on the core, inter-VLAN ACLs, NAT/PAT, SSH v2, port security, DHCP snooping, BPDU guard, NTP, and syslog.
+
+## Repository structure
+
+```
+network-infrastructure-design-deployment/
+├── README.md
+├── project-log.md           Dated notes on what was done each session
+├── .gitignore
+├── Planning/
+│   ├── requirements.md
+│   ├── addressing-plan.md      Addressing, OSPF routing design, switch port plan, ACL policy
+│   ├── glossary.md
+│   ├── ip-vlan-plan.xlsx
+│   ├── ip-vlan-plan.csv
+│   └── standards.md
+├── Pre-deployment/
+│   ├── site-survey.md
+│   ├── bill-of-materials.xlsx
+│   ├── inventory.xlsx
+│   ├── inventory.csv
+│   ├── ups-sizing.md
+│   ├── project-plan.xlsx
+│   ├── staging-checklist.md
+│   └── installation-checklist.md
+├── Configs/
+│   ├── network-infrastructure-design-deployment.pkt
+│   ├── templates/           Jinja2 templates (base, access switch, core)
+│   ├── variables/           Per-device variables (YAML or CSV)
+│   ├── render_configs.py    Renders one config per device
+│   ├── BLD1-CORE-01.txt
+│   ├── BLD1-ACC-01.txt
+│   ├── BLD1-ACC-02.txt
+│   ├── BLD1-ACC-03.txt
+│   ├── BLD1-ACC-04.txt
+│   ├── BLD1-ACC-05.txt
+│   ├── BLD1-RTR-01.txt
+│   ├── BLD2-RTR-01.txt
+│   ├── BLD2-ACC-01.txt
+│   └── wireless-design-note.md
+├── Testing/
+│   ├── test-matrix.xlsx
+│   └── evidence/
+├── Troubleshooting/
+│   ├── 01-wrong-access-vlan.md
+│   ├── 02-trunk-allowed-vlan-mismatch.md
+│   └── ...
+├── Coordination/
+│   ├── contractor-scope-email.md
+│   ├── facilities-request.md
+│   ├── vendor-rma-email.md
+│   ├── cutover-notice.md
+│   └── status-update-template.md
+├── Handoff/
+│   ├── as-built-notes.md
+│   ├── config-backups/
+│   └── closeout-checklist.md
+└── Diagrams/
+    ├── logical-topology.svg
+    ├── logical-topology.drawio
+    ├── rack-elevation.png
+    └── patch-panel-map.png
+```
+
+File names are suggestions. Match them to what you actually produce and keep this tree current.
 
 ## Project phases
 
@@ -168,8 +234,8 @@ Key terms used in this project. The full list is in [`Planning/glossary.md`](Pla
 
 ## Author
 
-**Terry Atong Taku**
-www.linkedin.com/in/terry-taku
+**[Your Name]**
+[LinkedIn URL]
 
 ---
 
