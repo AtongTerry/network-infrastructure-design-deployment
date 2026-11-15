@@ -6,7 +6,7 @@ A virtual two-building office network project covering the full deployment lifec
 
 > **Note:** This is a simulated environment built in Cisco Packet Tracer. No physical equipment was used. All device names, IP addresses, serial numbers, and asset tags are fictional.
 
-![Logical topology](Diagrams/logical-topology.svg)
+![Logical topology](Diagrams/logical-topology.png)
 
 ## Overview
 

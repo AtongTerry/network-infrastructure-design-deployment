@@ -1,0 +1,338 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="8bAWqNcaWW9XH2bow_69">
+    <mxGraphModel dx="4138" dy="1281" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="7AZhztvqFRN-54fEF37w-22" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="922.75" width="480" x="930" as="geometry" />
+        </mxCell>
+        <mxCell id="7AZhztvqFRN-54fEF37w-21" parent="1" style="rounded=0;whiteSpace=wrap;html=1;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="" vertex="1">
+          <mxGeometry height="932.75" width="1760" x="-920" as="geometry" />
+        </mxCell>
+        <mxCell id="JioL-8ORzMcOTCR5U1-M-58" edge="1" parent="1" source="4oMLlvXEQPI564UGJPMV-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;endArrow=block;endFill=1;startArrow=block;startFill=1;" target="JioL-8ORzMcOTCR5U1-M-57">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="el-15" connectable="0" parent="JioL-8ORzMcOTCR5U1-M-58" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#000000;labelBackgroundColor=#ffffff;" value="Gi0/0/2 · .37" vertex="1">
+          <mxGeometry relative="1" x="-0.88" as="geometry">
+            <mxPoint y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="el-16" connectable="0" parent="JioL-8ORzMcOTCR5U1-M-58" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#000000;labelBackgroundColor=#ffffff;" value="Inter-building 10.10.0.36/30" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="el-17" connectable="0" parent="JioL-8ORzMcOTCR5U1-M-58" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#000000;labelBackgroundColor=#ffffff;" value="Gi0/0/0 · .38" vertex="1">
+          <mxGeometry relative="1" x="0.88" as="geometry">
+            <mxPoint y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4oMLlvXEQPI564UGJPMV-1" parent="1" style="image=img/lib/clip_art/networking/Router_Icon_128x128.png;html=1;labelPerimeter=1;fontSize=11;fontColor=#000000;labelBackgroundColor=#ffffff;whiteSpace=nowrap;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;spacingRight=8;" value="&lt;b&gt;BLD1-RTR-01&lt;/b&gt;&lt;br&gt;ISR4331 · Router ID 10.10.0.33&lt;br&gt;NAT/PAT · originates default route" vertex="1">
+          <mxGeometry height="51" width="55.8" x="47.69999999999999" y="147" as="geometry" />
+        </mxCell>
+        <mxCell id="4oMLlvXEQPI564UGJPMV-9" parent="1" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#505050;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.devices.workstation_pc;labelPerimeter=1;fontSize=10;fontColor=#000000;labelBackgroundColor=#ffffff;whiteSpace=nowrap;" value="IT PC&lt;br&gt;VLAN 60 · Fa0/1" vertex="1">
+          <mxGeometry height="48" width="40" x="-120" y="576.65" as="geometry" />
+        </mxCell>
+        <mxCell id="4oMLlvXEQPI564UGJPMV-11" parent="1" style="image=img/lib/clip_art/computers/Server_Rack_Partial_128x128.png;html=1;labelPerimeter=1;fontSize=10;fontColor=#000000;labelBackgroundColor=#ffffff;whiteSpace=nowrap;strokeColor=none;" value="&lt;b&gt;BLD1-SRV-01 to 04&lt;/b&gt;&lt;br&gt;VLAN 110 · Fa0/17-20&lt;br&gt;192.168.2.226-229" vertex="1">
+          <mxGeometry height="59" width="78" x="35.700000000000045" y="614.45" as="geometry" />
+        </mxCell>
+        <mxCell id="4oMLlvXEQPI564UGJPMV-12" parent="1" style="sketch=0;html=1;pointerEvents=1;dashed=0;fillColor=#036897;strokeColor=#ffffff;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.cisco.misc.ups;labelPerimeter=1;fontSize=10;fontColor=#000000;labelBackgroundColor=#ffffff;whiteSpace=nowrap;" value="&lt;b&gt;BLD1-UPS-01&lt;/b&gt; · 10.10.0.25&lt;br&gt;Fa0/24 · VLAN 99" vertex="1">
+          <mxGeometry height="51" width="62" x="180" y="580.65" as="geometry" />
+        </mxCell>
+        <mxCell id="4oMLlvXEQPI564UGJPMV-13" parent="1" style="fillColorStyles=neutralFill;neutralFill=#9DA6A8;shape=mxgraph.networks2.icon;aspect=fixed;fillColor=#EDEDED;strokeColor=#000000;gradientColor=#5B6163;network2IconShadow=1;network2bgFillColor=none;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;network2Icon=mxgraph.networks2.printer;network2IconW=1;network2IconH=1.04;labelPerimeter=1;html=1;fontSize=10;fontColor=#000000;labelBackgroundColor=#ffffff;whiteSpace=nowrap;" value="Printer&lt;br&gt;VLAN 100 · Fa0/13" vertex="1">
+          <mxGeometry height="41.6" width="40" x="-305.0499999999999" y="613.05" as="geometry" />
+        </mxCell>
+        <mxCell id="4oMLlvXEQPI564UGJPMV-14" parent="1" style="image=img/lib/clip_art/networking/Wireless_Router_128x128.png;html=1;labelPerimeter=1;fontSize=10;fontColor=#000000;labelBackgroundColor=#ffffff;whiteSpace=nowrap;strokeColor=none;" value="BLD1-AP-01&lt;br&gt;10.10.0.21 · Fa0/24" vertex="1">
+          <mxGeometry height="41.6" width="55.8" x="-572.9" y="662.4499999999999" as="geometry" />
+        </mxCell>
+        <mxCell id="7AZhztvqFRN-54fEF37w-16" edge="1" parent="1" source="JioL-8ORzMcOTCR5U1-M-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.917;exitY=0.785;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;shape=arrow;" target="4oMLlvXEQPI564UGJPMV-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JioL-8ORzMcOTCR5U1-M-1" parent="1" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/internet_cloud.svg;points=[[0.522,0,0],[0.57,1,0],[0,0.562,0],[1,0.556,0],[0.905,0.274,0],[0.917,0.785,0],[0.1,0.872,0],[0.14,0.151,0]];labelPerimeter=1;" value="" vertex="1">
+          <mxGeometry height="59" width="93.65" x="24.270000000000028" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="JioL-8ORzMcOTCR5U1-M-29" edge="1" parent="1" source="JioL-8ORzMcOTCR5U1-M-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="JioL-8ORzMcOTCR5U1-M-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="el-7" connectable="0" parent="JioL-8ORzMcOTCR5U1-M-29" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#000000;labelBackgroundColor=#ffffff;" value="Fa0/5-6" vertex="1">
+          <mxGeometry relative="1" x="-0.4" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="el-8" connectable="0" parent="JioL-8ORzMcOTCR5U1-M-29" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#000000;labelBackgroundColor=#ffffff;" value="Gi0/1-2 · Po3" vertex="1">
+          <mxGeometry relative="1" x="0.4" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JioL-8ORzMcOTCR5U1-M-31" edge="1" parent="1" source="JioL-8ORzMcOTCR5U1-M-2" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="JioL-8ORzMcOTCR5U1-M-17">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="9.200000000000003" y="330" as="sourcePoint" />
+            <mxPoint x="-697.7" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="el-3" connectable="0" parent="JioL-8ORzMcOTCR5U1-M-31" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#000000;labelBackgroundColor=#ffffff;" value="Fa0/1-2" vertex="1">
+          <mxGeometry relative="1" x="-0.5" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="el-4" connectable="0" parent="JioL-8ORzMcOTCR5U1-M-31" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#000000;labelBackgroundColor=#ffffff;" value="Gi0/1-2 · Po1" vertex="1">
+          <mxGeometry relative="1" x="0.55" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EZDfOoiH6bhQ2iF9eJ3d-4" edge="1" parent="1" source="JioL-8ORzMcOTCR5U1-M-2" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="EZDfOoiH6bhQ2iF9eJ3d-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="el-5" connectable="0" parent="EZDfOoiH6bhQ2iF9eJ3d-4" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#000000;labelBackgroundColor=#ffffff;" value="Fa0/3-4" vertex="1">
+          <mxGeometry relative="1" x="-0.5" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="el-6" connectable="0" parent="EZDfOoiH6bhQ2iF9eJ3d-4" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#000000;labelBackgroundColor=#ffffff;" value="Gi0/1-2 · Po2" vertex="1">
+          <mxGeometry relative="1" x="0.55" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EZDfOoiH6bhQ2iF9eJ3d-7" edge="1" parent="1" source="JioL-8ORzMcOTCR5U1-M-2" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.95;exitY=0.94;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="EZDfOoiH6bhQ2iF9eJ3d-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="el-9" connectable="0" parent="EZDfOoiH6bhQ2iF9eJ3d-7" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#000000;labelBackgroundColor=#ffffff;" value="Fa0/7-8" vertex="1">
+          <mxGeometry relative="1" x="-0.5" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="el-10" connectable="0" parent="EZDfOoiH6bhQ2iF9eJ3d-7" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#000000;labelBackgroundColor=#ffffff;" value="Gi0/1-2 · Po4" vertex="1">
+          <mxGeometry relative="1" x="0.55" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JioL-8ORzMcOTCR5U1-M-2" parent="1" style="strokeColor=#ffffff;sketch=0;html=1;pointerEvents=1;dashed=0;fillColor=#036897;strokeWidth=2;verticalLabelPosition=middle;verticalAlign=top;align=left;outlineConnect=0;shape=mxgraph.cisco.switches.layer_3_switch;labelPerimeter=1;fontSize=11;fontColor=#000000;labelBackgroundColor=#ffffff;whiteSpace=nowrap;labelPosition=right;spacingLeft=8;" value="&lt;b&gt;BLD1-CORE-01&lt;/b&gt;&lt;br&gt;3560-24PS · mgmt / Router ID 10.10.0.1" vertex="1">
+          <mxGeometry height="51" width="50" x="54.50000000000002" y="309" as="geometry" />
+        </mxCell>
+        <mxCell id="JioL-8ORzMcOTCR5U1-M-9" edge="1" parent="1" source="JioL-8ORzMcOTCR5U1-M-2" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;fontFamily=Helvetica;fontSize=10;" target="JioL-8ORzMcOTCR5U1-M-15" value="">
+          <mxGeometry relative="1" x="-0.1772" y="-46" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="326.5887999999999" y="429" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="el-11" connectable="0" parent="JioL-8ORzMcOTCR5U1-M-9" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#000000;labelBackgroundColor=#ffffff;" value="Fa0/9-10" vertex="1">
+          <mxGeometry relative="1" x="-0.5" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="el-12" connectable="0" parent="JioL-8ORzMcOTCR5U1-M-9" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#000000;labelBackgroundColor=#ffffff;" value="Gi0/1-2 · Po5" vertex="1">
+          <mxGeometry relative="1" x="0.7" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JioL-8ORzMcOTCR5U1-M-42" edge="1" parent="1" source="JioL-8ORzMcOTCR5U1-M-13" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="4oMLlvXEQPI564UGJPMV-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JioL-8ORzMcOTCR5U1-M-13" parent="1" style="shape=rect;fillColor=#1192E8;aspect=fixed;resizable=0;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;strokeColor=none;fontSize=11;labelPerimeter=1;html=1;whiteSpace=nowrap;fontColor=#000000;labelBackgroundColor=#ffffff;spacingLeft=8;" value="&lt;b&gt;BLD1-ACC-03&lt;/b&gt;&lt;br&gt;2960-24TT · 10.10.0.13&lt;br&gt;IT, servers, UPS" vertex="1">
+          <mxGeometry height="48" width="48" x="55.50000000000002" y="432" as="geometry" />
+        </mxCell>
+        <mxCell id="JioL-8ORzMcOTCR5U1-M-14" parent="JioL-8ORzMcOTCR5U1-M-13" style="fillColor=#ffffff;strokeColor=none;dashed=0;outlineConnect=0;html=1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;part=1;movable=0;resizable=0;rotatable=0;shape=mxgraph.ibm_cloud.switch-layer-2;labelPerimeter=1;" value="" vertex="1">
+          <mxGeometry height="24" relative="1" width="24" as="geometry">
+            <mxPoint x="12" y="12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JioL-8ORzMcOTCR5U1-M-15" parent="1" style="shape=rect;fillColor=#1192E8;aspect=fixed;resizable=0;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;strokeColor=none;fontSize=11;labelPerimeter=1;html=1;whiteSpace=nowrap;fontColor=#000000;labelBackgroundColor=#ffffff;spacingLeft=8;" value="&lt;b&gt;BLD1-ACC-05&lt;/b&gt;&lt;br&gt;2960-24TT · 10.10.0.15&lt;br&gt;SALES, printers, AP-02" vertex="1">
+          <mxGeometry height="48" width="48" x="657.9999999999999" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="JioL-8ORzMcOTCR5U1-M-16" parent="JioL-8ORzMcOTCR5U1-M-15" style="fillColor=#ffffff;strokeColor=none;dashed=0;outlineConnect=0;html=1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;part=1;movable=0;resizable=0;rotatable=0;shape=mxgraph.ibm_cloud.switch-layer-2;labelPerimeter=1;" value="" vertex="1">
+          <mxGeometry height="24" relative="1" width="24" as="geometry">
+            <mxPoint x="12" y="12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JioL-8ORzMcOTCR5U1-M-43" edge="1" parent="1" source="JioL-8ORzMcOTCR5U1-M-17" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="JioL-8ORzMcOTCR5U1-M-35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JioL-8ORzMcOTCR5U1-M-44" edge="1" parent="1" source="JioL-8ORzMcOTCR5U1-M-17" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="JioL-8ORzMcOTCR5U1-M-34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JioL-8ORzMcOTCR5U1-M-17" parent="1" style="shape=rect;fillColor=#1192E8;aspect=fixed;resizable=0;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;strokeColor=none;fontSize=11;labelPerimeter=1;html=1;whiteSpace=nowrap;fontColor=#000000;labelBackgroundColor=#ffffff;spacingRight=8;" value="&lt;b&gt;BLD1-ACC-01&lt;/b&gt;&lt;br&gt;2960-24TT · 10.10.0.11&lt;br&gt;EXEC, HR, printers, AP-01" vertex="1">
+          <mxGeometry height="48" width="48" x="-676.4000000000001" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="JioL-8ORzMcOTCR5U1-M-18" parent="JioL-8ORzMcOTCR5U1-M-17" style="fillColor=#ffffff;strokeColor=none;dashed=0;outlineConnect=0;html=1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;part=1;movable=0;resizable=0;rotatable=0;shape=mxgraph.ibm_cloud.switch-layer-2;labelPerimeter=1;" value="" vertex="1">
+          <mxGeometry height="24" relative="1" width="24" as="geometry">
+            <mxPoint x="12" y="12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JioL-8ORzMcOTCR5U1-M-32" parent="1" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#505050;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.devices.workstation_pc;labelPerimeter=1;fontSize=10;fontColor=#000000;labelBackgroundColor=#ffffff;whiteSpace=nowrap;" value="OPS PC&lt;br&gt;VLAN 40 · Fa0/1" vertex="1">
+          <mxGeometry height="48" width="40" x="301.84999999999997" y="587.65" as="geometry" />
+        </mxCell>
+        <mxCell id="JioL-8ORzMcOTCR5U1-M-33" parent="1" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#505050;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.devices.workstation_pc;labelPerimeter=1;fontSize=10;fontColor=#000000;labelBackgroundColor=#ffffff;whiteSpace=nowrap;" value="ACCT PC&lt;br&gt;VLAN 30 · Fa0/1" vertex="1">
+          <mxGeometry height="48" width="40" x="-410.00000000000006" y="606.65" as="geometry" />
+        </mxCell>
+        <mxCell id="JioL-8ORzMcOTCR5U1-M-34" parent="1" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#505050;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.devices.workstation_pc;labelPerimeter=1;fontSize=10;fontColor=#000000;labelBackgroundColor=#ffffff;whiteSpace=nowrap;" value="HR PC&lt;br&gt;VLAN 20 · Fa0/9" vertex="1">
+          <mxGeometry height="48" width="40" x="-749.9999999999999" y="614.45" as="geometry" />
+        </mxCell>
+        <mxCell id="JioL-8ORzMcOTCR5U1-M-35" parent="1" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#505050;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.devices.workstation_pc;labelPerimeter=1;fontSize=10;fontColor=#000000;labelBackgroundColor=#ffffff;whiteSpace=nowrap;" value="EXEC PC&lt;br&gt;VLAN 10 · Fa0/1" vertex="1">
+          <mxGeometry height="48" width="40" x="-839.9999999999999" y="608.25" as="geometry" />
+        </mxCell>
+        <mxCell id="JioL-8ORzMcOTCR5U1-M-36" parent="1" style="fillColorStyles=neutralFill;neutralFill=#9DA6A8;shape=mxgraph.networks2.icon;aspect=fixed;fillColor=#EDEDED;strokeColor=#000000;gradientColor=#5B6163;network2IconShadow=1;network2bgFillColor=none;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;network2Icon=mxgraph.networks2.printer;network2IconW=1;network2IconH=1.04;labelPerimeter=1;html=1;fontSize=10;fontColor=#000000;labelBackgroundColor=#ffffff;whiteSpace=nowrap;" value="Printer&lt;br&gt;VLAN 100 · Fa0/19" vertex="1">
+          <mxGeometry height="41.6" width="40" x="-660" y="617.65" as="geometry" />
+        </mxCell>
+        <mxCell id="JioL-8ORzMcOTCR5U1-M-38" parent="1" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#505050;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.devices.workstation_pc;labelPerimeter=1;fontSize=10;fontColor=#000000;labelBackgroundColor=#ffffff;whiteSpace=nowrap;" value="SALES PC&lt;br&gt;VLAN 50 · Fa0/1" vertex="1">
+          <mxGeometry height="48" width="40" x="543.8" y="595.25" as="geometry" />
+        </mxCell>
+        <mxCell id="JioL-8ORzMcOTCR5U1-M-46" edge="1" parent="1" source="JioL-8ORzMcOTCR5U1-M-17" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.502;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="JioL-8ORzMcOTCR5U1-M-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JioL-8ORzMcOTCR5U1-M-50" edge="1" parent="1" source="JioL-8ORzMcOTCR5U1-M-15" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0.525;entryY=0.151;entryDx=0;entryDy=0;entryPerimeter=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="JioL-8ORzMcOTCR5U1-M-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JioL-8ORzMcOTCR5U1-M-59" edge="1" parent="1" source="JioL-8ORzMcOTCR5U1-M-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;startArrow=classic;startFill=1;dashed=1;strokeColor=light-dark(#000000,#3399FF);dashPattern=8 8;strokeWidth=3;" target="4oMLlvXEQPI564UGJPMV-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7AZhztvqFRN-54fEF37w-29" edge="1" parent="1" source="JioL-8ORzMcOTCR5U1-M-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="7AZhztvqFRN-54fEF37w-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="el-18" connectable="0" parent="7AZhztvqFRN-54fEF37w-29" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#000000;labelBackgroundColor=#ffffff;" value="Trunk: RTR Gi0/0/1 ↔ ACC Gi0/1&lt;br&gt;native 999 · VLAN 99, 120" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-110" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JioL-8ORzMcOTCR5U1-M-57" parent="1" style="image=img/lib/clip_art/networking/Router_Icon_128x128.png;html=1;labelPerimeter=1;fontSize=11;fontColor=#000000;labelBackgroundColor=#ffffff;whiteSpace=nowrap;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;spacingLeft=8;" value="&lt;b&gt;BLD2-RTR-01&lt;/b&gt;&lt;br&gt;ISR4331 · Router ID 10.10.0.38&lt;br&gt;DHCP + ACL for VLAN 120" vertex="1">
+          <mxGeometry height="51" width="55.8" x="1151.05" y="147" as="geometry" />
+        </mxCell>
+        <mxCell id="7AZhztvqFRN-54fEF37w-17" edge="1" parent="1" source="4oMLlvXEQPI564UGJPMV-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.1;entryY=0.872;entryDx=0;entryDy=0;entryPerimeter=0;defaultLabelBackgroundColor=page;labelPadding=0 4;shape=arrow;" target="JioL-8ORzMcOTCR5U1-M-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7AZhztvqFRN-54fEF37w-23" parent="1" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Building 1&lt;/h1&gt;" vertex="1">
+          <mxGeometry height="48" width="180" x="-300.18" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="7AZhztvqFRN-54fEF37w-25" parent="1" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Building 2&lt;/h1&gt;" vertex="1">
+          <mxGeometry height="48" width="180" x="980" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="7AZhztvqFRN-54fEF37w-26" parent="1" style="shape=rect;fillColor=#1192E8;aspect=fixed;resizable=0;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;strokeColor=none;fontSize=11;labelPerimeter=1;html=1;whiteSpace=nowrap;fontColor=#000000;labelBackgroundColor=#ffffff;spacingLeft=8;" value="&lt;b&gt;BLD2-ACC-01&lt;/b&gt;&lt;br&gt;2960-24TT · 10.10.0.42&lt;br&gt;Fa0/1-20 Logistics users" vertex="1">
+          <mxGeometry height="48" width="48" x="1154.95" y="236" as="geometry" />
+        </mxCell>
+        <mxCell id="7AZhztvqFRN-54fEF37w-27" parent="7AZhztvqFRN-54fEF37w-26" style="fillColor=#ffffff;strokeColor=none;dashed=0;outlineConnect=0;html=1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;part=1;movable=0;resizable=0;rotatable=0;shape=mxgraph.ibm_cloud.switch-layer-2;labelPerimeter=1;" value="" vertex="1">
+          <mxGeometry height="24" relative="1" width="24" as="geometry">
+            <mxPoint x="12" y="12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7AZhztvqFRN-54fEF37w-28" parent="1" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#505050;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.devices.workstation_pc;labelPerimeter=1;fontSize=10;fontColor=#000000;labelBackgroundColor=#ffffff;whiteSpace=nowrap;" value="Logistics PC&lt;br&gt;VLAN 120 · Fa0/1" vertex="1">
+          <mxGeometry height="48" width="40" x="1080" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="7AZhztvqFRN-54fEF37w-30" edge="1" parent="1" source="7AZhztvqFRN-54fEF37w-26" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="7AZhztvqFRN-54fEF37w-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7AZhztvqFRN-54fEF37w-32" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontColor=light-dark(#000000,#3399FF);" value="OSPF area 0 · point-to-point · MD5 authentication" vertex="1">
+          <mxGeometry height="30" width="300" x="300" y="198" as="geometry" />
+        </mxCell>
+        <mxCell id="7AZhztvqFRN-54fEF37w-33" edge="1" parent="1" source="4oMLlvXEQPI564UGJPMV-1" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.08;entryY=0.05;entryDx=0;entryDy=0;entryPerimeter=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="JioL-8ORzMcOTCR5U1-M-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="el-13" connectable="0" parent="7AZhztvqFRN-54fEF37w-33" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#000000;labelBackgroundColor=#ffffff;" value="Transit 10.10.0.32/30&lt;br&gt;RTR Gi0/0/1 .33 ↔ Core Gi0/1 .34" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-105" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7AZhztvqFRN-54fEF37w-34" edge="1" parent="1" source="4oMLlvXEQPI564UGJPMV-1" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;defaultLabelBackgroundColor=page;labelPadding=0 4;dashed=1;strokeWidth=2;startArrow=classic;startFill=1;strokeColor=light-dark(#000000,#3399FF);" target="JioL-8ORzMcOTCR5U1-M-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="el-14" connectable="0" parent="7AZhztvqFRN-54fEF37w-34" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#000000;labelBackgroundColor=#ffffff;" value="OSPF" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="34" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7AZhztvqFRN-54fEF37w-36" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontColor=light-dark(#000000,#000000);" value="Internet / ISP" vertex="1">
+          <mxGeometry height="30" width="70.8" x="35.7" y="44.5" as="geometry" />
+        </mxCell>
+        <mxCell id="EZDfOoiH6bhQ2iF9eJ3d-1" parent="1" style="shape=rect;fillColor=#1192E8;aspect=fixed;resizable=0;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;strokeColor=none;fontSize=11;labelPerimeter=1;html=1;whiteSpace=nowrap;fontColor=#000000;labelBackgroundColor=#ffffff;spacingLeft=8;" value="&lt;b&gt;BLD1-ACC-02&lt;/b&gt;&lt;br&gt;2960-24TT · 10.10.0.12&lt;br&gt;ACCT, printers" vertex="1">
+          <mxGeometry height="48" width="48" x="-370" y="491" as="geometry" />
+        </mxCell>
+        <mxCell id="EZDfOoiH6bhQ2iF9eJ3d-2" parent="EZDfOoiH6bhQ2iF9eJ3d-1" style="fillColor=#ffffff;strokeColor=none;dashed=0;outlineConnect=0;html=1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;part=1;movable=0;resizable=0;rotatable=0;shape=mxgraph.ibm_cloud.switch-layer-2;labelPerimeter=1;" value="" vertex="1">
+          <mxGeometry height="24" relative="1" width="24" as="geometry">
+            <mxPoint x="12" y="12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EZDfOoiH6bhQ2iF9eJ3d-13" edge="1" parent="1" source="EZDfOoiH6bhQ2iF9eJ3d-5" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="JioL-8ORzMcOTCR5U1-M-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EZDfOoiH6bhQ2iF9eJ3d-5" parent="1" style="shape=rect;fillColor=#1192E8;aspect=fixed;resizable=0;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;strokeColor=none;fontSize=11;labelPerimeter=1;html=1;whiteSpace=nowrap;fontColor=#000000;labelBackgroundColor=#ffffff;spacingLeft=8;" value="&lt;b&gt;BLD1-ACC-04&lt;/b&gt;&lt;br&gt;2960-24TT · 10.10.0.14&lt;br&gt;OPS, printers" vertex="1">
+          <mxGeometry height="48" width="48" x="341" y="443" as="geometry" />
+        </mxCell>
+        <mxCell id="EZDfOoiH6bhQ2iF9eJ3d-6" parent="EZDfOoiH6bhQ2iF9eJ3d-5" style="fillColor=#ffffff;strokeColor=none;dashed=0;outlineConnect=0;html=1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;part=1;movable=0;resizable=0;rotatable=0;shape=mxgraph.ibm_cloud.switch-layer-2;labelPerimeter=1;" value="" vertex="1">
+          <mxGeometry height="24" relative="1" width="24" as="geometry">
+            <mxPoint x="12" y="12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EZDfOoiH6bhQ2iF9eJ3d-8" edge="1" parent="1" source="JioL-8ORzMcOTCR5U1-M-13" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="4oMLlvXEQPI564UGJPMV-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EZDfOoiH6bhQ2iF9eJ3d-10" parent="1" style="fillColorStyles=neutralFill;neutralFill=#9DA6A8;shape=mxgraph.networks2.icon;aspect=fixed;fillColor=#EDEDED;strokeColor=#000000;gradientColor=#5B6163;network2IconShadow=1;network2bgFillColor=none;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;network2Icon=mxgraph.networks2.printer;network2IconW=1;network2IconH=1.04;labelPerimeter=1;html=1;fontSize=10;fontColor=#000000;labelBackgroundColor=#ffffff;whiteSpace=nowrap;" value="Printer&lt;br&gt;VLAN 100 · Fa0/15" vertex="1">
+          <mxGeometry height="41.6" width="40" x="410" y="590.85" as="geometry" />
+        </mxCell>
+        <mxCell id="EZDfOoiH6bhQ2iF9eJ3d-11" edge="1" parent="1" source="EZDfOoiH6bhQ2iF9eJ3d-1" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.502;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="4oMLlvXEQPI564UGJPMV-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EZDfOoiH6bhQ2iF9eJ3d-12" edge="1" parent="1" source="EZDfOoiH6bhQ2iF9eJ3d-1" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.222;entryY=0.018;entryDx=0;entryDy=0;entryPerimeter=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="JioL-8ORzMcOTCR5U1-M-33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EZDfOoiH6bhQ2iF9eJ3d-14" edge="1" parent="1" source="EZDfOoiH6bhQ2iF9eJ3d-5" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.502;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="EZDfOoiH6bhQ2iF9eJ3d-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EZDfOoiH6bhQ2iF9eJ3d-15" parent="1" style="fillColorStyles=neutralFill;neutralFill=#9DA6A8;shape=mxgraph.networks2.icon;aspect=fixed;fillColor=#EDEDED;strokeColor=#000000;gradientColor=#5B6163;network2IconShadow=1;network2bgFillColor=none;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;network2Icon=mxgraph.networks2.printer;network2IconW=1;network2IconH=1.04;labelPerimeter=1;html=1;fontSize=10;fontColor=#000000;labelBackgroundColor=#ffffff;whiteSpace=nowrap;" value="Printer&lt;br&gt;VLAN 100 · Fa0/21" vertex="1">
+          <mxGeometry height="41.6" width="40" x="662" y="619.9999999999999" as="geometry" />
+        </mxCell>
+        <mxCell id="EZDfOoiH6bhQ2iF9eJ3d-16" edge="1" parent="1" source="JioL-8ORzMcOTCR5U1-M-15" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.472;entryY=0.012;entryDx=0;entryDy=0;entryPerimeter=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="KyT2LsP1k2tEruCjcWGE-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="791.9175999999998" y="578.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EZDfOoiH6bhQ2iF9eJ3d-17" edge="1" parent="1" source="JioL-8ORzMcOTCR5U1-M-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.502;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="EZDfOoiH6bhQ2iF9eJ3d-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="new-1" parent="1" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#505050;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.devices.workstation_pc;labelPerimeter=1;fontSize=10;fontColor=#000000;labelBackgroundColor=#ffffff;whiteSpace=nowrap;" value="Logistics PC&lt;br&gt;VLAN 120 · Fa0/2" vertex="1">
+          <mxGeometry height="48" width="40" x="1279" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="new-edge-pc2" edge="1" parent="1" source="7AZhztvqFRN-54fEF37w-26" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="new-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="new-2" parent="1" style="text;html=1;align=right;verticalAlign=middle;fontSize=10;fontColor=#000000;whiteSpace=nowrap;" value="&lt;b&gt;WAN&lt;/b&gt; 203.0.113.0/30&lt;br&gt;RTR Gi0/0/0 .2 ↔ ISP-STUB .1" vertex="1">
+          <mxGeometry height="36" width="225" x="-215" y="95" as="geometry" />
+        </mxCell>
+        <mxCell id="new-19" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fillColor=#ffffff;strokeColor=#666666;fontColor=#000000;fontSize=10;spacing=6;overflow=hidden;" value="&lt;b style=&quot;font-size:11px&quot;&gt;Department VLANs (DHCP from core)&lt;/b&gt;&lt;br&gt;&lt;table border=&quot;1&quot; cellpadding=&quot;2&quot; cellspacing=&quot;0&quot; style=&quot;border-collapse:collapse;font-size:10px;width:100%&quot;&gt;&lt;tr style=&quot;background:#dbe8f5&quot;&gt;&lt;th align=&quot;left&quot;&gt;VLAN&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Name&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Subnet&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Gateway&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Switch ports&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;10&lt;/td&gt;&lt;td&gt;EXEC&lt;/td&gt;&lt;td&gt;192.168.2.192/28&lt;/td&gt;&lt;td&gt;.193&lt;/td&gt;&lt;td&gt;ACC-01 Fa0/1-8&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;20&lt;/td&gt;&lt;td&gt;HR&lt;/td&gt;&lt;td&gt;192.168.2.208/28&lt;/td&gt;&lt;td&gt;.209&lt;/td&gt;&lt;td&gt;ACC-01 Fa0/9-18&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;30&lt;/td&gt;&lt;td&gt;ACCT&lt;/td&gt;&lt;td&gt;192.168.2.64/27&lt;/td&gt;&lt;td&gt;.65&lt;/td&gt;&lt;td&gt;ACC-02 Fa0/1-12&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;40&lt;/td&gt;&lt;td&gt;OPS&lt;/td&gt;&lt;td&gt;192.168.2.96/27&lt;/td&gt;&lt;td&gt;.97&lt;/td&gt;&lt;td&gt;ACC-04 Fa0/1-14&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;50&lt;/td&gt;&lt;td&gt;SALES&lt;/td&gt;&lt;td&gt;192.168.2.128/27&lt;/td&gt;&lt;td&gt;.129&lt;/td&gt;&lt;td&gt;ACC-05 Fa0/1-20&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;60&lt;/td&gt;&lt;td&gt;IT&lt;/td&gt;&lt;td&gt;192.168.2.0/26&lt;/td&gt;&lt;td&gt;.1&lt;/td&gt;&lt;td&gt;ACC-03 Fa0/1-16&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" vertex="1">
+          <mxGeometry height="180" width="470" x="-900" y="745" as="geometry" />
+        </mxCell>
+        <mxCell id="new-20" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fillColor=#ffffff;strokeColor=#666666;fontColor=#000000;fontSize=10;spacing=6;overflow=hidden;" value="&lt;b style=&quot;font-size:11px&quot;&gt;Shared VLANs&lt;/b&gt;&lt;br&gt;&lt;table border=&quot;1&quot; cellpadding=&quot;2&quot; cellspacing=&quot;0&quot; style=&quot;border-collapse:collapse;font-size:10px;width:100%&quot;&gt;&lt;tr style=&quot;background:#dbe8f5&quot;&gt;&lt;th align=&quot;left&quot;&gt;VLAN&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Name&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Subnet&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Gateway&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Where&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;70&lt;/td&gt;&lt;td&gt;VOICE&lt;/td&gt;&lt;td&gt;192.168.1.0/25&lt;/td&gt;&lt;td&gt;.1&lt;/td&gt;&lt;td&gt;phones (voice VLAN)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;80&lt;/td&gt;&lt;td&gt;STAFF-WIFI&lt;/td&gt;&lt;td&gt;192.168.0.0/24&lt;/td&gt;&lt;td&gt;.1&lt;/td&gt;&lt;td&gt;AP-01, AP-02&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;90&lt;/td&gt;&lt;td&gt;GUEST&lt;/td&gt;&lt;td&gt;192.168.1.128/25&lt;/td&gt;&lt;td&gt;.129&lt;/td&gt;&lt;td&gt;AP-01, AP-02&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;100&lt;/td&gt;&lt;td&gt;PRINTERS-IOT&lt;/td&gt;&lt;td&gt;192.168.2.160/27&lt;/td&gt;&lt;td&gt;.161&lt;/td&gt;&lt;td&gt;18 printers&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;110&lt;/td&gt;&lt;td&gt;SERVERS&lt;/td&gt;&lt;td&gt;192.168.2.224/29&lt;/td&gt;&lt;td&gt;.225&lt;/td&gt;&lt;td&gt;ACC-03 Fa0/17-20&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;99&lt;/td&gt;&lt;td&gt;MGMT&lt;/td&gt;&lt;td&gt;10.10.0.0/27&lt;/td&gt;&lt;td&gt;.1&lt;/td&gt;&lt;td&gt;switches, APs, UPS&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" vertex="1">
+          <mxGeometry height="180" width="420" x="-415" y="745" as="geometry" />
+        </mxCell>
+        <mxCell id="new-21" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fillColor=#ffffff;strokeColor=#666666;fontColor=#000000;fontSize=10;spacing=6;overflow=hidden;" value="&lt;b style=&quot;font-size:11px&quot;&gt;Transit, WAN and services&lt;/b&gt;&lt;ul style=&quot;margin:4px 0 0 0;padding-left:14px&quot;&gt;&lt;li&gt;WAN 203.0.113.0/30: RTR Gi0/0/0 .2, ISP-STUB .1&lt;/li&gt;&lt;li&gt;Transit 10.10.0.32/30: RTR Gi0/0/1 .33, Core Gi0/1 .34&lt;/li&gt;&lt;li&gt;Inter-building 10.10.0.36/30: RTR Gi0/0/2 .37, BLD2-RTR-01 Gi0/0/0 .38&lt;/li&gt;&lt;li&gt;OSPFv2 process 1, area 0, MD5; user VLANs passive; edge router originates default route&lt;/li&gt;&lt;li&gt;NAT/PAT for 192.168.0.0/22 out Gi0/0/0&lt;/li&gt;&lt;li&gt;DHCP: core (Bldg 1), BLD2-RTR-01 (Bldg 2). DNS 192.168.2.226, domain campus.lab&lt;/li&gt;&lt;/ul&gt;" vertex="1">
+          <mxGeometry height="180" width="400" x="10" y="745" as="geometry" />
+        </mxCell>
+        <mxCell id="new-22" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fillColor=#ffffff;strokeColor=#666666;fontColor=#000000;fontSize=10;spacing=6;overflow=hidden;" value="&lt;b style=&quot;font-size:11px&quot;&gt;Legend and Packet Tracer notes&lt;/b&gt;&lt;ul style=&quot;margin:4px 0 0 0;padding-left:14px&quot;&gt;&lt;li&gt;Solid line: Ethernet link. Dashed line: OSPF adjacency.&lt;/li&gt;&lt;li&gt;Access uplinks: 2-link LACP port channels Po1-Po5 (core Fa0/1-10 to access Gi0/1-2), trunk, native VLAN 999, 100 Mbps in Packet Tracer&lt;/li&gt;&lt;li&gt;Server icon on ACC-03 Fa0/24 stands in for BLD1-UPS-01 (Packet Tracer has no UPS)&lt;/li&gt;&lt;li&gt;Models: ISR4331 routers, 3560-24PS core, 2960-24TT access&lt;/li&gt;&lt;/ul&gt;" vertex="1">
+          <mxGeometry height="180" width="395" x="425" y="745" as="geometry" />
+        </mxCell>
+        <mxCell id="new-23" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fillColor=#ffffff;strokeColor=#666666;fontColor=#000000;fontSize=10;spacing=6;overflow=hidden;" value="&lt;b style=&quot;font-size:11px&quot;&gt;Building 2 subnets&lt;/b&gt;&lt;br&gt;&lt;table border=&quot;1&quot; cellpadding=&quot;2&quot; cellspacing=&quot;0&quot; style=&quot;border-collapse:collapse;font-size:10px;width:100%&quot;&gt;&lt;tr style=&quot;background:#dbe8f5&quot;&gt;&lt;th align=&quot;left&quot;&gt;VLAN&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Name&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Subnet&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Gateway&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;120&lt;/td&gt;&lt;td&gt;LOGISTICS&lt;/td&gt;&lt;td&gt;192.168.3.0/27&lt;/td&gt;&lt;td&gt;.1 (RTR Gi0/0/1.120)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;99&lt;/td&gt;&lt;td&gt;MGMT-B2&lt;/td&gt;&lt;td&gt;10.10.0.40/29&lt;/td&gt;&lt;td&gt;.41 (RTR Gi0/0/1.99)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;ul style=&quot;margin:6px 0 0 0;padding-left:14px&quot;&gt;&lt;li&gt;20 Logistics users on ACC-01 Fa0/1-20, DHCP from BLD2-RTR-01&lt;/li&gt;&lt;li&gt;ACL LOGISTICS-IN on Gi0/0/1.120&lt;/li&gt;&lt;li&gt;Fa0/21-24 unused, shut down&lt;/li&gt;&lt;/ul&gt;" vertex="1">
+          <mxGeometry height="170" width="440" x="945" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="KyT2LsP1k2tEruCjcWGE-1" parent="1" style="points=[[0.03,0.36,0],[0.18,0,0],[0.5,0.34,0],[0.82,0,0],[0.97,0.36,0],[1,0.67,0],[0.975,0.975,0],[0.5,1,0],[0.025,0.975,0],[0,0.67,0]];verticalLabelPosition=bottom;sketch=0;html=1;verticalAlign=top;aspect=fixed;align=center;pointerEvents=1;shape=mxgraph.cisco19.wireless_access_point2;fillColor=#fafafa;strokeColor=#005073;labelPerimeter=1;" value="" vertex="1">
+          <mxGeometry height="50" width="50" x="-570" y="617.65" as="geometry" />
+        </mxCell>
+        <mxCell id="KyT2LsP1k2tEruCjcWGE-2" edge="1" parent="1" source="JioL-8ORzMcOTCR5U1-M-17" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.494;entryY=0.073;entryDx=0;entryDy=0;entryPerimeter=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="KyT2LsP1k2tEruCjcWGE-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KyT2LsP1k2tEruCjcWGE-3" parent="1" style="image=img/lib/clip_art/networking/Wireless_Router_128x128.png;html=1;labelPerimeter=1;fontSize=10;fontColor=#000000;labelBackgroundColor=#ffffff;whiteSpace=nowrap;strokeColor=none;" value="BLD1-AP-02&lt;br&gt;10.10.0.22 · Fa0/24" vertex="1">
+          <mxGeometry height="41.6" width="55.8" x="764.2000000000002" y="661.6" as="geometry" />
+        </mxCell>
+        <mxCell id="KyT2LsP1k2tEruCjcWGE-4" parent="1" style="points=[[0.03,0.36,0],[0.18,0,0],[0.5,0.34,0],[0.82,0,0],[0.97,0.36,0],[1,0.67,0],[0.975,0.975,0],[0.5,1,0],[0.025,0.975,0],[0,0.67,0]];verticalLabelPosition=bottom;sketch=0;html=1;verticalAlign=top;aspect=fixed;align=center;pointerEvents=1;shape=mxgraph.cisco19.wireless_access_point2;fillColor=#fafafa;strokeColor=#005073;labelPerimeter=1;" value="" vertex="1">
+          <mxGeometry height="50" width="50" x="770.0000000000001" y="611.6" as="geometry" />
+        </mxCell>
+        <mxCell id="KyT2LsP1k2tEruCjcWGE-6" edge="1" parent="1" source="JioL-8ORzMcOTCR5U1-M-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="KyT2LsP1k2tEruCjcWGE-5" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="80" y="480" as="sourcePoint" />
+            <mxPoint x="87" y="659" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KyT2LsP1k2tEruCjcWGE-5" parent="1" style="image;html=1;image=img/lib/clip_art/computers/Server_Rack_128x128.png;labelPerimeter=1;" value="" vertex="1">
+          <mxGeometry height="59" width="62" x="48.5" y="565.65" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
