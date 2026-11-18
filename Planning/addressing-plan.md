@@ -69,7 +69,7 @@ Notes:
 
 Conventions:
 - The gateway is the first usable address, hosted on a core switch SVI (Building 1) or a router subinterface (Building 2).
-- DHCP pools run from the first host after the gateway to the last usable address. SERVERS and MGMT are static only. Building 1 DHCP is served by the core, Building 2 DHCP by BLD2-RTR-01.
+- DHCP pools run from the first host after the gateway to the last usable address. SERVERS and MGMT are static only. All DHCP is served centrally by the core (BLD1-CORE-01). BLD2-RTR-01 relays Building 2 requests to it with `ip helper-address 10.10.0.1`.
 - Transit networks are routed /30 links (edge router to core, and between the two buildings). They have no VLAN.
 - Native VLAN 999 is unused, unrouted, and set on every trunk.
 
@@ -192,7 +192,7 @@ router ospf 1
 
 ### Building 2 router (BLD2-RTR-01)
 
-One physical port trunks to the switch and carries two 802.1Q subinterfaces (router-on-a-stick). The router is also the DHCP server and the default gateway for Building 2.
+One physical port trunks to the switch and carries two 802.1Q subinterfaces (router-on-a-stick). The router is the default gateway for Building 2 and relays DHCP requests to the core (`ip helper-address 10.10.0.1` on the Logistics subinterface). It does not run its own DHCP server.
 
 ```
 hostname BLD2-RTR-01
@@ -219,14 +219,8 @@ interface GigabitEthernet0/0/1.120
  description LOGISTICS gateway
  encapsulation dot1Q 120
  ip address 192.168.3.1 255.255.255.224
+ ip helper-address 10.10.0.1
  ip access-group LOGISTICS-IN in
-!
-ip dhcp excluded-address 192.168.3.1
-ip dhcp pool LOGISTICS
- network 192.168.3.0 255.255.255.224
- default-router 192.168.3.1
- dns-server 192.168.2.226
- domain-name campus.lab
 !
 ip access-list extended LOGISTICS-IN
  permit udp any eq bootpc any eq bootps
@@ -259,7 +253,7 @@ router ospf 1
 | Interface settings | `show ip ospf interface brief` | Transit interfaces in area 0, network type point-to-point |
 | Passive interfaces | `show ip protocols` | All SVIs (core) and `Gi0/0/1.99`, `Gi0/0/1.120` (BLD2 router) listed as passive |
 | Authentication | `show ip ospf interface Gi0/0/2` (edge router) | Message digest authentication enabled |
-| DHCP | `show ip dhcp binding` (BLD2 router) | Logistics PCs hold `192.168.3.0/27` leases, gateway `192.168.3.1` |
+| DHCP | `show ip dhcp binding` (core) | Logistics PCs hold `192.168.3.0/27` leases, gateway `192.168.3.1` |
 | End to end, internal | Logistics PC pings the file server `192.168.2.226` | Success across both transit links |
 | End to end, internet | Logistics PC pings an outside address | Success. `show ip nat translations` on the edge router shows the Logistics address translated |
 | Policy | Logistics PC pings an HR PC and `10.10.0.1` | Fails (ACLs working as designed) |
@@ -350,7 +344,7 @@ Uplink `Po5`: `Gi0/1-2` to core `Fa0/9-10`, LACP trunk, native VLAN 999, allowed
 | `Gi0/0/0` | Inter-building link to BLD1-RTR-01 `Gi0/0/2`, 10.10.0.38/30, OSPF area 0 |
 | `Gi0/0/1` | 802.1Q trunk to BLD2-ACC-01 `Gi0/1`, no IP address on the physical port |
 | `Gi0/0/1.99` | VLAN 99 management subinterface, gateway 10.10.0.41/29 |
-| `Gi0/0/1.120` | VLAN 120 LOGISTICS subinterface, gateway 192.168.3.1/27, DHCP server |
+| `Gi0/0/1.120` | VLAN 120 LOGISTICS subinterface, gateway 192.168.3.1/27, DHCP relay to the core |
 
 ### BLD2-ACC-01 (24-port, Mgmt 10.10.0.42)
 

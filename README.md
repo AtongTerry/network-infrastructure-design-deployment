@@ -84,7 +84,7 @@ Addressing is allocated with VLSM from two pools: `192.168.0.0/16` for hosts (su
 | BLD1-ACC-05 | Access switch (Sales, Printers/IoT, AP-02) | 10.10.0.15 |
 | BLD1-AP-01 / AP-02 | Wireless APs (Staff and Guest SSIDs) | 10.10.0.21 / 10.10.0.22 |
 | BLD1-UPS-01 | UPS network card | 10.10.0.25 |
-| BLD2-RTR-01 | Building 2 router: DHCP, router-on-a-stick, OSPF | 10.10.0.38 (inter-building), 10.10.0.41 (VLAN 99), 192.168.3.1 (VLAN 120) |
+| BLD2-RTR-01 | Building 2 router: DHCP relay, router-on-a-stick, OSPF | 10.10.0.38 (inter-building), 10.10.0.41 (VLAN 99), 192.168.3.1 (VLAN 120) |
 | BLD2-ACC-01 | Building 2 access switch (Logistics) | 10.10.0.42 |
 
 **Standards**
@@ -100,7 +100,71 @@ Addressing is allocated with VLSM from two pools: `192.168.0.0/16` for hosts (su
 - **Routing:** OSPFv2, single area (area 0), across the Building 1 core switch, the Building 1 edge router, and the Building 2 router. Point-to-point network type, MD5 authentication, passive interfaces on every user-facing SVI, and a default route originated by the edge router. Inter-VLAN routing happens on the core through SVIs in Building 1 and on router subinterfaces (router-on-a-stick) in Building 2.
 - **How devices are configured:** the Cisco IOS command line, first over console, then over SSH on the management VLAN. Configs are written as Jinja2 templates with per-device variables stored in the repo, rendered per device by a short Python script, applied during staging, then verified with `show` commands and committed.
 - **Automation (optional, later):** Netmiko or Ansible (`cisco.ios` collection) can push the rendered configs to GNS3 or EVE-NG devices. Packet Tracer devices cannot be driven from the host, so configs are pasted there.
-- **Protocols and features:** 802.1Q VLAN trunking, LACP port channels, Rapid PVST+, OSPF, DHCP on the core, inter-VLAN ACLs, NAT/PAT, SSH v2, port security, DHCP snooping, BPDU guard, NTP, and syslog.
+- **Protocols and features:** 802.1Q VLAN trunking, LACP port channels, Rapid PVST+, OSPF, central DHCP on the core with a relay in Building 2, inter-VLAN ACLs, NAT/PAT, SSH v2, port security, DHCP snooping, BPDU guard, NTP, and syslog.
+
+## Repository structure
+
+```
+network-infrastructure-design-deployment/
+├── README.md
+├── project-log.md           Dated notes on what was done each session
+├── .gitignore
+├── Planning/
+│   ├── requirements.md
+│   ├── addressing-plan.md      Addressing, OSPF routing design, switch port plan, ACL policy
+│   ├── glossary.md
+│   ├── ip-vlan-plan.xlsx
+│   ├── ip-vlan-plan.csv
+│   └── standards.md
+├── Pre-deployment/
+│   ├── site-survey.md
+│   ├── bill-of-materials.xlsx
+│   ├── inventory.xlsx
+│   ├── inventory.csv
+│   ├── ups-sizing.md
+│   ├── project-plan.xlsx
+│   ├── staging-checklist.md
+│   └── installation-checklist.md
+├── Configs/
+│   ├── network-infrastructure-design-deployment.pkt
+│   ├── templates/           Jinja2 templates (base, access switch, core)
+│   ├── variables/           Per-device variables (YAML or CSV)
+│   ├── render_configs.py    Renders one config per device
+│   ├── BLD1-CORE-01.txt
+│   ├── BLD1-ACC-01.txt
+│   ├── BLD1-ACC-02.txt
+│   ├── BLD1-ACC-03.txt
+│   ├── BLD1-ACC-04.txt
+│   ├── BLD1-ACC-05.txt
+│   ├── BLD1-RTR-01.txt
+│   ├── BLD2-RTR-01.txt
+│   ├── BLD2-ACC-01.txt
+│   └── wireless-design-note.md
+├── Testing/
+│   ├── test-matrix.xlsx
+│   └── evidence/
+├── Troubleshooting/
+│   ├── 01-wrong-access-vlan.md
+│   ├── 02-trunk-allowed-vlan-mismatch.md
+│   └── ...
+├── Coordination/
+│   ├── contractor-scope-email.md
+│   ├── facilities-request.md
+│   ├── vendor-rma-email.md
+│   ├── cutover-notice.md
+│   └── status-update-template.md
+├── Handoff/
+│   ├── as-built-notes.md
+│   ├── config-backups/
+│   └── closeout-checklist.md
+└── Diagrams/
+    ├── logical-topology.png
+    ├── logical-topology.drawio
+    ├── rack-elevation.png
+    └── patch-panel-map.png
+```
+
+File names are suggestions. Match them to what you actually produce and keep this tree current.
 
 ## Project phases
 
@@ -170,8 +234,8 @@ Key terms used in this project. The full list is in [`Planning/glossary.md`](Pla
 
 ## Author
 
-**Terry Atong Taku**
-www.linkedin.com/in/terry-taku
+**[Your Name]**
+[LinkedIn URL]
 
 ---
 
