@@ -102,70 +102,6 @@ Addressing is allocated with VLSM from two pools: `192.168.0.0/16` for hosts (su
 - **Automation (optional, later):** Netmiko or Ansible (`cisco.ios` collection) can push the rendered configs to GNS3 or EVE-NG devices. Packet Tracer devices cannot be driven from the host, so configs are pasted there.
 - **Protocols and features:** 802.1Q VLAN trunking, LACP port channels, Rapid PVST+, OSPF, central DHCP on the core with a relay in Building 2, inter-VLAN ACLs, NAT/PAT, SSH v2, port security, DHCP snooping, BPDU guard, NTP, and syslog.
 
-## Repository structure
-
-```
-network-infrastructure-design-deployment/
-├── README.md
-├── project-log.md           Dated notes on what was done each session
-├── .gitignore
-├── Planning/
-│   ├── requirements.md
-│   ├── addressing-plan.md      Addressing, OSPF routing design, switch port plan, ACL policy
-│   ├── glossary.md
-│   ├── ip-vlan-plan.xlsx
-│   ├── ip-vlan-plan.csv
-│   └── standards.md
-├── Pre-deployment/
-│   ├── site-survey.md
-│   ├── bill-of-materials.xlsx
-│   ├── inventory.xlsx
-│   ├── inventory.csv
-│   ├── ups-sizing.md
-│   ├── project-plan.xlsx
-│   ├── staging-checklist.md
-│   └── installation-checklist.md
-├── Configs/
-│   ├── network-infrastructure-design-deployment.pkt
-│   ├── templates/           Jinja2 templates (base, access switch, core)
-│   ├── variables/           Per-device variables (YAML or CSV)
-│   ├── render_configs.py    Renders one config per device
-│   ├── BLD1-CORE-01.txt
-│   ├── BLD1-ACC-01.txt
-│   ├── BLD1-ACC-02.txt
-│   ├── BLD1-ACC-03.txt
-│   ├── BLD1-ACC-04.txt
-│   ├── BLD1-ACC-05.txt
-│   ├── BLD1-RTR-01.txt
-│   ├── BLD2-RTR-01.txt
-│   ├── BLD2-ACC-01.txt
-│   └── wireless-design-note.md
-├── Testing/
-│   ├── test-matrix.xlsx
-│   └── evidence/
-├── Troubleshooting/
-│   ├── 01-wrong-access-vlan.md
-│   ├── 02-trunk-allowed-vlan-mismatch.md
-│   └── ...
-├── Coordination/
-│   ├── contractor-scope-email.md
-│   ├── facilities-request.md
-│   ├── vendor-rma-email.md
-│   ├── cutover-notice.md
-│   └── status-update-template.md
-├── Handoff/
-│   ├── as-built-notes.md
-│   ├── config-backups/
-│   └── closeout-checklist.md
-└── Diagrams/
-    ├── logical-topology.png
-    ├── logical-topology.drawio
-    ├── rack-elevation.png
-    └── patch-panel-map.png
-```
-
-File names are suggestions. Match them to what you actually produce and keep this tree current.
-
 ## Project phases
 
 | Phase | Focus | Folder | Status |
@@ -234,8 +170,8 @@ Key terms used in this project. The full list is in [`Planning/glossary.md`](Pla
 
 ## Author
 
-**[Your Name]**
-[LinkedIn URL]
+**Terry Atong Taku**
+www.linkedin.com/in/terry-taku
 
 ---
 
