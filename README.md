@@ -18,7 +18,7 @@ The goal is to practice the work of a real infrastructure deployment, not just a
 
 - Ethernet, TCP/IP, switching, VLANs, IP addressing, and subnetting
 - 802.1Q trunking, LACP/EtherChannel uplinks, inter-VLAN routing, and OSPF dynamic routing
-- Switch baseline hardening: SSH-only management, port security, DHCP snooping, BPDU guard, unused-port shutdown, native VLAN change
+- Switch baseline hardening: SSH-only management, port security, DHCP snooping (Building 2 switch; documented for Building 1, see note below), BPDU guard, unused-port shutdown, native VLAN change
 - Wireless deployment with SSIDs mapped to VLANs
 - Multi-building design: inter-building routed link, OSPF across three routing devices, router-on-a-stick, and shared NAT
 - Staging workflow: inventory, labeling, config templates, and checklists
@@ -100,7 +100,8 @@ Addressing is allocated with VLSM from two pools: `192.168.0.0/16` for hosts (su
 - **Routing:** OSPFv2, single area (area 0), across the Building 1 core switch, the Building 1 edge router, and the Building 2 router. Point-to-point network type, MD5 authentication, passive interfaces on every user-facing SVI, and a default route originated by the edge router. Inter-VLAN routing happens on the core through SVIs in Building 1 and on router subinterfaces (router-on-a-stick) in Building 2.
 - **How devices are configured:** the Cisco IOS command line, first over console, then over SSH on the management VLAN. Configs are written as Jinja2 templates with per-device variables stored in the repo, rendered per device by a short Python script, applied during staging, then verified with `show` commands and committed.
 - **Automation (optional, later):** Netmiko or Ansible (`cisco.ios` collection) can push the rendered configs to GNS3 or EVE-NG devices. Packet Tracer devices cannot be driven from the host, so configs are pasted there.
-- **Protocols and features:** 802.1Q VLAN trunking, LACP port channels, Rapid PVST+, OSPF, central DHCP on the core with a relay in Building 2, inter-VLAN ACLs, NAT/PAT, SSH v2, port security, DHCP snooping, BPDU guard, NTP, and syslog.
+- **Protocols and features:** 802.1Q VLAN trunking, LACP port channels, Rapid PVST+, OSPF, central DHCP on the core with a relay in Building 2, inter-VLAN ACLs, NAT/PAT, SSH v2, port security, DHCP snooping, BPDU guard, NTP, and syslog. Packet Tracer cannot trust a port channel, so DHCP snooping runs only on the Building 2 switch; the Building 1 commands are documented for real hardware.
+
 
 ## Project phases
 
@@ -170,7 +171,7 @@ Key terms used in this project. The full list is in [`Planning/glossary.md`](Pla
 
 ## Author
 
-**Terry Atong Taku**
+**Terry Taku**
 www.linkedin.com/in/terry-taku
 
 ---

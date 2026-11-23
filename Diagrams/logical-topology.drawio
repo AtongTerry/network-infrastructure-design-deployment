@@ -43,8 +43,8 @@
         <mxCell id="4oMLlvXEQPI564UGJPMV-13" parent="1" style="fillColorStyles=neutralFill;neutralFill=#9DA6A8;shape=mxgraph.networks2.icon;aspect=fixed;fillColor=#EDEDED;strokeColor=#000000;gradientColor=#5B6163;network2IconShadow=1;network2bgFillColor=none;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;network2Icon=mxgraph.networks2.printer;network2IconW=1;network2IconH=1.04;labelPerimeter=1;html=1;fontSize=10;fontColor=#000000;labelBackgroundColor=#ffffff;whiteSpace=nowrap;" value="Printer&lt;br&gt;VLAN 100 · Fa0/13" vertex="1">
           <mxGeometry height="41.6" width="40" x="-305.0499999999999" y="613.05" as="geometry" />
         </mxCell>
-        <mxCell id="4oMLlvXEQPI564UGJPMV-14" parent="1" style="image=img/lib/clip_art/networking/Wireless_Router_128x128.png;html=1;labelPerimeter=1;fontSize=10;fontColor=#000000;labelBackgroundColor=#ffffff;whiteSpace=nowrap;strokeColor=none;" value="BLD1-AP-01&lt;br&gt;10.10.0.21 · Fa0/24" vertex="1">
-          <mxGeometry height="41.6" width="55.8" x="-572.9" y="662.4499999999999" as="geometry" />
+        <mxCell id="4oMLlvXEQPI564UGJPMV-14" parent="1" style="image=img/lib/clip_art/networking/Wireless_Router_128x128.png;html=1;labelPerimeter=1;fontSize=10;fontColor=#000000;labelBackgroundColor=#ffffff;whiteSpace=nowrap;strokeColor=none;" value="BLD1-AP-01&lt;br&gt;BLD1-Staff VLAN 80&lt;div&gt;Fa0/24(access)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="48" width="78" x="-584" y="667.6500000000001" as="geometry" />
         </mxCell>
         <mxCell id="7AZhztvqFRN-54fEF37w-16" edge="1" parent="1" source="JioL-8ORzMcOTCR5U1-M-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.917;exitY=0.785;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;shape=arrow;" target="4oMLlvXEQPI564UGJPMV-1">
           <mxGeometry relative="1" as="geometry" />
@@ -171,7 +171,7 @@
         <mxCell id="JioL-8ORzMcOTCR5U1-M-35" parent="1" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#505050;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.devices.workstation_pc;labelPerimeter=1;fontSize=10;fontColor=#000000;labelBackgroundColor=#ffffff;whiteSpace=nowrap;" value="EXEC PC&lt;br&gt;VLAN 10 · Fa0/1" vertex="1">
           <mxGeometry height="48" width="40" x="-839.9999999999999" y="608.25" as="geometry" />
         </mxCell>
-        <mxCell id="JioL-8ORzMcOTCR5U1-M-36" parent="1" style="fillColorStyles=neutralFill;neutralFill=#9DA6A8;shape=mxgraph.networks2.icon;aspect=fixed;fillColor=#EDEDED;strokeColor=#000000;gradientColor=#5B6163;network2IconShadow=1;network2bgFillColor=none;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;network2Icon=mxgraph.networks2.printer;network2IconW=1;network2IconH=1.04;labelPerimeter=1;html=1;fontSize=10;fontColor=#000000;labelBackgroundColor=#ffffff;whiteSpace=nowrap;" value="Printer&lt;br&gt;VLAN 100 · Fa0/19" vertex="1">
+        <mxCell id="JioL-8ORzMcOTCR5U1-M-36" parent="1" style="fillColorStyles=neutralFill;neutralFill=#9DA6A8;shape=mxgraph.networks2.icon;aspect=fixed;fillColor=#EDEDED;strokeColor=#000000;gradientColor=#5B6163;network2IconShadow=1;network2bgFillColor=none;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;network2Icon=mxgraph.networks2.printer;network2IconW=1;network2IconH=1.04;labelPerimeter=1;html=1;fontSize=10;fontColor=#000000;labelBackgroundColor=#ffffff;whiteSpace=nowrap;" value="Printer&lt;br&gt;VLAN 100&lt;div&gt;&amp;nbsp;Fa0/19&lt;/div&gt;" vertex="1">
           <mxGeometry height="41.6" width="40" x="-660" y="617.65" as="geometry" />
         </mxCell>
         <mxCell id="JioL-8ORzMcOTCR5U1-M-38" parent="1" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#505050;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.devices.workstation_pc;labelPerimeter=1;fontSize=10;fontColor=#000000;labelBackgroundColor=#ffffff;whiteSpace=nowrap;" value="SALES PC&lt;br&gt;VLAN 50 · Fa0/1" vertex="1">
@@ -317,11 +317,8 @@
         <mxCell id="KyT2LsP1k2tEruCjcWGE-2" edge="1" parent="1" source="JioL-8ORzMcOTCR5U1-M-17" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.494;entryY=0.073;entryDx=0;entryDy=0;entryPerimeter=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="KyT2LsP1k2tEruCjcWGE-1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="KyT2LsP1k2tEruCjcWGE-3" parent="1" style="image=img/lib/clip_art/networking/Wireless_Router_128x128.png;html=1;labelPerimeter=1;fontSize=10;fontColor=#000000;labelBackgroundColor=#ffffff;whiteSpace=nowrap;strokeColor=none;" value="BLD1-AP-02&lt;br&gt;10.10.0.22 · Fa0/24" vertex="1">
-          <mxGeometry height="41.6" width="55.8" x="764.2000000000002" y="661.6" as="geometry" />
-        </mxCell>
         <mxCell id="KyT2LsP1k2tEruCjcWGE-4" parent="1" style="points=[[0.03,0.36,0],[0.18,0,0],[0.5,0.34,0],[0.82,0,0],[0.97,0.36,0],[1,0.67,0],[0.975,0.975,0],[0.5,1,0],[0.025,0.975,0],[0,0.67,0]];verticalLabelPosition=bottom;sketch=0;html=1;verticalAlign=top;aspect=fixed;align=center;pointerEvents=1;shape=mxgraph.cisco19.wireless_access_point2;fillColor=#fafafa;strokeColor=#005073;labelPerimeter=1;" value="" vertex="1">
-          <mxGeometry height="50" width="50" x="770.0000000000001" y="611.6" as="geometry" />
+          <mxGeometry height="50" width="50" x="760.0000000000001" y="611.6" as="geometry" />
         </mxCell>
         <mxCell id="KyT2LsP1k2tEruCjcWGE-6" edge="1" parent="1" source="JioL-8ORzMcOTCR5U1-M-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="KyT2LsP1k2tEruCjcWGE-5" value="">
           <mxGeometry relative="1" as="geometry">
@@ -331,6 +328,9 @@
         </mxCell>
         <mxCell id="KyT2LsP1k2tEruCjcWGE-5" parent="1" style="image;html=1;image=img/lib/clip_art/computers/Server_Rack_128x128.png;labelPerimeter=1;" value="" vertex="1">
           <mxGeometry height="59" width="62" x="48.5" y="565.65" as="geometry" />
+        </mxCell>
+        <mxCell id="3U5AaFGSl-8vSoMk4WV_-1" parent="1" style="image=img/lib/clip_art/networking/Wireless_Router_128x128.png;html=1;labelPerimeter=1;fontSize=10;fontColor=#000000;labelBackgroundColor=#ffffff;whiteSpace=nowrap;strokeColor=none;" value="BLD1-AP-02&lt;br&gt;BLD1-Guess VLAN 90&lt;div&gt;Fa0/24(access)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="41.6" width="50" x="760" y="661.6" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

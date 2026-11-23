@@ -83,8 +83,8 @@ Conventions:
 | BLD1-ACC-03 | VLAN 99 SVI | 10.10.0.13/27 |
 | BLD1-ACC-04 | VLAN 99 SVI | 10.10.0.14/27 |
 | BLD1-ACC-05 | VLAN 99 SVI | 10.10.0.15/27 |
-| BLD1-AP-01 | Management | 10.10.0.21/27 |
-| BLD1-AP-02 | Management | 10.10.0.22/27 |
+| BLD1-AP-01 | Management | 10.10.0.21/27 (planned; Packet Tracer's AP has no management IP) |
+| BLD1-AP-02 | Management | 10.10.0.22/27 (planned; Packet Tracer's AP has no management IP) |
 | BLD1-UPS-01 | Network card | 10.10.0.25/27 |
 | BLD1-RTR-01 | Gi0/0/1 inside (transit) | 10.10.0.33/30 |
 | BLD1-CORE-01 | Gi0/1 routed port (transit) | 10.10.0.34/30 |
@@ -294,7 +294,7 @@ Uplink `Po1`: `Gi0/1-2` to core `Fa0/1-2`, LACP trunk, native VLAN 999, allowed 
 | `Fa0/1-8` | 10 EXEC | 8 users |
 | `Fa0/9-18` | 20 HR | 10 users |
 | `Fa0/19-23` | 100 PRINTERS-IOT | 5 printers/IoT |
-| `Fa0/24` | n/a | AP-01 trunk (native 99, allow 80,90,99) |
+| `Fa0/24` | 80 STAFF-WIFI | AP-01, BLD1-Staff SSID (access port; Packet Tracer's AP cannot tag VLANs) |
 
 ### BLD1-ACC-02 (24-port, Mgmt 10.10.0.12)
 
@@ -335,7 +335,7 @@ Uplink `Po5`: `Gi0/1-2` to core `Fa0/9-10`, LACP trunk, native VLAN 999, allowed
 |---|---|---|
 | `Fa0/1-20` | 50 SALES | 20 users |
 | `Fa0/21-23` | 100 PRINTERS-IOT | 3 printers/IoT |
-| `Fa0/24` | n/a | AP-02 trunk (native 99, allow 80,90,99) |
+| `Fa0/24` | 90 GUEST | AP-02, BLD1-Guest SSID (access port; Packet Tracer's AP cannot tag VLANs) |
 
 ### BLD2-RTR-01 (router, 2 interfaces plus subinterfaces)
 
