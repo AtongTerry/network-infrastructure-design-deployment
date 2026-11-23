@@ -1,0 +1,6 @@
+domain: campus.lab
+banner: Authorized access only. Activity is monitored.
+syslog_host: 192.168.2.229
+ntp_server: 10.10.0.1
+mgmt_vlan: 99
+native_vlan: 999

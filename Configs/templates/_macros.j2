@@ -1,0 +1,32 @@
+{% macro head(hostname, full=true) %}
+enable
+configure terminal
+hostname {{ hostname }}
+no ip domain-lookup
+{% if full %}
+ip domain-name {{ g.domain }}
+service password-encryption
+{% endif %}
+enable secret {{ s.enable_secret }}
+{% if full %}
+username admin privilege 15 secret {{ s.admin_secret }}
+banner motd #{{ g.banner }}#
+!
+{% endif %}
+{%- endmacro %}
+{% macro tail(ntp) %}
+line console 0
+ logging synchronous
+line vty 0 15
+ login local
+ transport input ssh
+logging host {{ g.syslog_host }}
+{{ ntp }}
+end
+write memory
+{%- endmacro %}
+{% macro ospf_auth() %}
+ ip ospf network point-to-point
+ ip ospf authentication message-digest
+ ip ospf message-digest-key 1 md5 {{ s.ospf_key }}
+{%- endmacro %}

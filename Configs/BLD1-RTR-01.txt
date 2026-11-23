@@ -1,0 +1,58 @@
+enable
+configure terminal
+hostname BLD1-RTR-01
+no ip domain-lookup
+ip domain-name campus.lab
+service password-encryption
+enable secret {{ENABLE_SECRET}}
+username admin privilege 15 secret {{ADMIN_SECRET}}
+banner motd #Authorized access only. Activity is monitored.#
+!
+interface GigabitEthernet0/0/0
+ description WAN-TO-ISP
+ ip address 203.0.113.2 255.255.255.252
+ ip nat outside
+ no shutdown
+!
+interface GigabitEthernet0/0/1
+ description TRANSIT-TO-BLD1-CORE-01
+ ip address 10.10.0.33 255.255.255.252
+ ip nat inside
+ ip ospf network point-to-point
+ ip ospf authentication message-digest
+ ip ospf message-digest-key 1 md5 {{OSPF_KEY}}
+ no shutdown
+!
+interface GigabitEthernet0/0/2
+ description INTER-BUILDING-TO-BLD2-RTR-01
+ ip address 10.10.0.37 255.255.255.252
+ ip nat inside
+ ip ospf network point-to-point
+ ip ospf authentication message-digest
+ ip ospf message-digest-key 1 md5 {{OSPF_KEY}}
+ no shutdown
+!
+ip route 0.0.0.0 0.0.0.0 203.0.113.1
+!
+ip access-list standard NAT-INSIDE
+ permit 192.168.0.0 0.0.3.255
+!
+ip nat inside source list NAT-INSIDE interface GigabitEthernet0/0/0 overload
+!
+router ospf 1
+ router-id 10.10.0.33
+ passive-interface default
+ no passive-interface GigabitEthernet0/0/1
+ no passive-interface GigabitEthernet0/0/2
+ network 10.10.0.32 0.0.0.7 area 0
+ default-information originate
+!
+line console 0
+ logging synchronous
+line vty 0 15
+ login local
+ transport input ssh
+logging host 192.168.2.229
+ntp server 10.10.0.1
+end
+write memory

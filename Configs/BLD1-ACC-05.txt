@@ -1,0 +1,76 @@
+enable
+configure terminal
+hostname BLD1-ACC-05
+no ip domain-lookup
+ip domain-name campus.lab
+service password-encryption
+enable secret {{ENABLE_SECRET}}
+username admin privilege 15 secret {{ADMIN_SECRET}}
+banner motd #Authorized access only. Activity is monitored.#
+!
+spanning-tree mode rapid-pvst
+spanning-tree portfast bpduguard default
+vlan 50
+ name SALES
+vlan 70
+ name VOICE
+vlan 80
+ name STAFF-WIFI
+vlan 90
+ name GUEST
+vlan 99
+ name MGMT
+vlan 100
+ name PRINTERS-IOT
+vlan 999
+ name NATIVE-BLACKHOLE
+!
+interface vlan 99
+ ip address 10.10.0.15 255.255.255.224
+ no shutdown
+ip default-gateway 10.10.0.1
+!
+interface range GigabitEthernet0/1-2
+ channel-group 5 mode active
+interface Port-channel5
+ description TRUNK-TO-BLD1-CORE-01
+ switchport mode trunk
+ switchport trunk native vlan 999
+ switchport trunk allowed vlan 50,70,80,90,99,100
+!
+! DHCP snooping is left off in Packet Tracer: it cannot trust a port channel, so it drops the core's DHCP replies.
+! Real hardware: no ip dhcp snooping information option / ip dhcp snooping vlan 50,70,80,90,100 / ip dhcp snooping
+! and 'ip dhcp snooping trust' on interface Port-channel5.
+!
+interface range FastEthernet0/1-20
+ description SALES users
+ switchport mode access
+ switchport access vlan 50
+ switchport voice vlan 70
+ spanning-tree portfast
+ switchport port-security
+ switchport port-security maximum 3
+ switchport port-security violation restrict
+interface range FastEthernet0/21-23
+ description PRINTERS-IOT
+ switchport mode access
+ switchport access vlan 100
+ spanning-tree portfast
+ switchport port-security
+ switchport port-security maximum 1
+ switchport port-security violation restrict
+interface FastEthernet0/24
+ description BLD1-AP-02 (BLD1-Guest)
+ switchport mode access
+ switchport access vlan 90
+ spanning-tree portfast
+!
+line console 0
+ logging synchronous
+line vty 0 15
+ login local
+ transport input ssh
+logging host 192.168.2.229
+ntp server 10.10.0.1
+end
+write memory

@@ -1,0 +1,46 @@
+{% from '_macros.j2' import head, tail, ospf_auth with context %}
+{{ head(hostname) | trim }}
+!
+interface {{ uplink.name }}
+ description {{ uplink.description }}
+ ip address {{ uplink.ip }} {{ uplink.mask }}
+{{ ospf_auth() }}
+ no shutdown
+!
+interface {{ trunk.name }}
+ description {{ trunk.description }}
+ no ip address
+ no shutdown
+!
+{% for s in subinterfaces %}
+interface {{ trunk.name }}.{{ s.vlan }}
+ description {{ s.description }}
+ encapsulation dot1Q {{ s.vlan }}
+ ip address {{ s.ip }} {{ s.mask }}
+{% if s.helper is defined %}
+ ip helper-address {{ s.helper }}
+{% endif %}
+{% if s.acl_in is defined %}
+ ip access-group {{ s.acl_in }} in
+{% endif %}
+{% if not loop.last %}
+!
+{% endif %}
+{% endfor %}
+!
+ip access-list extended LOGISTICS-IN
+ permit udp any eq bootpc any eq bootps
+{% for d in acl_denies %}
+ deny ip any {{ d.net }} {{ d.wild }}
+{% endfor %}
+ permit ip any any
+!
+router ospf 1
+ router-id {{ ospf.router_id }}
+ passive-interface default
+ no passive-interface {{ uplink.name }}
+{% for n in ospf.networks %}
+ network {{ n.net }} {{ n.wild }} area 0
+{% endfor %}
+!
+{{ tail('ntp server ' ~ g.ntp_server) }}

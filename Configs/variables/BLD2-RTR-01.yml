@@ -1,0 +1,17 @@
+template: router-branch.j2
+hostname: BLD2-RTR-01
+uplink: {name: GigabitEthernet0/0/0, description: INTER-BUILDING-TO-BLD1-RTR-01, ip: 10.10.0.38, mask: 255.255.255.252}
+trunk: {name: GigabitEthernet0/0/1, description: TRUNK-TO-BLD2-ACC-01}
+subinterfaces:
+  - {vlan: 99, description: MGMT gateway, ip: 10.10.0.41, mask: 255.255.255.248}
+  - {vlan: 120, description: LOGISTICS gateway, ip: 192.168.3.1, mask: 255.255.255.224, helper: 10.10.0.1, acl_in: LOGISTICS-IN}
+acl_denies:
+  - {net: 192.168.2.208, wild: 0.0.0.15}
+  - {net: 192.168.2.64, wild: 0.0.0.31}
+  - {net: 10.10.0.0, wild: 0.0.0.63}
+ospf:
+  router_id: 10.10.0.38
+  networks:
+    - {net: 10.10.0.36, wild: 0.0.0.3}
+    - {net: 10.10.0.40, wild: 0.0.0.7}
+    - {net: 192.168.3.0, wild: 0.0.0.31}

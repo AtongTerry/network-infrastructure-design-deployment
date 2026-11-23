@@ -1,0 +1,39 @@
+template: access-switch.j2
+hostname: BLD1-ACC-02
+vlans:
+- id: 30
+  name: ACCT
+- id: 70
+  name: VOICE
+- id: 99
+  name: MGMT
+- id: 100
+  name: PRINTERS-IOT
+- id: 999
+  name: NATIVE-BLACKHOLE
+mgmt_ip: 10.10.0.12
+mgmt_mask: 255.255.255.224
+gateway: 10.10.0.1
+uplink:
+  type: lacp
+  channel: 2
+  peer: BLD1-CORE-01
+  allowed: 30,70,99,100
+  snooping_vlans: 30,70,100
+ports:
+- ports: 1-12
+  range: true
+  description: ACCT users
+  vlan: 30
+  voice_vlan: 70
+  port_security: 3
+- ports: 13-17
+  range: true
+  description: PRINTERS-IOT
+  vlan: 100
+  port_security: 1
+- ports: 18-24
+  range: true
+  description: UNUSED
+  vlan: 999
+  shutdown: true

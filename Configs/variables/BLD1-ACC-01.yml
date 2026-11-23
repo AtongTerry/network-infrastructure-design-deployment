@@ -1,0 +1,50 @@
+template: access-switch.j2
+hostname: BLD1-ACC-01
+vlans:
+- id: 10
+  name: EXEC
+- id: 20
+  name: HR
+- id: 70
+  name: VOICE
+- id: 80
+  name: STAFF-WIFI
+- id: 90
+  name: GUEST
+- id: 99
+  name: MGMT
+- id: 100
+  name: PRINTERS-IOT
+- id: 999
+  name: NATIVE-BLACKHOLE
+mgmt_ip: 10.10.0.11
+mgmt_mask: 255.255.255.224
+gateway: 10.10.0.1
+uplink:
+  type: lacp
+  channel: 1
+  peer: BLD1-CORE-01
+  allowed: 10,20,70,80,90,99,100
+  snooping_vlans: 10,20,70,80,90,100
+ports:
+- ports: 1-8
+  range: true
+  description: EXEC users
+  vlan: 10
+  voice_vlan: 70
+  port_security: 3
+- ports: 9-18
+  range: true
+  description: HR users
+  vlan: 20
+  voice_vlan: 70
+  port_security: 3
+- ports: 19-23
+  range: true
+  description: PRINTERS-IOT
+  vlan: 100
+  port_security: 1
+- ports: '24'
+  range: false
+  description: BLD1-AP-01 (BLD1-Staff)
+  vlan: 80

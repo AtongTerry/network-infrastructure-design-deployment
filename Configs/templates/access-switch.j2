@@ -1,0 +1,64 @@
+{% from '_macros.j2' import head, tail with context %}
+{{ head(hostname) | trim }}
+spanning-tree mode rapid-pvst
+spanning-tree portfast bpduguard default
+{% for v in vlans %}
+vlan {{ v.id }}
+ name {{ v.name }}
+{% endfor %}
+!
+interface vlan {{ g.mgmt_vlan }}
+ ip address {{ mgmt_ip }} {{ mgmt_mask }}
+ no shutdown
+ip default-gateway {{ gateway }}
+!
+{% if uplink.type == 'lacp' %}
+interface range GigabitEthernet0/1-2
+ channel-group {{ uplink.channel }} mode active
+interface Port-channel{{ uplink.channel }}
+ description TRUNK-TO-{{ uplink.peer }}
+ switchport mode trunk
+ switchport trunk native vlan {{ g.native_vlan }}
+ switchport trunk allowed vlan {{ uplink.allowed }}
+!
+! DHCP snooping is left off in Packet Tracer: it cannot trust a port channel, so it drops the core's DHCP replies.
+! Real hardware: no ip dhcp snooping information option / ip dhcp snooping vlan {{ uplink.snooping_vlans }} / ip dhcp snooping
+! and 'ip dhcp snooping trust' on interface Port-channel{{ uplink.channel }}.
+!
+{% else %}
+interface GigabitEthernet0/1
+ description TRUNK-TO-{{ uplink.peer }}
+ switchport mode trunk
+ switchport trunk native vlan {{ g.native_vlan }}
+ switchport trunk allowed vlan {{ uplink.allowed }}
+!
+no ip dhcp snooping information option
+ip dhcp snooping vlan {{ uplink.snooping_vlans }}
+ip dhcp snooping
+interface GigabitEthernet0/1
+ ip dhcp snooping trust
+!
+{% endif %}
+{% for p in ports %}
+interface {{ 'range ' if p.range else '' }}FastEthernet0/{{ p.ports }}
+ description {{ p.description }}
+ switchport mode access
+ switchport access vlan {{ p.vlan }}
+{% if p.voice_vlan is defined %}
+ switchport voice vlan {{ p.voice_vlan }}
+{% endif %}
+{% if p.shutdown | default(false) %}
+ shutdown
+{% else %}
+ spanning-tree portfast
+{% endif %}
+{% if p.port_security is defined %}
+ switchport port-security
+ switchport port-security maximum {{ p.port_security }}
+ switchport port-security violation restrict
+{% endif %}
+{% if p.separator | default(false) %}!
+{% endif %}
+{% endfor %}
+!
+{{ tail('ntp server ' ~ g.ntp_server) }}

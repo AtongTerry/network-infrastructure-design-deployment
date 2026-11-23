@@ -1,0 +1,4 @@
+template: isp.j2
+hostname: ISP-RTR
+wan: {name: GigabitEthernet0/0/0, description: TO-BLD1-RTR-01, ip: 203.0.113.1, mask: 255.255.255.252}
+loopback: 8.8.8.8

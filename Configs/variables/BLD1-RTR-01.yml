@@ -1,0 +1,13 @@
+template: router-edge.j2
+hostname: BLD1-RTR-01
+interfaces:
+  - {name: GigabitEthernet0/0/0, description: WAN-TO-ISP, ip: 203.0.113.2, mask: 255.255.255.252, nat: outside, ospf: false}
+  - {name: GigabitEthernet0/0/1, description: TRANSIT-TO-BLD1-CORE-01, ip: 10.10.0.33, mask: 255.255.255.252, nat: inside, ospf: true}
+  - {name: GigabitEthernet0/0/2, description: INTER-BUILDING-TO-BLD2-RTR-01, ip: 10.10.0.37, mask: 255.255.255.252, nat: inside, ospf: true}
+default_route: 203.0.113.1
+nat: {net: 192.168.0.0, wild: 0.0.3.255, outside: GigabitEthernet0/0/0}
+ospf:
+  router_id: 10.10.0.33
+  passive_exceptions: [GigabitEthernet0/0/1, GigabitEthernet0/0/2]
+  networks:
+    - {net: 10.10.0.32, wild: 0.0.0.7}

@@ -1,0 +1,58 @@
+{% from '_macros.j2' import head, tail, ospf_auth with context %}
+{{ head(hostname) | trim }}
+spanning-tree mode rapid-pvst
+spanning-tree vlan {{ stp_priority_vlans }} priority 4096
+ip routing
+{% for v in vlans %}
+vlan {{ v.id }}
+ name {{ v.name }}
+{% endfor %}
+!
+{% for i in svis %}
+interface vlan {{ i.id }}
+ description {{ i.name }} gateway
+ ip address {{ i.ip }} {{ i.mask }}
+ no shutdown
+{% endfor %}
+!
+{% for a in dhcp_excluded %}
+ip dhcp excluded-address {{ a }}
+{% endfor %}
+{% for p in dhcp_pools %}
+ip dhcp pool {{ p.name }}
+ network {{ p.network }} {{ p.mask }}
+ default-router {{ p.router }}
+ dns-server {{ p.dns }}
+ domain-name {{ g.domain }}
+{% endfor %}
+!
+{% for c in port_channels %}
+interface range FastEthernet0/{{ c.members }}
+ channel-group {{ c.id }} mode active
+interface Port-channel{{ c.id }}
+ description TRUNK-TO-{{ c.peer }}
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ switchport trunk native vlan {{ g.native_vlan }}
+ switchport trunk allowed vlan {{ c.allowed }}
+{% endfor %}
+!
+interface GigabitEthernet0/1
+ description {{ transit.description }}
+ no switchport
+ ip address {{ transit.ip }} {{ transit.mask }}
+{{ ospf_auth() }}
+ no shutdown
+!
+router ospf 1
+ router-id {{ ospf.router_id }}
+ passive-interface default
+{% for i in ospf.passive_exceptions %}
+ no passive-interface {{ i }}
+{% endfor %}
+{% for n in ospf.networks %}
+ network {{ n.net }} {{ n.wild }} area 0
+{% endfor %}
+!
+{% include 'core-acls.j2' %}
+{{ tail('ntp master 3') }}

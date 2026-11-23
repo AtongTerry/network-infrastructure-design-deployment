@@ -1,0 +1,29 @@
+template: access-switch.j2
+hostname: BLD2-ACC-01
+vlans:
+- id: 99
+  name: MGMT
+- id: 120
+  name: LOGISTICS
+- id: 999
+  name: NATIVE-BLACKHOLE
+mgmt_ip: 10.10.0.42
+mgmt_mask: 255.255.255.248
+gateway: 10.10.0.41
+uplink:
+  type: single
+  peer: BLD2-RTR-01
+  allowed: 99,120
+  snooping_vlans: '120'
+ports:
+- ports: 1-20
+  range: true
+  description: LOGISTICS users
+  vlan: 120
+  port_security: 2
+  separator: true
+- ports: 21-24
+  range: true
+  description: UNUSED
+  vlan: 999
+  shutdown: true

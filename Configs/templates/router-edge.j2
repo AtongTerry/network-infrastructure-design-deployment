@@ -1,0 +1,34 @@
+{% from '_macros.j2' import head, tail, ospf_auth with context %}
+{{ head(hostname) | trim }}
+{% for i in interfaces %}
+interface {{ i.name }}
+ description {{ i.description }}
+ ip address {{ i.ip }} {{ i.mask }}
+{% if i.nat %}
+ ip nat {{ i.nat }}
+{% endif %}
+{% if i.ospf %}
+{{ ospf_auth() }}
+{% endif %}
+ no shutdown
+!
+{% endfor %}
+ip route 0.0.0.0 0.0.0.0 {{ default_route }}
+!
+ip access-list standard NAT-INSIDE
+ permit {{ nat.net }} {{ nat.wild }}
+!
+ip nat inside source list NAT-INSIDE interface {{ nat.outside }} overload
+!
+router ospf 1
+ router-id {{ ospf.router_id }}
+ passive-interface default
+{% for i in ospf.passive_exceptions %}
+ no passive-interface {{ i }}
+{% endfor %}
+{% for n in ospf.networks %}
+ network {{ n.net }} {{ n.wild }} area 0
+{% endfor %}
+ default-information originate
+!
+{{ tail('ntp server ' ~ g.ntp_server) }}

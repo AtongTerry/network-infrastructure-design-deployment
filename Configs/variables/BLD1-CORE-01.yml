@@ -1,0 +1,181 @@
+template: core.j2
+hostname: BLD1-CORE-01
+stp_priority_vlans: 10,20,30,40,50,60,70,80,90,99,100,110
+vlans:
+- id: 10
+  name: EXEC
+- id: 20
+  name: HR
+- id: 30
+  name: ACCT
+- id: 40
+  name: OPS
+- id: 50
+  name: SALES
+- id: 60
+  name: IT
+- id: 70
+  name: VOICE
+- id: 80
+  name: STAFF-WIFI
+- id: 90
+  name: GUEST
+- id: 99
+  name: MGMT
+- id: 100
+  name: PRINTERS-IOT
+- id: 110
+  name: SERVERS
+- id: 999
+  name: NATIVE-BLACKHOLE
+svis:
+- id: 10
+  name: EXEC
+  ip: 192.168.2.193
+  mask: 255.255.255.240
+- id: 20
+  name: HR
+  ip: 192.168.2.209
+  mask: 255.255.255.240
+- id: 30
+  name: ACCT
+  ip: 192.168.2.65
+  mask: 255.255.255.224
+- id: 40
+  name: OPS
+  ip: 192.168.2.97
+  mask: 255.255.255.224
+- id: 50
+  name: SALES
+  ip: 192.168.2.129
+  mask: 255.255.255.224
+- id: 60
+  name: IT
+  ip: 192.168.2.1
+  mask: 255.255.255.192
+- id: 70
+  name: VOICE
+  ip: 192.168.1.1
+  mask: 255.255.255.128
+- id: 80
+  name: STAFF-WIFI
+  ip: 192.168.0.1
+  mask: 255.255.255.0
+- id: 90
+  name: GUEST
+  ip: 192.168.1.129
+  mask: 255.255.255.128
+- id: 99
+  name: MGMT
+  ip: 10.10.0.1
+  mask: 255.255.255.224
+- id: 100
+  name: PRINTERS-IOT
+  ip: 192.168.2.161
+  mask: 255.255.255.224
+- id: 110
+  name: SERVERS
+  ip: 192.168.2.225
+  mask: 255.255.255.248
+dhcp_excluded:
+- 192.168.2.193
+- 192.168.2.209
+- 192.168.2.65
+- 192.168.2.97
+- 192.168.2.129
+- 192.168.2.1
+- 192.168.1.1
+- 192.168.0.1
+- 192.168.1.129
+- 192.168.2.161
+- 192.168.3.1
+dhcp_pools:
+- name: EXEC
+  network: 192.168.2.192
+  mask: 255.255.255.240
+  router: 192.168.2.193
+  dns: 192.168.2.226
+- name: HR
+  network: 192.168.2.208
+  mask: 255.255.255.240
+  router: 192.168.2.209
+  dns: 192.168.2.226
+- name: ACCT
+  network: 192.168.2.64
+  mask: 255.255.255.224
+  router: 192.168.2.65
+  dns: 192.168.2.226
+- name: OPS
+  network: 192.168.2.96
+  mask: 255.255.255.224
+  router: 192.168.2.97
+  dns: 192.168.2.226
+- name: SALES
+  network: 192.168.2.128
+  mask: 255.255.255.224
+  router: 192.168.2.129
+  dns: 192.168.2.226
+- name: IT
+  network: 192.168.2.0
+  mask: 255.255.255.192
+  router: 192.168.2.1
+  dns: 192.168.2.226
+- name: VOICE
+  network: 192.168.1.0
+  mask: 255.255.255.128
+  router: 192.168.1.1
+  dns: 192.168.2.226
+- name: STAFF-WIFI
+  network: 192.168.0.0
+  mask: 255.255.255.0
+  router: 192.168.0.1
+  dns: 192.168.2.226
+- name: GUEST
+  network: 192.168.1.128
+  mask: 255.255.255.128
+  router: 192.168.1.129
+  dns: 1.1.1.1
+- name: PRINTERS-IOT
+  network: 192.168.2.160
+  mask: 255.255.255.224
+  router: 192.168.2.161
+  dns: 192.168.2.226
+- name: LOGISTICS
+  network: 192.168.3.0
+  mask: 255.255.255.224
+  router: 192.168.3.1
+  dns: 192.168.2.226
+port_channels:
+- id: 1
+  members: 1-2
+  peer: BLD1-ACC-01
+  allowed: 10,20,70,80,90,99,100
+- id: 2
+  members: 3-4
+  peer: BLD1-ACC-02
+  allowed: 30,70,99,100
+- id: 3
+  members: 5-6
+  peer: BLD1-ACC-03
+  allowed: 60,70,99,110
+- id: 4
+  members: 7-8
+  peer: BLD1-ACC-04
+  allowed: 40,70,99,100
+- id: 5
+  members: 9-10
+  peer: BLD1-ACC-05
+  allowed: 50,70,80,90,99,100
+transit:
+  description: TRANSIT-TO-BLD1-RTR-01
+  ip: 10.10.0.34
+  mask: 255.255.255.252
+ospf:
+  router_id: 10.10.0.1
+  passive_exceptions:
+  - GigabitEthernet0/1
+  networks:
+  - net: 192.168.0.0
+    wild: 0.0.3.255
+  - net: 10.10.0.0
+    wild: 0.0.0.63

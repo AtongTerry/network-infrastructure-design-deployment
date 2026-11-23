@@ -1,0 +1,11 @@
+{% from '_macros.j2' import head with context %}
+{{ head(hostname, full=false) | trim }}
+!
+interface {{ wan.name }}
+ description {{ wan.description }}
+ ip address {{ wan.ip }} {{ wan.mask }}
+ no shutdown
+interface Loopback0
+ ip address {{ loopback }} 255.255.255.255
+end
+write memory

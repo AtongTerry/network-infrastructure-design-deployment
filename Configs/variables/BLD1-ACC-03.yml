@@ -1,0 +1,42 @@
+template: access-switch.j2
+hostname: BLD1-ACC-03
+vlans:
+- id: 60
+  name: IT
+- id: 70
+  name: VOICE
+- id: 99
+  name: MGMT
+- id: 110
+  name: SERVERS
+- id: 999
+  name: NATIVE-BLACKHOLE
+mgmt_ip: 10.10.0.13
+mgmt_mask: 255.255.255.224
+gateway: 10.10.0.1
+uplink:
+  type: lacp
+  channel: 3
+  peer: BLD1-CORE-01
+  allowed: 60,70,99,110
+  snooping_vlans: 60,70
+ports:
+- ports: 1-16
+  range: true
+  description: IT users
+  vlan: 60
+  voice_vlan: 70
+  port_security: 3
+- ports: 17-20
+  range: true
+  description: SERVERS
+  vlan: 110
+- ports: 21-23
+  range: true
+  description: UNUSED
+  vlan: 999
+  shutdown: true
+- ports: '24'
+  range: false
+  description: UPS-01
+  vlan: 99

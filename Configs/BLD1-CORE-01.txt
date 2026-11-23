@@ -1,0 +1,253 @@
+enable
+configure terminal
+hostname BLD1-CORE-01
+no ip domain-lookup
+ip domain-name campus.lab
+service password-encryption
+enable secret {{ENABLE_SECRET}}
+username admin privilege 15 secret {{ADMIN_SECRET}}
+banner motd #Authorized access only. Activity is monitored.#
+!
+spanning-tree mode rapid-pvst
+spanning-tree vlan 10,20,30,40,50,60,70,80,90,99,100,110 priority 4096
+ip routing
+vlan 10
+ name EXEC
+vlan 20
+ name HR
+vlan 30
+ name ACCT
+vlan 40
+ name OPS
+vlan 50
+ name SALES
+vlan 60
+ name IT
+vlan 70
+ name VOICE
+vlan 80
+ name STAFF-WIFI
+vlan 90
+ name GUEST
+vlan 99
+ name MGMT
+vlan 100
+ name PRINTERS-IOT
+vlan 110
+ name SERVERS
+vlan 999
+ name NATIVE-BLACKHOLE
+!
+interface vlan 10
+ description EXEC gateway
+ ip address 192.168.2.193 255.255.255.240
+ no shutdown
+interface vlan 20
+ description HR gateway
+ ip address 192.168.2.209 255.255.255.240
+ no shutdown
+interface vlan 30
+ description ACCT gateway
+ ip address 192.168.2.65 255.255.255.224
+ no shutdown
+interface vlan 40
+ description OPS gateway
+ ip address 192.168.2.97 255.255.255.224
+ no shutdown
+interface vlan 50
+ description SALES gateway
+ ip address 192.168.2.129 255.255.255.224
+ no shutdown
+interface vlan 60
+ description IT gateway
+ ip address 192.168.2.1 255.255.255.192
+ no shutdown
+interface vlan 70
+ description VOICE gateway
+ ip address 192.168.1.1 255.255.255.128
+ no shutdown
+interface vlan 80
+ description STAFF-WIFI gateway
+ ip address 192.168.0.1 255.255.255.0
+ no shutdown
+interface vlan 90
+ description GUEST gateway
+ ip address 192.168.1.129 255.255.255.128
+ no shutdown
+interface vlan 99
+ description MGMT gateway
+ ip address 10.10.0.1 255.255.255.224
+ no shutdown
+interface vlan 100
+ description PRINTERS-IOT gateway
+ ip address 192.168.2.161 255.255.255.224
+ no shutdown
+interface vlan 110
+ description SERVERS gateway
+ ip address 192.168.2.225 255.255.255.248
+ no shutdown
+!
+ip dhcp excluded-address 192.168.2.193
+ip dhcp excluded-address 192.168.2.209
+ip dhcp excluded-address 192.168.2.65
+ip dhcp excluded-address 192.168.2.97
+ip dhcp excluded-address 192.168.2.129
+ip dhcp excluded-address 192.168.2.1
+ip dhcp excluded-address 192.168.1.1
+ip dhcp excluded-address 192.168.0.1
+ip dhcp excluded-address 192.168.1.129
+ip dhcp excluded-address 192.168.2.161
+ip dhcp excluded-address 192.168.3.1
+ip dhcp pool EXEC
+ network 192.168.2.192 255.255.255.240
+ default-router 192.168.2.193
+ dns-server 192.168.2.226
+ domain-name campus.lab
+ip dhcp pool HR
+ network 192.168.2.208 255.255.255.240
+ default-router 192.168.2.209
+ dns-server 192.168.2.226
+ domain-name campus.lab
+ip dhcp pool ACCT
+ network 192.168.2.64 255.255.255.224
+ default-router 192.168.2.65
+ dns-server 192.168.2.226
+ domain-name campus.lab
+ip dhcp pool OPS
+ network 192.168.2.96 255.255.255.224
+ default-router 192.168.2.97
+ dns-server 192.168.2.226
+ domain-name campus.lab
+ip dhcp pool SALES
+ network 192.168.2.128 255.255.255.224
+ default-router 192.168.2.129
+ dns-server 192.168.2.226
+ domain-name campus.lab
+ip dhcp pool IT
+ network 192.168.2.0 255.255.255.192
+ default-router 192.168.2.1
+ dns-server 192.168.2.226
+ domain-name campus.lab
+ip dhcp pool VOICE
+ network 192.168.1.0 255.255.255.128
+ default-router 192.168.1.1
+ dns-server 192.168.2.226
+ domain-name campus.lab
+ip dhcp pool STAFF-WIFI
+ network 192.168.0.0 255.255.255.0
+ default-router 192.168.0.1
+ dns-server 192.168.2.226
+ domain-name campus.lab
+ip dhcp pool GUEST
+ network 192.168.1.128 255.255.255.128
+ default-router 192.168.1.129
+ dns-server 1.1.1.1
+ domain-name campus.lab
+ip dhcp pool PRINTERS-IOT
+ network 192.168.2.160 255.255.255.224
+ default-router 192.168.2.161
+ dns-server 192.168.2.226
+ domain-name campus.lab
+ip dhcp pool LOGISTICS
+ network 192.168.3.0 255.255.255.224
+ default-router 192.168.3.1
+ dns-server 192.168.2.226
+ domain-name campus.lab
+!
+interface range FastEthernet0/1-2
+ channel-group 1 mode active
+interface Port-channel1
+ description TRUNK-TO-BLD1-ACC-01
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ switchport trunk native vlan 999
+ switchport trunk allowed vlan 10,20,70,80,90,99,100
+interface range FastEthernet0/3-4
+ channel-group 2 mode active
+interface Port-channel2
+ description TRUNK-TO-BLD1-ACC-02
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ switchport trunk native vlan 999
+ switchport trunk allowed vlan 30,70,99,100
+interface range FastEthernet0/5-6
+ channel-group 3 mode active
+interface Port-channel3
+ description TRUNK-TO-BLD1-ACC-03
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ switchport trunk native vlan 999
+ switchport trunk allowed vlan 60,70,99,110
+interface range FastEthernet0/7-8
+ channel-group 4 mode active
+interface Port-channel4
+ description TRUNK-TO-BLD1-ACC-04
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ switchport trunk native vlan 999
+ switchport trunk allowed vlan 40,70,99,100
+interface range FastEthernet0/9-10
+ channel-group 5 mode active
+interface Port-channel5
+ description TRUNK-TO-BLD1-ACC-05
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ switchport trunk native vlan 999
+ switchport trunk allowed vlan 50,70,80,90,99,100
+!
+interface GigabitEthernet0/1
+ description TRANSIT-TO-BLD1-RTR-01
+ no switchport
+ ip address 10.10.0.34 255.255.255.252
+ ip ospf network point-to-point
+ ip ospf authentication message-digest
+ ip ospf message-digest-key 1 md5 {{OSPF_KEY}}
+ no shutdown
+!
+router ospf 1
+ router-id 10.10.0.1
+ passive-interface default
+ no passive-interface GigabitEthernet0/1
+ network 192.168.0.0 0.0.3.255 area 0
+ network 10.10.0.0 0.0.0.63 area 0
+!
+ip access-list extended GUEST-IN
+ permit udp any eq bootpc any eq bootps
+ permit udp any any eq 53
+ deny ip any 192.168.0.0 0.0.255.255
+ deny ip any 10.0.0.0 0.255.255.255
+ deny ip any 172.16.0.0 0.15.255.255
+ permit ip any any
+!
+interface vlan 90
+ ip access-group GUEST-IN in
+!
+ip access-list extended PROTECT-HR-ACCT
+ permit tcp any any established
+ permit ip 192.168.2.0 0.0.0.63 any
+ permit ip 192.168.2.192 0.0.0.15 any
+ permit ip 192.168.2.224 0.0.0.7 any
+ deny ip any any
+!
+interface vlan 20
+ ip access-group PROTECT-HR-ACCT out
+interface vlan 30
+ ip access-group PROTECT-HR-ACCT out
+!
+ip access-list extended PROTECT-MGMT
+ permit tcp any any established
+ permit ip 192.168.2.0 0.0.0.63 any
+ deny ip any any
+!
+interface vlan 99
+ ip access-group PROTECT-MGMT out
+!
+line console 0
+ logging synchronous
+line vty 0 15
+ login local
+ transport input ssh
+logging host 192.168.2.229
+ntp master 3
+end
+write memory

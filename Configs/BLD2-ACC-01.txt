@@ -1,0 +1,60 @@
+enable
+configure terminal
+hostname BLD2-ACC-01
+no ip domain-lookup
+ip domain-name campus.lab
+service password-encryption
+enable secret {{ENABLE_SECRET}}
+username admin privilege 15 secret {{ADMIN_SECRET}}
+banner motd #Authorized access only. Activity is monitored.#
+!
+spanning-tree mode rapid-pvst
+spanning-tree portfast bpduguard default
+vlan 99
+ name MGMT
+vlan 120
+ name LOGISTICS
+vlan 999
+ name NATIVE-BLACKHOLE
+!
+interface vlan 99
+ ip address 10.10.0.42 255.255.255.248
+ no shutdown
+ip default-gateway 10.10.0.41
+!
+interface GigabitEthernet0/1
+ description TRUNK-TO-BLD2-RTR-01
+ switchport mode trunk
+ switchport trunk native vlan 999
+ switchport trunk allowed vlan 99,120
+!
+no ip dhcp snooping information option
+ip dhcp snooping vlan 120
+ip dhcp snooping
+interface GigabitEthernet0/1
+ ip dhcp snooping trust
+!
+interface range FastEthernet0/1-20
+ description LOGISTICS users
+ switchport mode access
+ switchport access vlan 120
+ spanning-tree portfast
+ switchport port-security
+ switchport port-security maximum 2
+ switchport port-security violation restrict
+!
+interface range FastEthernet0/21-24
+ description UNUSED
+ switchport mode access
+ switchport access vlan 999
+ shutdown
+!
+line console 0
+ logging synchronous
+line vty 0 15
+ login local
+ transport input ssh
+logging host 192.168.2.229
+ntp server 10.10.0.1
+end
+write memory
