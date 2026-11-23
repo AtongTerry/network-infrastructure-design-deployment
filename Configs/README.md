@@ -14,7 +14,7 @@ Device configurations for the lab, kept two ways:
 
 ```bash
 pip install jinja2 pyyaml
-python render_configs.py --out .          # rewrites the sanitized .txt files in this folder
+python render_configs.py --out .          # rewrites the .txt files in this folder
 git diff --stat                           # shows exactly what a change touched
 ```
 
@@ -22,7 +22,7 @@ For a private lab build with real passwords (never commit the output):
 
 ```bash
 cp secrets.example.yml secrets.yml        # then edit the values; secrets.yml is git-ignored
-python render_configs.py --secrets secrets.yml --out build/
+python render_configs.py --secrets secrets.yml --out build/ # install yaml and jinja2 first (pip install pyyaml, pip install jinja2 )
 ```
 
 ## Change workflow
